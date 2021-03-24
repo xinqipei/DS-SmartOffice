@@ -116,9 +116,9 @@ public class RadiatorsServer extends RadiatorsServiceImplBase{
 		String aName = myRadiators.getitemName();
 		String aStatus = status;
 		Integer aTemperature = myRadiators.getTemperature();
-		Integer aFan = myRadiators.getSpeed();
+	
 		
-		radiatorsResponse response = radiatorsResponse.newBuilder().setAname(aName).setStatus(aStatus).setTemperature(aTemperature).setFan(aFan).build();
+		radiatorsResponse response = radiatorsResponse.newBuilder().setAname(aName).setStatus(aStatus).setTemperature(aTemperature).build();
 		responseObserver.onNext(response);
 		responseObserver.onCompleted();
 		

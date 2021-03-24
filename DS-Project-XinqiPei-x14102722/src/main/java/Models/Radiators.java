@@ -4,14 +4,14 @@ public class Radiators {
 	private String item, itemName;
 	private boolean on;
 	private int temperature;
-	private int speed;
+	
 	
 	public Radiators() {
 		this.item="Radiators";
 		this.on=true;
 		this.itemName="Radiators Name";
-		this.temperature=20;
-		this.speed=1;
+		this.temperature=30;
+		
 	}
 
 	public String getitem() {
@@ -46,13 +46,6 @@ public class Radiators {
 		this.temperature = temperature;
 	}
 
-	public int getSpeed() {
-		return speed;
-	}
-
-	public void setSpeed(int speed) {
-		this.speed = speed;
-	}
 
 	
 }
