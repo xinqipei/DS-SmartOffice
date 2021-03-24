@@ -2,20 +2,20 @@ syntax = "proto3";
 
 option java_multiple_files = true;
 option java_package = "org.DS.xinqipeiproject.SmartOfficeGRPC";
-option java_outer_classname = "RadiatorsServiceImpl";
+option java_outer_classname = "SecuritycameraServiceImpl";
 
 package SmartFarmingGRPC;
 
-service RadiatorsService {
-  rpc initialAppliance(Empty) returns (radiatorsResponse) {}
+service SecuritycameraService{
+  rpc initialAppliance(Empty) returns (cameraResponse) {}
   
-  rpc changeTemperature(valueRequest) returns (stream valueResponse) {}
+  rpc changeCamera(stringRequest) returns (stream stringResponse) {}
   
-  rpc changeFan(valueRequest) returns (stream valueResponse) {}
+  rpc changeVolume(valueRequest) returns (stream valueResponse) {}
   
   rpc onOff(booleanRequest) returns (booleanResponse) {}
   
-  rpc changeApplianceName(stringRequest) returns (stringResponse) {}	
+  rpc changeApplianceName(stringRequest) returns (stringResponse) {}
 
 }
 
@@ -47,9 +47,9 @@ message valueResponse {
   int32 length = 3;
 }
 
-message radiatorsResponse {
-	string aname = 4;
-	string status = 5;
-	int32 temperature = 6;
-	int32 fan = 7;
+message cameraResponse{
+  string aname = 4;
+  string status = 5;
+  string cam = 6;
+  int32 volume = 7;
 }

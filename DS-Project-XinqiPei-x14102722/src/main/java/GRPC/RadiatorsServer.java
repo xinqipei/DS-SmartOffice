@@ -8,15 +8,15 @@ import javax.jmdns.JmDNS;
 import javax.jmdns.ServiceEvent;
 import javax.jmdns.ServiceListener;
 
-import org.org.DS.xinqipei.SmartOfficeGRPC.Empty;
-import org.DS.xinqipei.SmartOfficeGRPC.RadiatorsServiceGrpc.RadiatorsServiceImplBase;
-import org.DS.xinqipei.SmartOfficeGRPC.booleanRequest;
-import org.DS.xinqipei.SmartOfficeGRPC.booleanResponse;
-import org.DS.xinqipei.SmartOfficeGRPC.RadiatorsResponse;
-import org.DS.xinqipei.SmartOfficeGRPC.stringRequest;
-import org.DS.xinqipei.SmartOfficeGRPC.stringResponse;
-import org.DS.xinqipei.SmartOfficeGRPC.valueRequest;
-import org.DS.xinqipei.SmartOfficeGRPC.valueResponse;
+import org.DS.xinqipeiproject.SmartOfficeGRPC.Empty;
+import org.DS.xinqipeiproject.SmartOfficeGRPC.RadiatorsServiceGrpc.RadiatorsServiceImplBase;
+import org.DS.xinqipeiproject.SmartOfficeGRPC.booleanRequest;
+import org.DS.xinqipeiproject.SmartOfficeGRPC.booleanResponse;
+import org.DS.xinqipeiproject.SmartOfficeGRPC.radiatorsResponse;
+import org.DS.xinqipeiproject.SmartOfficeGRPC.stringRequest;
+import org.DS.xinqipeiproject.SmartOfficeGRPC.stringResponse;
+import org.DS.xinqipeiproject.SmartOfficeGRPC.valueRequest;
+import org.DS.xinqipeiproject.SmartOfficeGRPC.valueResponse;
 
 import io.grpc.stub.StreamObserver;
 
@@ -101,7 +101,7 @@ public class RadiatorsServer extends RadiatorsServiceImplBase{
 	}
 
 	@Override
-	public void initialAppliance(Empty request, StreamObserver<RadiatorsResponse> responseObserver) {
+	public void initialAppliance(Empty request, StreamObserver<radiatorsResponse> responseObserver) {
 		// TODO Auto-generated method stub
 		System.out.println("Receiving initial appliance request for TV ");
 		String status;
@@ -118,7 +118,7 @@ public class RadiatorsServer extends RadiatorsServiceImplBase{
 		Integer aTemperature = myRadiators.getTemperature();
 		Integer aFan = myRadiators.getSpeed();
 		
-		RadiatorsResponse response = RadiatorsResponse.newBuilder().setAname(aName).setStatus(aStatus).setTemperature(aTemperature).setFan(aFan).build();
+		radiatorsResponse response = radiatorsResponse.newBuilder().setAname(aName).setStatus(aStatus).setTemperature(aTemperature).setFan(aFan).build();
 		responseObserver.onNext(response);
 		responseObserver.onCompleted();
 		

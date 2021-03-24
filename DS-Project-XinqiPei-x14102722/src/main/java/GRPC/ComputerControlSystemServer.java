@@ -8,15 +8,15 @@ import javax.jmdns.JmDNS;
 import javax.jmdns.ServiceEvent;
 import javax.jmdns.ServiceListener;
 
-import org.DS.xinqipei.SmartOfficeGRPC.Empty;
-import org.DS.xinqipei.SmartOfficeGRPC.ComputerControlSystemServiceGrpc.ComputerControlSystemServiceImplBase;
-import org.DS.xinqipei.SmartOfficeGRPC.booleanRequest;
-import org.DS.xinqipei.SmartOfficeGRPC.booleanResponse;
-import org.DS.xinqipei.SmartOfficeGRPC.computercontrolsystemResponse;
-import org.DS.xinqipei.SmartOfficeGRPC.stringRequest;
-import org.DS.xinqipei.SmartOfficeGRPC.stringResponse;
-import org.DS.xinqipei.SmartOfficeGRPC.valueRequest;
-import org.DS.xinqipei.SmartOfficeGRPC.valueResponse;
+import org.DS.xinqipeiproject.SmartOfficeGRPC.Empty;
+import org.DS.xinqipeiproject.SmartOfficeGRPC.ComputerControlSystemServiceGrpc.ComputerControlSystemServiceImplBase;
+import org.DS.xinqipeiproject.SmartOfficeGRPC.booleanRequest;
+import org.DS.xinqipeiproject.SmartOfficeGRPC.booleanResponse;
+import org.DS.xinqipeiproject.SmartOfficeGRPC.computercontrolsystemResponse;
+import org.DS.xinqipeiproject.SmartOfficeGRPC.stringRequest;
+import org.DS.xinqipeiproject.SmartOfficeGRPC.stringResponse;
+import org.DS.xinqipeiproject.SmartOfficeGRPC.valueRequest;
+import org.DS.xinqipeiproject.SmartOfficeGRPC.valueResponse;
 
 import io.grpc.stub.StreamObserver;
 
@@ -116,39 +116,39 @@ public class ComputerControlSystemServer extends ComputerControlSystemServiceImp
 		}
 		String aName = myComputerControlSystem.getApplianceName();
 		String aStatus = status;
-		Integer aIntensity = myComputerControlSystem.getIntensity();
+		//Integer aVolume = myComputerControlSystem.getVolume();
 		
-		computercontrolsystemResponse response = computercontrolsystemResponse.newBuilder().setAname(aName).setStatus(aStatus).setIntensity(aIntensity).build();
+		computercontrolsystemResponse response = computercontrolsystemResponse.newBuilder().setAname(aName).setStatus(aStatus).build();
 		responseObserver.onNext(response);
 		responseObserver.onCompleted();
 	}
 
-	@Override
-	public void changeIntensity(valueRequest request, StreamObserver<valueResponse> responseObserver) {
+	/*@Override
+	public void changeVolume(valueRequest request, StreamObserver<valueResponse> responseObserver) {
 		// TODO Auto-generated method stub
-		int currentIntensity= myComputerControlSystem.getIntensity();
-		int changeIntensity = request.getLength();
+		int currentVolume= myComputerControlSystem.getVolume();
+		int changeVolume = request.getLength();
 		
-		System.out.println("Receiving new intensity for computercontrolsystem" + currentIntensity);
-		int newIntensity= currentIntensity + changeIntensity;
-		if(newIntensity > 100 || newIntensity < 0 ) {//start if
-			System.out.println("Intensity cannot exceed 100 or be less than 0: " + newIntensity);
-			System.out.println("The current intensity is set to: " + myComputerControlSystem.getIntensity());
+		System.out.println("Receiving new intensity for computercontrolsystem" + currentVolume);
+		int newVolume= currentVolume + changeVolume;
+		if(newVolume > 100 || newVolume < 0 ) {//start if
+			System.out.println("Volume cannot exceed 100 or be less than 0: " + newVolume);
+			System.out.println("The current intensity is set to: " + myComputerControlSystem.getVolume());
 			
-			valueResponse response = valueResponse.newBuilder().setLength(myComputerControlSystem.getIntensity()).build();
+			valueResponse response = valueResponse.newBuilder().setLength(myComputerControlSystem.getVolume()).build();
 			responseObserver.onNext(response);
 			responseObserver.onCompleted();
 		}//end if
 		else {//start else
-			myComputerControlSystem.setIntensity(newIntensity);
-			System.out.println("The updated intensity level is: " + newIntensity);		
-			valueResponse response = valueResponse.newBuilder().setLength(newIntensity).build();
+			myComputerControlSystem.setVolume(newVolume);
+			System.out.println("The updated intensity level is: " + newVolume);		
+			valueResponse response = valueResponse.newBuilder().setLength(newVolume).build();
 			responseObserver.onNext(response);
 			responseObserver.onCompleted();
 		}//end else
 		
 	}
-
+*/
 	@Override
 	public void onOff(booleanRequest request, StreamObserver<booleanResponse> responseObserver) {
 		// TODO Auto-generated method stub
