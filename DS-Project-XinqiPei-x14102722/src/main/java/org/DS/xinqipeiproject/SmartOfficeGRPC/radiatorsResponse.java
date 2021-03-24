@@ -4,11 +4,11 @@
 package org.DS.xinqipeiproject.SmartOfficeGRPC;
 
 /**
- * Protobuf type {@code SmartFarmingGRPC.radiatorsResponse}
+ * Protobuf type {@code SmartOfficeGRPC.radiatorsResponse}
  */
 public  final class radiatorsResponse extends
     com.google.protobuf.GeneratedMessageV3 implements
-    // @@protoc_insertion_point(message_implements:SmartFarmingGRPC.radiatorsResponse)
+    // @@protoc_insertion_point(message_implements:SmartOfficeGRPC.radiatorsResponse)
     radiatorsResponseOrBuilder {
 private static final long serialVersionUID = 0L;
   // Use radiatorsResponse.newBuilder() to construct.
@@ -89,13 +89,13 @@ private static final long serialVersionUID = 0L;
   }
   public static final com.google.protobuf.Descriptors.Descriptor
       getDescriptor() {
-    return org.DS.xinqipeiproject.SmartOfficeGRPC.RadiatorsServiceImpl.internal_static_SmartFarmingGRPC_radiatorsResponse_descriptor;
+    return org.DS.xinqipeiproject.SmartOfficeGRPC.RadiatorsServiceImpl.internal_static_SmartOfficeGRPC_radiatorsResponse_descriptor;
   }
 
   @java.lang.Override
   protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internalGetFieldAccessorTable() {
-    return org.DS.xinqipeiproject.SmartOfficeGRPC.RadiatorsServiceImpl.internal_static_SmartFarmingGRPC_radiatorsResponse_fieldAccessorTable
+    return org.DS.xinqipeiproject.SmartOfficeGRPC.RadiatorsServiceImpl.internal_static_SmartOfficeGRPC_radiatorsResponse_fieldAccessorTable
         .ensureFieldAccessorsInitialized(
             org.DS.xinqipeiproject.SmartOfficeGRPC.radiatorsResponse.class, org.DS.xinqipeiproject.SmartOfficeGRPC.radiatorsResponse.Builder.class);
   }
@@ -374,21 +374,21 @@ private static final long serialVersionUID = 0L;
     return builder;
   }
   /**
-   * Protobuf type {@code SmartFarmingGRPC.radiatorsResponse}
+   * Protobuf type {@code SmartOfficeGRPC.radiatorsResponse}
    */
   public static final class Builder extends
       com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
-      // @@protoc_insertion_point(builder_implements:SmartFarmingGRPC.radiatorsResponse)
+      // @@protoc_insertion_point(builder_implements:SmartOfficeGRPC.radiatorsResponse)
       org.DS.xinqipeiproject.SmartOfficeGRPC.radiatorsResponseOrBuilder {
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return org.DS.xinqipeiproject.SmartOfficeGRPC.RadiatorsServiceImpl.internal_static_SmartFarmingGRPC_radiatorsResponse_descriptor;
+      return org.DS.xinqipeiproject.SmartOfficeGRPC.RadiatorsServiceImpl.internal_static_SmartOfficeGRPC_radiatorsResponse_descriptor;
     }
 
     @java.lang.Override
     protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return org.DS.xinqipeiproject.SmartOfficeGRPC.RadiatorsServiceImpl.internal_static_SmartFarmingGRPC_radiatorsResponse_fieldAccessorTable
+      return org.DS.xinqipeiproject.SmartOfficeGRPC.RadiatorsServiceImpl.internal_static_SmartOfficeGRPC_radiatorsResponse_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
               org.DS.xinqipeiproject.SmartOfficeGRPC.radiatorsResponse.class, org.DS.xinqipeiproject.SmartOfficeGRPC.radiatorsResponse.Builder.class);
     }
@@ -425,7 +425,7 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public com.google.protobuf.Descriptors.Descriptor
         getDescriptorForType() {
-      return org.DS.xinqipeiproject.SmartOfficeGRPC.RadiatorsServiceImpl.internal_static_SmartFarmingGRPC_radiatorsResponse_descriptor;
+      return org.DS.xinqipeiproject.SmartOfficeGRPC.RadiatorsServiceImpl.internal_static_SmartOfficeGRPC_radiatorsResponse_descriptor;
     }
 
     @java.lang.Override
@@ -742,10 +742,10 @@ private static final long serialVersionUID = 0L;
     }
 
 
-    // @@protoc_insertion_point(builder_scope:SmartFarmingGRPC.radiatorsResponse)
+    // @@protoc_insertion_point(builder_scope:SmartOfficeGRPC.radiatorsResponse)
   }
 
-  // @@protoc_insertion_point(class_scope:SmartFarmingGRPC.radiatorsResponse)
+  // @@protoc_insertion_point(class_scope:SmartOfficeGRPC.radiatorsResponse)
   private static final org.DS.xinqipeiproject.SmartOfficeGRPC.radiatorsResponse DEFAULT_INSTANCE;
   static {
     DEFAULT_INSTANCE = new org.DS.xinqipeiproject.SmartOfficeGRPC.radiatorsResponse();

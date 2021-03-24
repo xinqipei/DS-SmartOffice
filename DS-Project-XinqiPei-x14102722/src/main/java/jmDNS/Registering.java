@@ -30,11 +30,11 @@ public class Registering {
 			jmdns = JmDNS.create(InetAddress.getLocalHost());
 			// Registering all services
 			System.out.println("Registering");
-			ServiceInfo serviceRadiators = ServiceInfo.create("_http._tcp.local.", myRadiators.getAppliance(), radiatorsPort,
+			ServiceInfo serviceRadiators = ServiceInfo.create("_http._tcp.local.", myRadiators.getitem(), radiatorsPort,
 					"path=index.html");
-			ServiceInfo serviceProjector = ServiceInfo.create("_http._tcp.local.", myComputerControlSystem.getAppliance(),
+			ServiceInfo serviceProjector = ServiceInfo.create("_http._tcp.local.", myComputerControlSystem.getitem(),
 					computercontrolsystemPort, "path=index.html");
-			ServiceInfo serviceLighting = ServiceInfo.create("_http._tcp.local.", myLighting.getAppliance(), lightingPort,
+			ServiceInfo serviceLighting = ServiceInfo.create("_http._tcp.local.", myLighting.getitem(), lightingPort,
 					"path=index.html");
 
 			jmdns.registerService(serviceRadiators);

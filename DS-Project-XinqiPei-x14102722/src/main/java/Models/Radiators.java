@@ -1,33 +1,33 @@
 package Models;
 
 public class Radiators {
-	private String appliance, applianceName;
+	private String item, itemName;
 	private boolean on;
 	private int temperature;
 	private int speed;
 	
 	public Radiators() {
-		this.appliance="Radiators";
+		this.item="Radiators";
 		this.on=true;
-		this.applianceName="Radiators Name";
+		this.itemName="Radiators Name";
 		this.temperature=20;
 		this.speed=1;
 	}
 
-	public String getAppliance() {
-		return appliance;
+	public String getitem() {
+		return item;
 	}
 
-	public void setAppliance(String appliance) {
-		this.appliance = appliance;
+	public void setitem(String item) {
+		this.item = item;
 	}
 
-	public String getApplianceName() {
-		return applianceName;
+	public String getitemName() {
+		return itemName;
 	}
 
-	public void setApplianceName(String applianceName) {
-		this.applianceName = applianceName;
+	public void setitemName(String itemName) {
+		this.itemName = itemName;
 	}
 
 	public boolean isOn() {

@@ -4,7 +4,7 @@
 package org.DS.xinqipeiproject.SmartOfficeGRPC;
 
 public interface cameraResponseOrBuilder extends
-    // @@protoc_insertion_point(interface_extends:SmartFarmingGRPC.cameraResponse)
+    // @@protoc_insertion_point(interface_extends:SmartOfficeGRPC.cameraResponse)
     com.google.protobuf.MessageOrBuilder {
 
   /**

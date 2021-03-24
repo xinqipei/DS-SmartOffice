@@ -24,39 +24,39 @@ public final class RadiatorsServiceGrpc {
 
   private RadiatorsServiceGrpc() {}
 
-  public static final String SERVICE_NAME = "SmartFarmingGRPC.RadiatorsService";
+  public static final String SERVICE_NAME = "SmartOfficeGRPC.RadiatorsService";
 
   // Static method descriptors that strictly reflect the proto.
   private static volatile io.grpc.MethodDescriptor<org.DS.xinqipeiproject.SmartOfficeGRPC.Empty,
-      org.DS.xinqipeiproject.SmartOfficeGRPC.radiatorsResponse> getInitialApplianceMethod;
+      org.DS.xinqipeiproject.SmartOfficeGRPC.radiatorsResponse> getInitialItemMethod;
 
   @io.grpc.stub.annotations.RpcMethod(
-      fullMethodName = SERVICE_NAME + '/' + "initialAppliance",
+      fullMethodName = SERVICE_NAME + '/' + "initialItem",
       requestType = org.DS.xinqipeiproject.SmartOfficeGRPC.Empty.class,
       responseType = org.DS.xinqipeiproject.SmartOfficeGRPC.radiatorsResponse.class,
       methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
   public static io.grpc.MethodDescriptor<org.DS.xinqipeiproject.SmartOfficeGRPC.Empty,
-      org.DS.xinqipeiproject.SmartOfficeGRPC.radiatorsResponse> getInitialApplianceMethod() {
-    io.grpc.MethodDescriptor<org.DS.xinqipeiproject.SmartOfficeGRPC.Empty, org.DS.xinqipeiproject.SmartOfficeGRPC.radiatorsResponse> getInitialApplianceMethod;
-    if ((getInitialApplianceMethod = RadiatorsServiceGrpc.getInitialApplianceMethod) == null) {
+      org.DS.xinqipeiproject.SmartOfficeGRPC.radiatorsResponse> getInitialItemMethod() {
+    io.grpc.MethodDescriptor<org.DS.xinqipeiproject.SmartOfficeGRPC.Empty, org.DS.xinqipeiproject.SmartOfficeGRPC.radiatorsResponse> getInitialItemMethod;
+    if ((getInitialItemMethod = RadiatorsServiceGrpc.getInitialItemMethod) == null) {
       synchronized (RadiatorsServiceGrpc.class) {
-        if ((getInitialApplianceMethod = RadiatorsServiceGrpc.getInitialApplianceMethod) == null) {
-          RadiatorsServiceGrpc.getInitialApplianceMethod = getInitialApplianceMethod = 
+        if ((getInitialItemMethod = RadiatorsServiceGrpc.getInitialItemMethod) == null) {
+          RadiatorsServiceGrpc.getInitialItemMethod = getInitialItemMethod = 
               io.grpc.MethodDescriptor.<org.DS.xinqipeiproject.SmartOfficeGRPC.Empty, org.DS.xinqipeiproject.SmartOfficeGRPC.radiatorsResponse>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
               .setFullMethodName(generateFullMethodName(
-                  "SmartFarmingGRPC.RadiatorsService", "initialAppliance"))
+                  "SmartOfficeGRPC.RadiatorsService", "initialItem"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   org.DS.xinqipeiproject.SmartOfficeGRPC.Empty.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   org.DS.xinqipeiproject.SmartOfficeGRPC.radiatorsResponse.getDefaultInstance()))
-                  .setSchemaDescriptor(new RadiatorsServiceMethodDescriptorSupplier("initialAppliance"))
+                  .setSchemaDescriptor(new RadiatorsServiceMethodDescriptorSupplier("initialItem"))
                   .build();
           }
         }
      }
-     return getInitialApplianceMethod;
+     return getInitialItemMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<org.DS.xinqipeiproject.SmartOfficeGRPC.valueRequest,
@@ -77,7 +77,7 @@ public final class RadiatorsServiceGrpc {
               io.grpc.MethodDescriptor.<org.DS.xinqipeiproject.SmartOfficeGRPC.valueRequest, org.DS.xinqipeiproject.SmartOfficeGRPC.valueResponse>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.SERVER_STREAMING)
               .setFullMethodName(generateFullMethodName(
-                  "SmartFarmingGRPC.RadiatorsService", "changeTemperature"))
+                  "SmartOfficeGRPC.RadiatorsService", "changeTemperature"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   org.DS.xinqipeiproject.SmartOfficeGRPC.valueRequest.getDefaultInstance()))
@@ -109,7 +109,7 @@ public final class RadiatorsServiceGrpc {
               io.grpc.MethodDescriptor.<org.DS.xinqipeiproject.SmartOfficeGRPC.valueRequest, org.DS.xinqipeiproject.SmartOfficeGRPC.valueResponse>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.SERVER_STREAMING)
               .setFullMethodName(generateFullMethodName(
-                  "SmartFarmingGRPC.RadiatorsService", "changeFan"))
+                  "SmartOfficeGRPC.RadiatorsService", "changeFan"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   org.DS.xinqipeiproject.SmartOfficeGRPC.valueRequest.getDefaultInstance()))
@@ -141,7 +141,7 @@ public final class RadiatorsServiceGrpc {
               io.grpc.MethodDescriptor.<org.DS.xinqipeiproject.SmartOfficeGRPC.booleanRequest, org.DS.xinqipeiproject.SmartOfficeGRPC.booleanResponse>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
               .setFullMethodName(generateFullMethodName(
-                  "SmartFarmingGRPC.RadiatorsService", "onOff"))
+                  "SmartOfficeGRPC.RadiatorsService", "onOff"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   org.DS.xinqipeiproject.SmartOfficeGRPC.booleanRequest.getDefaultInstance()))
@@ -156,35 +156,35 @@ public final class RadiatorsServiceGrpc {
   }
 
   private static volatile io.grpc.MethodDescriptor<org.DS.xinqipeiproject.SmartOfficeGRPC.stringRequest,
-      org.DS.xinqipeiproject.SmartOfficeGRPC.stringResponse> getChangeApplianceNameMethod;
+      org.DS.xinqipeiproject.SmartOfficeGRPC.stringResponse> getChangeItemNameMethod;
 
   @io.grpc.stub.annotations.RpcMethod(
-      fullMethodName = SERVICE_NAME + '/' + "changeApplianceName",
+      fullMethodName = SERVICE_NAME + '/' + "changeItemName",
       requestType = org.DS.xinqipeiproject.SmartOfficeGRPC.stringRequest.class,
       responseType = org.DS.xinqipeiproject.SmartOfficeGRPC.stringResponse.class,
       methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
   public static io.grpc.MethodDescriptor<org.DS.xinqipeiproject.SmartOfficeGRPC.stringRequest,
-      org.DS.xinqipeiproject.SmartOfficeGRPC.stringResponse> getChangeApplianceNameMethod() {
-    io.grpc.MethodDescriptor<org.DS.xinqipeiproject.SmartOfficeGRPC.stringRequest, org.DS.xinqipeiproject.SmartOfficeGRPC.stringResponse> getChangeApplianceNameMethod;
-    if ((getChangeApplianceNameMethod = RadiatorsServiceGrpc.getChangeApplianceNameMethod) == null) {
+      org.DS.xinqipeiproject.SmartOfficeGRPC.stringResponse> getChangeItemNameMethod() {
+    io.grpc.MethodDescriptor<org.DS.xinqipeiproject.SmartOfficeGRPC.stringRequest, org.DS.xinqipeiproject.SmartOfficeGRPC.stringResponse> getChangeItemNameMethod;
+    if ((getChangeItemNameMethod = RadiatorsServiceGrpc.getChangeItemNameMethod) == null) {
       synchronized (RadiatorsServiceGrpc.class) {
-        if ((getChangeApplianceNameMethod = RadiatorsServiceGrpc.getChangeApplianceNameMethod) == null) {
-          RadiatorsServiceGrpc.getChangeApplianceNameMethod = getChangeApplianceNameMethod = 
+        if ((getChangeItemNameMethod = RadiatorsServiceGrpc.getChangeItemNameMethod) == null) {
+          RadiatorsServiceGrpc.getChangeItemNameMethod = getChangeItemNameMethod = 
               io.grpc.MethodDescriptor.<org.DS.xinqipeiproject.SmartOfficeGRPC.stringRequest, org.DS.xinqipeiproject.SmartOfficeGRPC.stringResponse>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
               .setFullMethodName(generateFullMethodName(
-                  "SmartFarmingGRPC.RadiatorsService", "changeApplianceName"))
+                  "SmartOfficeGRPC.RadiatorsService", "changeItemName"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   org.DS.xinqipeiproject.SmartOfficeGRPC.stringRequest.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   org.DS.xinqipeiproject.SmartOfficeGRPC.stringResponse.getDefaultInstance()))
-                  .setSchemaDescriptor(new RadiatorsServiceMethodDescriptorSupplier("changeApplianceName"))
+                  .setSchemaDescriptor(new RadiatorsServiceMethodDescriptorSupplier("changeItemName"))
                   .build();
           }
         }
      }
-     return getChangeApplianceNameMethod;
+     return getChangeItemNameMethod;
   }
 
   /**
@@ -216,9 +216,9 @@ public final class RadiatorsServiceGrpc {
 
     /**
      */
-    public void initialAppliance(org.DS.xinqipeiproject.SmartOfficeGRPC.Empty request,
+    public void initialItem(org.DS.xinqipeiproject.SmartOfficeGRPC.Empty request,
         io.grpc.stub.StreamObserver<org.DS.xinqipeiproject.SmartOfficeGRPC.radiatorsResponse> responseObserver) {
-      asyncUnimplementedUnaryCall(getInitialApplianceMethod(), responseObserver);
+      asyncUnimplementedUnaryCall(getInitialItemMethod(), responseObserver);
     }
 
     /**
@@ -244,20 +244,20 @@ public final class RadiatorsServiceGrpc {
 
     /**
      */
-    public void changeApplianceName(org.DS.xinqipeiproject.SmartOfficeGRPC.stringRequest request,
+    public void changeItemName(org.DS.xinqipeiproject.SmartOfficeGRPC.stringRequest request,
         io.grpc.stub.StreamObserver<org.DS.xinqipeiproject.SmartOfficeGRPC.stringResponse> responseObserver) {
-      asyncUnimplementedUnaryCall(getChangeApplianceNameMethod(), responseObserver);
+      asyncUnimplementedUnaryCall(getChangeItemNameMethod(), responseObserver);
     }
 
     @java.lang.Override public final io.grpc.ServerServiceDefinition bindService() {
       return io.grpc.ServerServiceDefinition.builder(getServiceDescriptor())
           .addMethod(
-            getInitialApplianceMethod(),
+            getInitialItemMethod(),
             asyncUnaryCall(
               new MethodHandlers<
                 org.DS.xinqipeiproject.SmartOfficeGRPC.Empty,
                 org.DS.xinqipeiproject.SmartOfficeGRPC.radiatorsResponse>(
-                  this, METHODID_INITIAL_APPLIANCE)))
+                  this, METHODID_INITIAL_ITEM)))
           .addMethod(
             getChangeTemperatureMethod(),
             asyncServerStreamingCall(
@@ -280,12 +280,12 @@ public final class RadiatorsServiceGrpc {
                 org.DS.xinqipeiproject.SmartOfficeGRPC.booleanResponse>(
                   this, METHODID_ON_OFF)))
           .addMethod(
-            getChangeApplianceNameMethod(),
+            getChangeItemNameMethod(),
             asyncUnaryCall(
               new MethodHandlers<
                 org.DS.xinqipeiproject.SmartOfficeGRPC.stringRequest,
                 org.DS.xinqipeiproject.SmartOfficeGRPC.stringResponse>(
-                  this, METHODID_CHANGE_APPLIANCE_NAME)))
+                  this, METHODID_CHANGE_ITEM_NAME)))
           .build();
     }
   }
@@ -310,10 +310,10 @@ public final class RadiatorsServiceGrpc {
 
     /**
      */
-    public void initialAppliance(org.DS.xinqipeiproject.SmartOfficeGRPC.Empty request,
+    public void initialItem(org.DS.xinqipeiproject.SmartOfficeGRPC.Empty request,
         io.grpc.stub.StreamObserver<org.DS.xinqipeiproject.SmartOfficeGRPC.radiatorsResponse> responseObserver) {
       asyncUnaryCall(
-          getChannel().newCall(getInitialApplianceMethod(), getCallOptions()), request, responseObserver);
+          getChannel().newCall(getInitialItemMethod(), getCallOptions()), request, responseObserver);
     }
 
     /**
@@ -342,10 +342,10 @@ public final class RadiatorsServiceGrpc {
 
     /**
      */
-    public void changeApplianceName(org.DS.xinqipeiproject.SmartOfficeGRPC.stringRequest request,
+    public void changeItemName(org.DS.xinqipeiproject.SmartOfficeGRPC.stringRequest request,
         io.grpc.stub.StreamObserver<org.DS.xinqipeiproject.SmartOfficeGRPC.stringResponse> responseObserver) {
       asyncUnaryCall(
-          getChannel().newCall(getChangeApplianceNameMethod(), getCallOptions()), request, responseObserver);
+          getChannel().newCall(getChangeItemNameMethod(), getCallOptions()), request, responseObserver);
     }
   }
 
@@ -369,9 +369,9 @@ public final class RadiatorsServiceGrpc {
 
     /**
      */
-    public org.DS.xinqipeiproject.SmartOfficeGRPC.radiatorsResponse initialAppliance(org.DS.xinqipeiproject.SmartOfficeGRPC.Empty request) {
+    public org.DS.xinqipeiproject.SmartOfficeGRPC.radiatorsResponse initialItem(org.DS.xinqipeiproject.SmartOfficeGRPC.Empty request) {
       return blockingUnaryCall(
-          getChannel(), getInitialApplianceMethod(), getCallOptions(), request);
+          getChannel(), getInitialItemMethod(), getCallOptions(), request);
     }
 
     /**
@@ -399,9 +399,9 @@ public final class RadiatorsServiceGrpc {
 
     /**
      */
-    public org.DS.xinqipeiproject.SmartOfficeGRPC.stringResponse changeApplianceName(org.DS.xinqipeiproject.SmartOfficeGRPC.stringRequest request) {
+    public org.DS.xinqipeiproject.SmartOfficeGRPC.stringResponse changeItemName(org.DS.xinqipeiproject.SmartOfficeGRPC.stringRequest request) {
       return blockingUnaryCall(
-          getChannel(), getChangeApplianceNameMethod(), getCallOptions(), request);
+          getChannel(), getChangeItemNameMethod(), getCallOptions(), request);
     }
   }
 
@@ -425,10 +425,10 @@ public final class RadiatorsServiceGrpc {
 
     /**
      */
-    public com.google.common.util.concurrent.ListenableFuture<org.DS.xinqipeiproject.SmartOfficeGRPC.radiatorsResponse> initialAppliance(
+    public com.google.common.util.concurrent.ListenableFuture<org.DS.xinqipeiproject.SmartOfficeGRPC.radiatorsResponse> initialItem(
         org.DS.xinqipeiproject.SmartOfficeGRPC.Empty request) {
       return futureUnaryCall(
-          getChannel().newCall(getInitialApplianceMethod(), getCallOptions()), request);
+          getChannel().newCall(getInitialItemMethod(), getCallOptions()), request);
     }
 
     /**
@@ -441,18 +441,18 @@ public final class RadiatorsServiceGrpc {
 
     /**
      */
-    public com.google.common.util.concurrent.ListenableFuture<org.DS.xinqipeiproject.SmartOfficeGRPC.stringResponse> changeApplianceName(
+    public com.google.common.util.concurrent.ListenableFuture<org.DS.xinqipeiproject.SmartOfficeGRPC.stringResponse> changeItemName(
         org.DS.xinqipeiproject.SmartOfficeGRPC.stringRequest request) {
       return futureUnaryCall(
-          getChannel().newCall(getChangeApplianceNameMethod(), getCallOptions()), request);
+          getChannel().newCall(getChangeItemNameMethod(), getCallOptions()), request);
     }
   }
 
-  private static final int METHODID_INITIAL_APPLIANCE = 0;
+  private static final int METHODID_INITIAL_ITEM = 0;
   private static final int METHODID_CHANGE_TEMPERATURE = 1;
   private static final int METHODID_CHANGE_FAN = 2;
   private static final int METHODID_ON_OFF = 3;
-  private static final int METHODID_CHANGE_APPLIANCE_NAME = 4;
+  private static final int METHODID_CHANGE_ITEM_NAME = 4;
 
   private static final class MethodHandlers<Req, Resp> implements
       io.grpc.stub.ServerCalls.UnaryMethod<Req, Resp>,
@@ -471,8 +471,8 @@ public final class RadiatorsServiceGrpc {
     @java.lang.SuppressWarnings("unchecked")
     public void invoke(Req request, io.grpc.stub.StreamObserver<Resp> responseObserver) {
       switch (methodId) {
-        case METHODID_INITIAL_APPLIANCE:
-          serviceImpl.initialAppliance((org.DS.xinqipeiproject.SmartOfficeGRPC.Empty) request,
+        case METHODID_INITIAL_ITEM:
+          serviceImpl.initialItem((org.DS.xinqipeiproject.SmartOfficeGRPC.Empty) request,
               (io.grpc.stub.StreamObserver<org.DS.xinqipeiproject.SmartOfficeGRPC.radiatorsResponse>) responseObserver);
           break;
         case METHODID_CHANGE_TEMPERATURE:
@@ -487,8 +487,8 @@ public final class RadiatorsServiceGrpc {
           serviceImpl.onOff((org.DS.xinqipeiproject.SmartOfficeGRPC.booleanRequest) request,
               (io.grpc.stub.StreamObserver<org.DS.xinqipeiproject.SmartOfficeGRPC.booleanResponse>) responseObserver);
           break;
-        case METHODID_CHANGE_APPLIANCE_NAME:
-          serviceImpl.changeApplianceName((org.DS.xinqipeiproject.SmartOfficeGRPC.stringRequest) request,
+        case METHODID_CHANGE_ITEM_NAME:
+          serviceImpl.changeItemName((org.DS.xinqipeiproject.SmartOfficeGRPC.stringRequest) request,
               (io.grpc.stub.StreamObserver<org.DS.xinqipeiproject.SmartOfficeGRPC.stringResponse>) responseObserver);
           break;
         default:
@@ -552,11 +552,11 @@ public final class RadiatorsServiceGrpc {
         if (result == null) {
           serviceDescriptor = result = io.grpc.ServiceDescriptor.newBuilder(SERVICE_NAME)
               .setSchemaDescriptor(new RadiatorsServiceFileDescriptorSupplier())
-              .addMethod(getInitialApplianceMethod())
+              .addMethod(getInitialItemMethod())
               .addMethod(getChangeTemperatureMethod())
               .addMethod(getChangeFanMethod())
               .addMethod(getOnOffMethod())
-              .addMethod(getChangeApplianceNameMethod())
+              .addMethod(getChangeItemNameMethod())
               .build();
         }
       }

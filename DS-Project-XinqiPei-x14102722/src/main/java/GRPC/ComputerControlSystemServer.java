@@ -103,9 +103,9 @@ public class ComputerControlSystemServer extends ComputerControlSystemServiceImp
 	
 	
 
-	public void initialAppliance(Empty request, StreamObserver<computercontrolsystemResponse> responseObserver) {
+	public void initialItem(Empty request, StreamObserver<computercontrolsystemResponse> responseObserver) {
 		// TODO Auto-generated method stub
-		System.out.println("Receiving initial appliance request for ComputerControlSystem ");
+		System.out.println("Receiving initial item request for ComputerControlSystem ");
 		String status;
 		
 		if(myComputerControlSystem.isOn()) {
@@ -114,7 +114,7 @@ public class ComputerControlSystemServer extends ComputerControlSystemServiceImp
 		else {
 			status = "Off";
 		}
-		String aName = myComputerControlSystem.getApplianceName();
+		String aName = myComputerControlSystem.getitemName();
 		String aStatus = status;
 		//Integer aVolume = myComputerControlSystem.getVolume();
 		
@@ -123,32 +123,7 @@ public class ComputerControlSystemServer extends ComputerControlSystemServiceImp
 		responseObserver.onCompleted();
 	}
 
-	/*@Override
-	public void changeVolume(valueRequest request, StreamObserver<valueResponse> responseObserver) {
-		// TODO Auto-generated method stub
-		int currentVolume= myComputerControlSystem.getVolume();
-		int changeVolume = request.getLength();
-		
-		System.out.println("Receiving new intensity for computercontrolsystem" + currentVolume);
-		int newVolume= currentVolume + changeVolume;
-		if(newVolume > 100 || newVolume < 0 ) {//start if
-			System.out.println("Volume cannot exceed 100 or be less than 0: " + newVolume);
-			System.out.println("The current intensity is set to: " + myComputerControlSystem.getVolume());
-			
-			valueResponse response = valueResponse.newBuilder().setLength(myComputerControlSystem.getVolume()).build();
-			responseObserver.onNext(response);
-			responseObserver.onCompleted();
-		}//end if
-		else {//start else
-			myComputerControlSystem.setVolume(newVolume);
-			System.out.println("The updated intensity level is: " + newVolume);		
-			valueResponse response = valueResponse.newBuilder().setLength(newVolume).build();
-			responseObserver.onNext(response);
-			responseObserver.onCompleted();
-		}//end else
-		
-	}
-*/
+
 	@Override
 	public void onOff(booleanRequest request, StreamObserver<booleanResponse> responseObserver) {
 		// TODO Auto-generated method stub
@@ -163,12 +138,12 @@ public class ComputerControlSystemServer extends ComputerControlSystemServiceImp
 	}
 
 	@Override
-	public void changeApplianceName(stringRequest request, StreamObserver<stringResponse> responseObserver) {
+	public void changeItemName(stringRequest request, StreamObserver<stringResponse> responseObserver) {
 		// TODO Auto-generated method stub
 		String name = request.getText();
 		System.out.println("Changing computercontrolsystem name to "+name);
 
-		myComputerControlSystem.setApplianceName(name);
+		myComputerControlSystem.setitemName(name);
 		 
 		stringResponse response = stringResponse.newBuilder().setText(name).build();
 		System.out.println("Response "+response.getText());

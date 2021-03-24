@@ -24,39 +24,39 @@ public final class ComputerControlSystemServiceGrpc {
 
   private ComputerControlSystemServiceGrpc() {}
 
-  public static final String SERVICE_NAME = "SmartFarmingGRPC.ComputerControlSystemService";
+  public static final String SERVICE_NAME = "SmartOfficeGRPC.ComputerControlSystemService";
 
   // Static method descriptors that strictly reflect the proto.
   private static volatile io.grpc.MethodDescriptor<org.DS.xinqipeiproject.SmartOfficeGRPC.Empty,
-      org.DS.xinqipeiproject.SmartOfficeGRPC.computercontrolsystemResponse> getInitialApplianceMethod;
+      org.DS.xinqipeiproject.SmartOfficeGRPC.computercontrolsystemResponse> getInitialItemMethod;
 
   @io.grpc.stub.annotations.RpcMethod(
-      fullMethodName = SERVICE_NAME + '/' + "initialAppliance",
+      fullMethodName = SERVICE_NAME + '/' + "initialItem",
       requestType = org.DS.xinqipeiproject.SmartOfficeGRPC.Empty.class,
       responseType = org.DS.xinqipeiproject.SmartOfficeGRPC.computercontrolsystemResponse.class,
       methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
   public static io.grpc.MethodDescriptor<org.DS.xinqipeiproject.SmartOfficeGRPC.Empty,
-      org.DS.xinqipeiproject.SmartOfficeGRPC.computercontrolsystemResponse> getInitialApplianceMethod() {
-    io.grpc.MethodDescriptor<org.DS.xinqipeiproject.SmartOfficeGRPC.Empty, org.DS.xinqipeiproject.SmartOfficeGRPC.computercontrolsystemResponse> getInitialApplianceMethod;
-    if ((getInitialApplianceMethod = ComputerControlSystemServiceGrpc.getInitialApplianceMethod) == null) {
+      org.DS.xinqipeiproject.SmartOfficeGRPC.computercontrolsystemResponse> getInitialItemMethod() {
+    io.grpc.MethodDescriptor<org.DS.xinqipeiproject.SmartOfficeGRPC.Empty, org.DS.xinqipeiproject.SmartOfficeGRPC.computercontrolsystemResponse> getInitialItemMethod;
+    if ((getInitialItemMethod = ComputerControlSystemServiceGrpc.getInitialItemMethod) == null) {
       synchronized (ComputerControlSystemServiceGrpc.class) {
-        if ((getInitialApplianceMethod = ComputerControlSystemServiceGrpc.getInitialApplianceMethod) == null) {
-          ComputerControlSystemServiceGrpc.getInitialApplianceMethod = getInitialApplianceMethod = 
+        if ((getInitialItemMethod = ComputerControlSystemServiceGrpc.getInitialItemMethod) == null) {
+          ComputerControlSystemServiceGrpc.getInitialItemMethod = getInitialItemMethod = 
               io.grpc.MethodDescriptor.<org.DS.xinqipeiproject.SmartOfficeGRPC.Empty, org.DS.xinqipeiproject.SmartOfficeGRPC.computercontrolsystemResponse>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
               .setFullMethodName(generateFullMethodName(
-                  "SmartFarmingGRPC.ComputerControlSystemService", "initialAppliance"))
+                  "SmartOfficeGRPC.ComputerControlSystemService", "initialItem"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   org.DS.xinqipeiproject.SmartOfficeGRPC.Empty.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   org.DS.xinqipeiproject.SmartOfficeGRPC.computercontrolsystemResponse.getDefaultInstance()))
-                  .setSchemaDescriptor(new ComputerControlSystemServiceMethodDescriptorSupplier("initialAppliance"))
+                  .setSchemaDescriptor(new ComputerControlSystemServiceMethodDescriptorSupplier("initialItem"))
                   .build();
           }
         }
      }
-     return getInitialApplianceMethod;
+     return getInitialItemMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<org.DS.xinqipeiproject.SmartOfficeGRPC.valueRequest,
@@ -77,7 +77,7 @@ public final class ComputerControlSystemServiceGrpc {
               io.grpc.MethodDescriptor.<org.DS.xinqipeiproject.SmartOfficeGRPC.valueRequest, org.DS.xinqipeiproject.SmartOfficeGRPC.valueResponse>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.SERVER_STREAMING)
               .setFullMethodName(generateFullMethodName(
-                  "SmartFarmingGRPC.ComputerControlSystemService", "changeVolume"))
+                  "SmartOfficeGRPC.ComputerControlSystemService", "changeVolume"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   org.DS.xinqipeiproject.SmartOfficeGRPC.valueRequest.getDefaultInstance()))
@@ -109,7 +109,7 @@ public final class ComputerControlSystemServiceGrpc {
               io.grpc.MethodDescriptor.<org.DS.xinqipeiproject.SmartOfficeGRPC.booleanRequest, org.DS.xinqipeiproject.SmartOfficeGRPC.booleanResponse>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
               .setFullMethodName(generateFullMethodName(
-                  "SmartFarmingGRPC.ComputerControlSystemService", "onOff"))
+                  "SmartOfficeGRPC.ComputerControlSystemService", "onOff"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   org.DS.xinqipeiproject.SmartOfficeGRPC.booleanRequest.getDefaultInstance()))
@@ -124,35 +124,35 @@ public final class ComputerControlSystemServiceGrpc {
   }
 
   private static volatile io.grpc.MethodDescriptor<org.DS.xinqipeiproject.SmartOfficeGRPC.stringRequest,
-      org.DS.xinqipeiproject.SmartOfficeGRPC.stringResponse> getChangeApplianceNameMethod;
+      org.DS.xinqipeiproject.SmartOfficeGRPC.stringResponse> getChangeItemNameMethod;
 
   @io.grpc.stub.annotations.RpcMethod(
-      fullMethodName = SERVICE_NAME + '/' + "changeApplianceName",
+      fullMethodName = SERVICE_NAME + '/' + "changeItemName",
       requestType = org.DS.xinqipeiproject.SmartOfficeGRPC.stringRequest.class,
       responseType = org.DS.xinqipeiproject.SmartOfficeGRPC.stringResponse.class,
       methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
   public static io.grpc.MethodDescriptor<org.DS.xinqipeiproject.SmartOfficeGRPC.stringRequest,
-      org.DS.xinqipeiproject.SmartOfficeGRPC.stringResponse> getChangeApplianceNameMethod() {
-    io.grpc.MethodDescriptor<org.DS.xinqipeiproject.SmartOfficeGRPC.stringRequest, org.DS.xinqipeiproject.SmartOfficeGRPC.stringResponse> getChangeApplianceNameMethod;
-    if ((getChangeApplianceNameMethod = ComputerControlSystemServiceGrpc.getChangeApplianceNameMethod) == null) {
+      org.DS.xinqipeiproject.SmartOfficeGRPC.stringResponse> getChangeItemNameMethod() {
+    io.grpc.MethodDescriptor<org.DS.xinqipeiproject.SmartOfficeGRPC.stringRequest, org.DS.xinqipeiproject.SmartOfficeGRPC.stringResponse> getChangeItemNameMethod;
+    if ((getChangeItemNameMethod = ComputerControlSystemServiceGrpc.getChangeItemNameMethod) == null) {
       synchronized (ComputerControlSystemServiceGrpc.class) {
-        if ((getChangeApplianceNameMethod = ComputerControlSystemServiceGrpc.getChangeApplianceNameMethod) == null) {
-          ComputerControlSystemServiceGrpc.getChangeApplianceNameMethod = getChangeApplianceNameMethod = 
+        if ((getChangeItemNameMethod = ComputerControlSystemServiceGrpc.getChangeItemNameMethod) == null) {
+          ComputerControlSystemServiceGrpc.getChangeItemNameMethod = getChangeItemNameMethod = 
               io.grpc.MethodDescriptor.<org.DS.xinqipeiproject.SmartOfficeGRPC.stringRequest, org.DS.xinqipeiproject.SmartOfficeGRPC.stringResponse>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
               .setFullMethodName(generateFullMethodName(
-                  "SmartFarmingGRPC.ComputerControlSystemService", "changeApplianceName"))
+                  "SmartOfficeGRPC.ComputerControlSystemService", "changeItemName"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   org.DS.xinqipeiproject.SmartOfficeGRPC.stringRequest.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   org.DS.xinqipeiproject.SmartOfficeGRPC.stringResponse.getDefaultInstance()))
-                  .setSchemaDescriptor(new ComputerControlSystemServiceMethodDescriptorSupplier("changeApplianceName"))
+                  .setSchemaDescriptor(new ComputerControlSystemServiceMethodDescriptorSupplier("changeItemName"))
                   .build();
           }
         }
      }
-     return getChangeApplianceNameMethod;
+     return getChangeItemNameMethod;
   }
 
   /**
@@ -184,9 +184,9 @@ public final class ComputerControlSystemServiceGrpc {
 
     /**
      */
-    public void initialAppliance(org.DS.xinqipeiproject.SmartOfficeGRPC.Empty request,
+    public void initialItem(org.DS.xinqipeiproject.SmartOfficeGRPC.Empty request,
         io.grpc.stub.StreamObserver<org.DS.xinqipeiproject.SmartOfficeGRPC.computercontrolsystemResponse> responseObserver) {
-      asyncUnimplementedUnaryCall(getInitialApplianceMethod(), responseObserver);
+      asyncUnimplementedUnaryCall(getInitialItemMethod(), responseObserver);
     }
 
     /**
@@ -205,20 +205,20 @@ public final class ComputerControlSystemServiceGrpc {
 
     /**
      */
-    public void changeApplianceName(org.DS.xinqipeiproject.SmartOfficeGRPC.stringRequest request,
+    public void changeItemName(org.DS.xinqipeiproject.SmartOfficeGRPC.stringRequest request,
         io.grpc.stub.StreamObserver<org.DS.xinqipeiproject.SmartOfficeGRPC.stringResponse> responseObserver) {
-      asyncUnimplementedUnaryCall(getChangeApplianceNameMethod(), responseObserver);
+      asyncUnimplementedUnaryCall(getChangeItemNameMethod(), responseObserver);
     }
 
     @java.lang.Override public final io.grpc.ServerServiceDefinition bindService() {
       return io.grpc.ServerServiceDefinition.builder(getServiceDescriptor())
           .addMethod(
-            getInitialApplianceMethod(),
+            getInitialItemMethod(),
             asyncUnaryCall(
               new MethodHandlers<
                 org.DS.xinqipeiproject.SmartOfficeGRPC.Empty,
                 org.DS.xinqipeiproject.SmartOfficeGRPC.computercontrolsystemResponse>(
-                  this, METHODID_INITIAL_APPLIANCE)))
+                  this, METHODID_INITIAL_ITEM)))
           .addMethod(
             getChangeVolumeMethod(),
             asyncServerStreamingCall(
@@ -234,12 +234,12 @@ public final class ComputerControlSystemServiceGrpc {
                 org.DS.xinqipeiproject.SmartOfficeGRPC.booleanResponse>(
                   this, METHODID_ON_OFF)))
           .addMethod(
-            getChangeApplianceNameMethod(),
+            getChangeItemNameMethod(),
             asyncUnaryCall(
               new MethodHandlers<
                 org.DS.xinqipeiproject.SmartOfficeGRPC.stringRequest,
                 org.DS.xinqipeiproject.SmartOfficeGRPC.stringResponse>(
-                  this, METHODID_CHANGE_APPLIANCE_NAME)))
+                  this, METHODID_CHANGE_ITEM_NAME)))
           .build();
     }
   }
@@ -264,10 +264,10 @@ public final class ComputerControlSystemServiceGrpc {
 
     /**
      */
-    public void initialAppliance(org.DS.xinqipeiproject.SmartOfficeGRPC.Empty request,
+    public void initialItem(org.DS.xinqipeiproject.SmartOfficeGRPC.Empty request,
         io.grpc.stub.StreamObserver<org.DS.xinqipeiproject.SmartOfficeGRPC.computercontrolsystemResponse> responseObserver) {
       asyncUnaryCall(
-          getChannel().newCall(getInitialApplianceMethod(), getCallOptions()), request, responseObserver);
+          getChannel().newCall(getInitialItemMethod(), getCallOptions()), request, responseObserver);
     }
 
     /**
@@ -288,10 +288,10 @@ public final class ComputerControlSystemServiceGrpc {
 
     /**
      */
-    public void changeApplianceName(org.DS.xinqipeiproject.SmartOfficeGRPC.stringRequest request,
+    public void changeItemName(org.DS.xinqipeiproject.SmartOfficeGRPC.stringRequest request,
         io.grpc.stub.StreamObserver<org.DS.xinqipeiproject.SmartOfficeGRPC.stringResponse> responseObserver) {
       asyncUnaryCall(
-          getChannel().newCall(getChangeApplianceNameMethod(), getCallOptions()), request, responseObserver);
+          getChannel().newCall(getChangeItemNameMethod(), getCallOptions()), request, responseObserver);
     }
   }
 
@@ -315,9 +315,9 @@ public final class ComputerControlSystemServiceGrpc {
 
     /**
      */
-    public org.DS.xinqipeiproject.SmartOfficeGRPC.computercontrolsystemResponse initialAppliance(org.DS.xinqipeiproject.SmartOfficeGRPC.Empty request) {
+    public org.DS.xinqipeiproject.SmartOfficeGRPC.computercontrolsystemResponse initialItem(org.DS.xinqipeiproject.SmartOfficeGRPC.Empty request) {
       return blockingUnaryCall(
-          getChannel(), getInitialApplianceMethod(), getCallOptions(), request);
+          getChannel(), getInitialItemMethod(), getCallOptions(), request);
     }
 
     /**
@@ -337,9 +337,9 @@ public final class ComputerControlSystemServiceGrpc {
 
     /**
      */
-    public org.DS.xinqipeiproject.SmartOfficeGRPC.stringResponse changeApplianceName(org.DS.xinqipeiproject.SmartOfficeGRPC.stringRequest request) {
+    public org.DS.xinqipeiproject.SmartOfficeGRPC.stringResponse changeItemName(org.DS.xinqipeiproject.SmartOfficeGRPC.stringRequest request) {
       return blockingUnaryCall(
-          getChannel(), getChangeApplianceNameMethod(), getCallOptions(), request);
+          getChannel(), getChangeItemNameMethod(), getCallOptions(), request);
     }
   }
 
@@ -363,10 +363,10 @@ public final class ComputerControlSystemServiceGrpc {
 
     /**
      */
-    public com.google.common.util.concurrent.ListenableFuture<org.DS.xinqipeiproject.SmartOfficeGRPC.computercontrolsystemResponse> initialAppliance(
+    public com.google.common.util.concurrent.ListenableFuture<org.DS.xinqipeiproject.SmartOfficeGRPC.computercontrolsystemResponse> initialItem(
         org.DS.xinqipeiproject.SmartOfficeGRPC.Empty request) {
       return futureUnaryCall(
-          getChannel().newCall(getInitialApplianceMethod(), getCallOptions()), request);
+          getChannel().newCall(getInitialItemMethod(), getCallOptions()), request);
     }
 
     /**
@@ -379,17 +379,17 @@ public final class ComputerControlSystemServiceGrpc {
 
     /**
      */
-    public com.google.common.util.concurrent.ListenableFuture<org.DS.xinqipeiproject.SmartOfficeGRPC.stringResponse> changeApplianceName(
+    public com.google.common.util.concurrent.ListenableFuture<org.DS.xinqipeiproject.SmartOfficeGRPC.stringResponse> changeItemName(
         org.DS.xinqipeiproject.SmartOfficeGRPC.stringRequest request) {
       return futureUnaryCall(
-          getChannel().newCall(getChangeApplianceNameMethod(), getCallOptions()), request);
+          getChannel().newCall(getChangeItemNameMethod(), getCallOptions()), request);
     }
   }
 
-  private static final int METHODID_INITIAL_APPLIANCE = 0;
+  private static final int METHODID_INITIAL_ITEM = 0;
   private static final int METHODID_CHANGE_VOLUME = 1;
   private static final int METHODID_ON_OFF = 2;
-  private static final int METHODID_CHANGE_APPLIANCE_NAME = 3;
+  private static final int METHODID_CHANGE_ITEM_NAME = 3;
 
   private static final class MethodHandlers<Req, Resp> implements
       io.grpc.stub.ServerCalls.UnaryMethod<Req, Resp>,
@@ -408,8 +408,8 @@ public final class ComputerControlSystemServiceGrpc {
     @java.lang.SuppressWarnings("unchecked")
     public void invoke(Req request, io.grpc.stub.StreamObserver<Resp> responseObserver) {
       switch (methodId) {
-        case METHODID_INITIAL_APPLIANCE:
-          serviceImpl.initialAppliance((org.DS.xinqipeiproject.SmartOfficeGRPC.Empty) request,
+        case METHODID_INITIAL_ITEM:
+          serviceImpl.initialItem((org.DS.xinqipeiproject.SmartOfficeGRPC.Empty) request,
               (io.grpc.stub.StreamObserver<org.DS.xinqipeiproject.SmartOfficeGRPC.computercontrolsystemResponse>) responseObserver);
           break;
         case METHODID_CHANGE_VOLUME:
@@ -420,8 +420,8 @@ public final class ComputerControlSystemServiceGrpc {
           serviceImpl.onOff((org.DS.xinqipeiproject.SmartOfficeGRPC.booleanRequest) request,
               (io.grpc.stub.StreamObserver<org.DS.xinqipeiproject.SmartOfficeGRPC.booleanResponse>) responseObserver);
           break;
-        case METHODID_CHANGE_APPLIANCE_NAME:
-          serviceImpl.changeApplianceName((org.DS.xinqipeiproject.SmartOfficeGRPC.stringRequest) request,
+        case METHODID_CHANGE_ITEM_NAME:
+          serviceImpl.changeItemName((org.DS.xinqipeiproject.SmartOfficeGRPC.stringRequest) request,
               (io.grpc.stub.StreamObserver<org.DS.xinqipeiproject.SmartOfficeGRPC.stringResponse>) responseObserver);
           break;
         default:
@@ -485,10 +485,10 @@ public final class ComputerControlSystemServiceGrpc {
         if (result == null) {
           serviceDescriptor = result = io.grpc.ServiceDescriptor.newBuilder(SERVICE_NAME)
               .setSchemaDescriptor(new ComputerControlSystemServiceFileDescriptorSupplier())
-              .addMethod(getInitialApplianceMethod())
+              .addMethod(getInitialItemMethod())
               .addMethod(getChangeVolumeMethod())
               .addMethod(getOnOffMethod())
-              .addMethod(getChangeApplianceNameMethod())
+              .addMethod(getChangeItemNameMethod())
               .build();
         }
       }

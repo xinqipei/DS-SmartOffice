@@ -4,11 +4,11 @@
 package org.DS.xinqipeiproject.SmartOfficeGRPC;
 
 /**
- * Protobuf type {@code SmartFarmingGRPC.lightingResponse}
+ * Protobuf type {@code SmartOfficeGRPC.lightingResponse}
  */
 public  final class lightingResponse extends
     com.google.protobuf.GeneratedMessageV3 implements
-    // @@protoc_insertion_point(message_implements:SmartFarmingGRPC.lightingResponse)
+    // @@protoc_insertion_point(message_implements:SmartOfficeGRPC.lightingResponse)
     lightingResponseOrBuilder {
 private static final long serialVersionUID = 0L;
   // Use lightingResponse.newBuilder() to construct.
@@ -83,13 +83,13 @@ private static final long serialVersionUID = 0L;
   }
   public static final com.google.protobuf.Descriptors.Descriptor
       getDescriptor() {
-    return org.DS.xinqipeiproject.SmartOfficeGRPC.LightingServiceImpl.internal_static_SmartFarmingGRPC_lightingResponse_descriptor;
+    return org.DS.xinqipeiproject.SmartOfficeGRPC.LightingServiceImpl.internal_static_SmartOfficeGRPC_lightingResponse_descriptor;
   }
 
   @java.lang.Override
   protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internalGetFieldAccessorTable() {
-    return org.DS.xinqipeiproject.SmartOfficeGRPC.LightingServiceImpl.internal_static_SmartFarmingGRPC_lightingResponse_fieldAccessorTable
+    return org.DS.xinqipeiproject.SmartOfficeGRPC.LightingServiceImpl.internal_static_SmartOfficeGRPC_lightingResponse_fieldAccessorTable
         .ensureFieldAccessorsInitialized(
             org.DS.xinqipeiproject.SmartOfficeGRPC.lightingResponse.class, org.DS.xinqipeiproject.SmartOfficeGRPC.lightingResponse.Builder.class);
   }
@@ -348,21 +348,21 @@ private static final long serialVersionUID = 0L;
     return builder;
   }
   /**
-   * Protobuf type {@code SmartFarmingGRPC.lightingResponse}
+   * Protobuf type {@code SmartOfficeGRPC.lightingResponse}
    */
   public static final class Builder extends
       com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
-      // @@protoc_insertion_point(builder_implements:SmartFarmingGRPC.lightingResponse)
+      // @@protoc_insertion_point(builder_implements:SmartOfficeGRPC.lightingResponse)
       org.DS.xinqipeiproject.SmartOfficeGRPC.lightingResponseOrBuilder {
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return org.DS.xinqipeiproject.SmartOfficeGRPC.LightingServiceImpl.internal_static_SmartFarmingGRPC_lightingResponse_descriptor;
+      return org.DS.xinqipeiproject.SmartOfficeGRPC.LightingServiceImpl.internal_static_SmartOfficeGRPC_lightingResponse_descriptor;
     }
 
     @java.lang.Override
     protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return org.DS.xinqipeiproject.SmartOfficeGRPC.LightingServiceImpl.internal_static_SmartFarmingGRPC_lightingResponse_fieldAccessorTable
+      return org.DS.xinqipeiproject.SmartOfficeGRPC.LightingServiceImpl.internal_static_SmartOfficeGRPC_lightingResponse_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
               org.DS.xinqipeiproject.SmartOfficeGRPC.lightingResponse.class, org.DS.xinqipeiproject.SmartOfficeGRPC.lightingResponse.Builder.class);
     }
@@ -397,7 +397,7 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public com.google.protobuf.Descriptors.Descriptor
         getDescriptorForType() {
-      return org.DS.xinqipeiproject.SmartOfficeGRPC.LightingServiceImpl.internal_static_SmartFarmingGRPC_lightingResponse_descriptor;
+      return org.DS.xinqipeiproject.SmartOfficeGRPC.LightingServiceImpl.internal_static_SmartOfficeGRPC_lightingResponse_descriptor;
     }
 
     @java.lang.Override
@@ -684,10 +684,10 @@ private static final long serialVersionUID = 0L;
     }
 
 
-    // @@protoc_insertion_point(builder_scope:SmartFarmingGRPC.lightingResponse)
+    // @@protoc_insertion_point(builder_scope:SmartOfficeGRPC.lightingResponse)
   }
 
-  // @@protoc_insertion_point(class_scope:SmartFarmingGRPC.lightingResponse)
+  // @@protoc_insertion_point(class_scope:SmartOfficeGRPC.lightingResponse)
   private static final org.DS.xinqipeiproject.SmartOfficeGRPC.lightingResponse DEFAULT_INSTANCE;
   static {
     DEFAULT_INSTANCE = new org.DS.xinqipeiproject.SmartOfficeGRPC.lightingResponse();

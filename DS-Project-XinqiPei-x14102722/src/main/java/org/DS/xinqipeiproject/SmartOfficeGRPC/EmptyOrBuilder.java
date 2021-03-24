@@ -4,6 +4,6 @@
 package org.DS.xinqipeiproject.SmartOfficeGRPC;
 
 public interface EmptyOrBuilder extends
-    // @@protoc_insertion_point(interface_extends:SmartFarmingGRPC.Empty)
+    // @@protoc_insertion_point(interface_extends:SmartOfficeGRPC.Empty)
     com.google.protobuf.MessageOrBuilder {
 }

@@ -4,11 +4,11 @@
 package org.DS.xinqipeiproject.SmartOfficeGRPC;
 
 /**
- * Protobuf type {@code SmartFarmingGRPC.valueRequest}
+ * Protobuf type {@code SmartOfficeGRPC.valueRequest}
  */
 public  final class valueRequest extends
     com.google.protobuf.GeneratedMessageV3 implements
-    // @@protoc_insertion_point(message_implements:SmartFarmingGRPC.valueRequest)
+    // @@protoc_insertion_point(message_implements:SmartOfficeGRPC.valueRequest)
     valueRequestOrBuilder {
 private static final long serialVersionUID = 0L;
   // Use valueRequest.newBuilder() to construct.
@@ -69,13 +69,13 @@ private static final long serialVersionUID = 0L;
   }
   public static final com.google.protobuf.Descriptors.Descriptor
       getDescriptor() {
-    return org.DS.xinqipeiproject.SmartOfficeGRPC.SecuritycameraServiceImpl.internal_static_SmartFarmingGRPC_valueRequest_descriptor;
+    return org.DS.xinqipeiproject.SmartOfficeGRPC.SecuritycameraServiceImpl.internal_static_SmartOfficeGRPC_valueRequest_descriptor;
   }
 
   @java.lang.Override
   protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internalGetFieldAccessorTable() {
-    return org.DS.xinqipeiproject.SmartOfficeGRPC.SecuritycameraServiceImpl.internal_static_SmartFarmingGRPC_valueRequest_fieldAccessorTable
+    return org.DS.xinqipeiproject.SmartOfficeGRPC.SecuritycameraServiceImpl.internal_static_SmartOfficeGRPC_valueRequest_fieldAccessorTable
         .ensureFieldAccessorsInitialized(
             org.DS.xinqipeiproject.SmartOfficeGRPC.valueRequest.class, org.DS.xinqipeiproject.SmartOfficeGRPC.valueRequest.Builder.class);
   }
@@ -246,21 +246,21 @@ private static final long serialVersionUID = 0L;
     return builder;
   }
   /**
-   * Protobuf type {@code SmartFarmingGRPC.valueRequest}
+   * Protobuf type {@code SmartOfficeGRPC.valueRequest}
    */
   public static final class Builder extends
       com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
-      // @@protoc_insertion_point(builder_implements:SmartFarmingGRPC.valueRequest)
+      // @@protoc_insertion_point(builder_implements:SmartOfficeGRPC.valueRequest)
       org.DS.xinqipeiproject.SmartOfficeGRPC.valueRequestOrBuilder {
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return org.DS.xinqipeiproject.SmartOfficeGRPC.SecuritycameraServiceImpl.internal_static_SmartFarmingGRPC_valueRequest_descriptor;
+      return org.DS.xinqipeiproject.SmartOfficeGRPC.SecuritycameraServiceImpl.internal_static_SmartOfficeGRPC_valueRequest_descriptor;
     }
 
     @java.lang.Override
     protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return org.DS.xinqipeiproject.SmartOfficeGRPC.SecuritycameraServiceImpl.internal_static_SmartFarmingGRPC_valueRequest_fieldAccessorTable
+      return org.DS.xinqipeiproject.SmartOfficeGRPC.SecuritycameraServiceImpl.internal_static_SmartOfficeGRPC_valueRequest_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
               org.DS.xinqipeiproject.SmartOfficeGRPC.valueRequest.class, org.DS.xinqipeiproject.SmartOfficeGRPC.valueRequest.Builder.class);
     }
@@ -291,7 +291,7 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public com.google.protobuf.Descriptors.Descriptor
         getDescriptorForType() {
-      return org.DS.xinqipeiproject.SmartOfficeGRPC.SecuritycameraServiceImpl.internal_static_SmartFarmingGRPC_valueRequest_descriptor;
+      return org.DS.xinqipeiproject.SmartOfficeGRPC.SecuritycameraServiceImpl.internal_static_SmartOfficeGRPC_valueRequest_descriptor;
     }
 
     @java.lang.Override
@@ -430,10 +430,10 @@ private static final long serialVersionUID = 0L;
     }
 
 
-    // @@protoc_insertion_point(builder_scope:SmartFarmingGRPC.valueRequest)
+    // @@protoc_insertion_point(builder_scope:SmartOfficeGRPC.valueRequest)
   }
 
-  // @@protoc_insertion_point(class_scope:SmartFarmingGRPC.valueRequest)
+  // @@protoc_insertion_point(class_scope:SmartOfficeGRPC.valueRequest)
   private static final org.DS.xinqipeiproject.SmartOfficeGRPC.valueRequest DEFAULT_INSTANCE;
   static {
     DEFAULT_INSTANCE = new org.DS.xinqipeiproject.SmartOfficeGRPC.valueRequest();

@@ -4,7 +4,7 @@
 package org.DS.xinqipeiproject.SmartOfficeGRPC;
 
 public interface radiatorsResponseOrBuilder extends
-    // @@protoc_insertion_point(interface_extends:SmartFarmingGRPC.radiatorsResponse)
+    // @@protoc_insertion_point(interface_extends:SmartOfficeGRPC.radiatorsResponse)
     com.google.protobuf.MessageOrBuilder {
 
   /**

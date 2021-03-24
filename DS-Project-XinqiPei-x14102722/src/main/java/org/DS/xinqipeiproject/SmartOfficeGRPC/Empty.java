@@ -4,11 +4,11 @@
 package org.DS.xinqipeiproject.SmartOfficeGRPC;
 
 /**
- * Protobuf type {@code SmartFarmingGRPC.Empty}
+ * Protobuf type {@code SmartOfficeGRPC.Empty}
  */
 public  final class Empty extends
     com.google.protobuf.GeneratedMessageV3 implements
-    // @@protoc_insertion_point(message_implements:SmartFarmingGRPC.Empty)
+    // @@protoc_insertion_point(message_implements:SmartOfficeGRPC.Empty)
     EmptyOrBuilder {
 private static final long serialVersionUID = 0L;
   // Use Empty.newBuilder() to construct.
@@ -62,13 +62,13 @@ private static final long serialVersionUID = 0L;
   }
   public static final com.google.protobuf.Descriptors.Descriptor
       getDescriptor() {
-    return org.DS.xinqipeiproject.SmartOfficeGRPC.SecuritycameraServiceImpl.internal_static_SmartFarmingGRPC_Empty_descriptor;
+    return org.DS.xinqipeiproject.SmartOfficeGRPC.SecuritycameraServiceImpl.internal_static_SmartOfficeGRPC_Empty_descriptor;
   }
 
   @java.lang.Override
   protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internalGetFieldAccessorTable() {
-    return org.DS.xinqipeiproject.SmartOfficeGRPC.SecuritycameraServiceImpl.internal_static_SmartFarmingGRPC_Empty_fieldAccessorTable
+    return org.DS.xinqipeiproject.SmartOfficeGRPC.SecuritycameraServiceImpl.internal_static_SmartOfficeGRPC_Empty_fieldAccessorTable
         .ensureFieldAccessorsInitialized(
             org.DS.xinqipeiproject.SmartOfficeGRPC.Empty.class, org.DS.xinqipeiproject.SmartOfficeGRPC.Empty.Builder.class);
   }
@@ -219,21 +219,21 @@ private static final long serialVersionUID = 0L;
     return builder;
   }
   /**
-   * Protobuf type {@code SmartFarmingGRPC.Empty}
+   * Protobuf type {@code SmartOfficeGRPC.Empty}
    */
   public static final class Builder extends
       com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
-      // @@protoc_insertion_point(builder_implements:SmartFarmingGRPC.Empty)
+      // @@protoc_insertion_point(builder_implements:SmartOfficeGRPC.Empty)
       org.DS.xinqipeiproject.SmartOfficeGRPC.EmptyOrBuilder {
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return org.DS.xinqipeiproject.SmartOfficeGRPC.SecuritycameraServiceImpl.internal_static_SmartFarmingGRPC_Empty_descriptor;
+      return org.DS.xinqipeiproject.SmartOfficeGRPC.SecuritycameraServiceImpl.internal_static_SmartOfficeGRPC_Empty_descriptor;
     }
 
     @java.lang.Override
     protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return org.DS.xinqipeiproject.SmartOfficeGRPC.SecuritycameraServiceImpl.internal_static_SmartFarmingGRPC_Empty_fieldAccessorTable
+      return org.DS.xinqipeiproject.SmartOfficeGRPC.SecuritycameraServiceImpl.internal_static_SmartOfficeGRPC_Empty_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
               org.DS.xinqipeiproject.SmartOfficeGRPC.Empty.class, org.DS.xinqipeiproject.SmartOfficeGRPC.Empty.Builder.class);
     }
@@ -262,7 +262,7 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public com.google.protobuf.Descriptors.Descriptor
         getDescriptorForType() {
-      return org.DS.xinqipeiproject.SmartOfficeGRPC.SecuritycameraServiceImpl.internal_static_SmartFarmingGRPC_Empty_descriptor;
+      return org.DS.xinqipeiproject.SmartOfficeGRPC.SecuritycameraServiceImpl.internal_static_SmartOfficeGRPC_Empty_descriptor;
     }
 
     @java.lang.Override
@@ -371,10 +371,10 @@ private static final long serialVersionUID = 0L;
     }
 
 
-    // @@protoc_insertion_point(builder_scope:SmartFarmingGRPC.Empty)
+    // @@protoc_insertion_point(builder_scope:SmartOfficeGRPC.Empty)
   }
 
-  // @@protoc_insertion_point(class_scope:SmartFarmingGRPC.Empty)
+  // @@protoc_insertion_point(class_scope:SmartOfficeGRPC.Empty)
   private static final org.DS.xinqipeiproject.SmartOfficeGRPC.Empty DEFAULT_INSTANCE;
   static {
     DEFAULT_INSTANCE = new org.DS.xinqipeiproject.SmartOfficeGRPC.Empty();

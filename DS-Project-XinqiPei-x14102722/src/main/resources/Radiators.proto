@@ -4,10 +4,10 @@ option java_multiple_files = true;
 option java_package = "org.DS.xinqipeiproject.SmartOfficeGRPC";
 option java_outer_classname = "RadiatorsServiceImpl";
 
-package SmartFarmingGRPC;
+package SmartOfficeGRPC;
 
 service RadiatorsService {
-  rpc initialAppliance(Empty) returns (radiatorsResponse) {}
+  rpc initialItem(Empty) returns (radiatorsResponse) {}
   
   rpc changeTemperature(valueRequest) returns (stream valueResponse) {}
   
@@ -15,7 +15,7 @@ service RadiatorsService {
   
   rpc onOff(booleanRequest) returns (booleanResponse) {}
   
-  rpc changeApplianceName(stringRequest) returns (stringResponse) {}	
+  rpc changeItemName(stringRequest) returns (stringResponse) {}	
 
 }
 

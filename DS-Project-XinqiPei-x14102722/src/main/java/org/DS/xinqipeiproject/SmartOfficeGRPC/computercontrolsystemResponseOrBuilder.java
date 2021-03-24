@@ -4,7 +4,7 @@
 package org.DS.xinqipeiproject.SmartOfficeGRPC;
 
 public interface computercontrolsystemResponseOrBuilder extends
-    // @@protoc_insertion_point(interface_extends:SmartFarmingGRPC.computercontrolsystemResponse)
+    // @@protoc_insertion_point(interface_extends:SmartOfficeGRPC.computercontrolsystemResponse)
     com.google.protobuf.MessageOrBuilder {
 
   /**

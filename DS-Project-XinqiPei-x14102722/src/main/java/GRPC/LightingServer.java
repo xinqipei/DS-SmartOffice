@@ -111,9 +111,9 @@ public class LightingServer extends LightingServiceImplBase{
 	
 
 	@Override
-	public void initialAppliance(Empty request, StreamObserver<lightingResponse> responseObserver) {
+	public void initialItem(Empty request, StreamObserver<lightingResponse> responseObserver) {
 		// TODO Auto-generated method stub
-		System.out.println("Receiving initial appliance request for Lightings");
+		System.out.println("Receiving initial item request for Lightings");
 		String status;
 		
 		if(myLighting.isOn()) {
@@ -123,7 +123,7 @@ public class LightingServer extends LightingServiceImplBase{
 			  status ="Off";
 
 		}
-		String aName = myLighting.getApplianceName();
+		String aName = myLighting.getitemName();
 		String aStatus = status;
 		Integer aBrightness = myLighting.getBrightness();
 		
@@ -173,12 +173,12 @@ public class LightingServer extends LightingServiceImplBase{
 	}//end onOff method
 
 	@Override
-	public void changeApplianceName(stringRequest request, StreamObserver<stringResponse> responseObserver) {
+	public void changeItemName(stringRequest request, StreamObserver<stringResponse> responseObserver) {
 		// TODO Auto-generated method stub
 		String name = request.getText();
 		System.out.println("Changing lighting name to "+name);
 
-		myLighting.setApplianceName(name);
+		myLighting.setitemName(name);
 		 
 		stringResponse response = stringResponse.newBuilder().setText(name).build();
 		System.out.println("Response "+response.getText());

@@ -101,9 +101,9 @@ public class RadiatorsServer extends RadiatorsServiceImplBase{
 	}
 
 	@Override
-	public void initialAppliance(Empty request, StreamObserver<radiatorsResponse> responseObserver) {
+	public void initialItem(Empty request, StreamObserver<radiatorsResponse> responseObserver) {
 		// TODO Auto-generated method stub
-		System.out.println("Receiving initial appliance request for TV ");
+		System.out.println("Receiving initial item request for TV ");
 		String status;
 		
 		if(myRadiators.isOn()) {
@@ -113,7 +113,7 @@ public class RadiatorsServer extends RadiatorsServiceImplBase{
 			status = "Off";
 		}
 		
-		String aName = myRadiators.getApplianceName();
+		String aName = myRadiators.getitemName();
 		String aStatus = status;
 		Integer aTemperature = myRadiators.getTemperature();
 		Integer aFan = myRadiators.getSpeed();
@@ -130,11 +130,11 @@ public class RadiatorsServer extends RadiatorsServiceImplBase{
 		int currentTemperature = myRadiators.getTemperature();
 		int changeTemperature = request.getLength();
 		
-		System.out.println("Receiving new temperature for Radiators " + currentTemperature);
+		System.out.println("Updated new radiator temperature " + currentTemperature);
 		int newTemperature = currentTemperature + changeTemperature;
-		if(newTemperature > 40 || newTemperature < 0 ) {//start if
-			System.out.println("Temperature cannot exceed 40 or be less than 0: " + newTemperature);
-			System.out.println("The current Temperature is set to: " + myRadiators.getTemperature());
+		if(newTemperature > 30 || newTemperature < 15 ) {//start if
+			System.out.println("Temperature cannot go over 40 or less than 15: " + newTemperature);
+			System.out.println("The temperature is: " + myRadiators.getTemperature());
 			
 			valueResponse response = valueResponse.newBuilder().setLength(myRadiators.getTemperature()).build();
 			responseObserver.onNext(response);
@@ -150,31 +150,6 @@ public class RadiatorsServer extends RadiatorsServiceImplBase{
 		
 	}
 
-	@Override
-	public void changeFan(valueRequest request, StreamObserver<valueResponse> responseObserver) {
-		// TODO Auto-generated method stub
-		int currentSpeed = myRadiators.getSpeed();
-		int changeSpeed = request.getLength();
-		
-		System.out.println("Receiving new fan speed for Radiators " + currentSpeed);
-		int newSpeed = currentSpeed + changeSpeed;
-		if(newSpeed > 10 || newSpeed < 0 ) {//start if
-			System.out.println("Speed cannot exceed 10 or be less than 0: " + newSpeed);
-			System.out.println("The current speed is set to: " + myRadiators.getSpeed());
-			
-			valueResponse response = valueResponse.newBuilder().setLength(myRadiators.getSpeed()).build();
-			responseObserver.onNext(response);
-			responseObserver.onCompleted();
-		}//end if
-		else {//start else
-			myRadiators.setSpeed(newSpeed);
-			System.out.println("The updated fan speed is: " + newSpeed);		
-			valueResponse response = valueResponse.newBuilder().setLength(newSpeed).build();
-			responseObserver.onNext(response);
-			responseObserver.onCompleted();
-		}//end else
-		
-	}
 
 	@Override
 	public void onOff(booleanRequest request, StreamObserver<booleanResponse> responseObserver) {
@@ -190,12 +165,12 @@ public class RadiatorsServer extends RadiatorsServiceImplBase{
 	}
 
 	@Override
-	public void changeApplianceName(stringRequest request, StreamObserver<stringResponse> responseObserver) {
+	public void changeItemName(stringRequest request, StreamObserver<stringResponse> responseObserver) {
 		// TODO Auto-generated method stub
 		String name = request.getText();
 		System.out.println("Changing projector name to "+name);
 
-		myRadiators.setApplianceName(name);
+		myRadiators.setitemName(name);
 		 
 		stringResponse response = stringResponse.newBuilder().setText(name).build();
 		System.out.println("Response "+response.getText());

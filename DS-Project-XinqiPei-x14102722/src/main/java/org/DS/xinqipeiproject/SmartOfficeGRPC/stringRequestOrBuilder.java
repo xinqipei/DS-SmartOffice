@@ -4,7 +4,7 @@
 package org.DS.xinqipeiproject.SmartOfficeGRPC;
 
 public interface stringRequestOrBuilder extends
-    // @@protoc_insertion_point(interface_extends:SmartFarmingGRPC.stringRequest)
+    // @@protoc_insertion_point(interface_extends:SmartOfficeGRPC.stringRequest)
     com.google.protobuf.MessageOrBuilder {
 
   /**

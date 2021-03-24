@@ -4,7 +4,7 @@
 package org.DS.xinqipeiproject.SmartOfficeGRPC;
 
 public interface lightingResponseOrBuilder extends
-    // @@protoc_insertion_point(interface_extends:SmartFarmingGRPC.lightingResponse)
+    // @@protoc_insertion_point(interface_extends:SmartOfficeGRPC.lightingResponse)
     com.google.protobuf.MessageOrBuilder {
 
   /**

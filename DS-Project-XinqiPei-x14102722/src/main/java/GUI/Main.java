@@ -45,10 +45,10 @@ import java.awt.Color;
 public class Main {
 	
 	private JFrame frame;
-	private JTextField appliance_name_text;
-	private JTextField appliance_onOff_text;
-	private JTextField appliance_extra_op_text;
-	private JTextField appliance_extra_op2_text;
+	private JTextField Item_name_text;
+	private JTextField Item_onOff_text;
+	private JTextField Item_extra_op_text;
+	private JTextField Item_extra_op2_text;
 	
 	private static ComputerControlSystemServiceGrpc.ComputerControlSystemServiceBlockingStub computercontrolsystem_blockingStub;
 	private static ComputerControlSystemServiceGrpc.ComputerControlSystemServiceStub computercontrolsystem_asyncStub;
@@ -73,7 +73,7 @@ public class Main {
 	
 	public JLabel computercontrolsystemInfo_name;
 	public JLabel computercontrolsystemInfo_status;
-	public JLabel computercontrolsystemInfo_intensity;
+	public JLabel computercontrolsystemInfo_volume;
 	public JLabel computercontrolsystemInfo_range;
 	
 	public JLabel lightingInfo_name;
@@ -82,7 +82,7 @@ public class Main {
 	
 	public JLabel camInfo_name;
 	public JLabel camInfo_status;
-	public JLabel camInfo_intensity;
+	public JLabel camInfo_brightness;
 	public JLabel camInfo_camera;
 	
 	public JLabel radiatorsInfo_name;
@@ -90,10 +90,10 @@ public class Main {
 	public JLabel radiatorsInfo_temperature;
 	public JLabel radiatorsInfo_speed;
 	
-	int radiatorsPort =8080;
-	int computercontrolsystemPort =8081;
-	int lightingPort =8082;
-	int camPort =8083;
+	int radiatorsPort =1234;
+	int computercontrolsystemPort =1235;
+	int lightingPort =1236;
+	int camPort =1237;
 	
 	public static void main(String[] args) {
 		EventQueue.invokeLater(new Runnable() {
@@ -111,12 +111,12 @@ public class Main {
 	public Main() throws InterruptedException, IOException {
 		initialize();
 		Registering r = new Registering();
-		//Start Appliance Registry, GRPC servers and channels then unregister
+		//Start Item Registry, GRPC servers and channels then unregister
 		r.jmndsRegister(radiatorsPort, computercontrolsystemPort, lightingPort, camPort);
 		startGRPCServers();
 		channels();
 		r.unRegister();
-		loadInitialAppliances();
+		loadInitialItems();
 	}
 	
 	public void startGRPCServers() throws IOException, InterruptedException {
@@ -125,7 +125,7 @@ public class Main {
 		RadiatorsServer.startDiscovery();
 
 	}
-	public void loadInitialAppliances() throws IOException, InterruptedException {
+	public void loadInitialItems() throws IOException, InterruptedException {
 		initialRadiators();
 		initialComputerControlSystem();
 		initialLighting();
@@ -166,67 +166,63 @@ public class Main {
 		
 
 		/*Heading Label*/
-		JLabel headLabel = new JLabel("Smart Farming");
+		JLabel headLabel = new JLabel("Smart Office");
 		headLabel.setFont(new Font("Tahoma", Font.BOLD, 16));
 		headLabel.setBounds(101, 11, 245, 14);
 		frame.getContentPane().add(headLabel);
 		
-		JLabel controller_lbl = new JLabel("Appliance Controls");
+		JLabel controller_lbl = new JLabel("Item Controls");
 		controller_lbl.setFont(new Font("Tahoma", Font.BOLD, 15));
 		controller_lbl.setBounds(10, 64, 143, 14);
 		frame.getContentPane().add(controller_lbl);
 		
-		JLabel appliance_name_lbl = new JLabel("Appliance Name");
-		appliance_name_lbl.setBounds(56, 89, 83, 14);
-		frame.getContentPane().add(appliance_name_lbl);
+		JLabel Item_name_lbl = new JLabel("Location");
+		Item_name_lbl.setBounds(56, 89, 83, 14);
+		frame.getContentPane().add(Item_name_lbl);
 		
-		JLabel intensity_lbl = new JLabel("Volume");
-		intensity_lbl.setBounds(275, 90, 48, 14);
-		frame.getContentPane().add(intensity_lbl);
+		JLabel volume_lbl = new JLabel("Volume");
+		volume_lbl.setBounds(275, 90, 48, 14);
+		frame.getContentPane().add(volume_lbl);
 		
-		JLabel lblChannel = new JLabel("Range");
+		JLabel lblChannel = new JLabel("");
 		lblChannel.setBounds(370, 90, 48, 14);
 		frame.getContentPane().add(lblChannel);
 		
-		JLabel appliance_name2_lblabel = new JLabel("Appliance Name");
-		appliance_name2_lblabel.setBounds(56, 135, 83, 14);
-		frame.getContentPane().add(appliance_name2_lblabel);
+		JLabel Item_name2_lblabel = new JLabel("Location");
+		Item_name2_lblabel.setBounds(56, 135, 83, 14);
+		frame.getContentPane().add(Item_name2_lblabel);
 		
-		JLabel appliance_status2_lbl = new JLabel("Appliance Status");
-		appliance_status2_lbl.setBounds(170, 135, 83, 14);
-		frame.getContentPane().add(appliance_status2_lbl);
+		JLabel Item_status2_lbl = new JLabel("Item Status");
+		Item_status2_lbl.setBounds(170, 135, 83, 14);
+		frame.getContentPane().add(Item_status2_lbl);
 		
 		JLabel temperature_lbl = new JLabel("Temperature");
 		temperature_lbl.setBounds(270, 135, 48, 14);
 		frame.getContentPane().add(temperature_lbl);
 		
-		JLabel speed_lbl = new JLabel("Speed");
-		speed_lbl.setBounds(370, 135, 38, 14);
-		frame.getContentPane().add(speed_lbl);
+		JLabel Item_name3_lbl = new JLabel("Name");
+		Item_name3_lbl.setBounds(56, 180, 83, 14);
+		frame.getContentPane().add(Item_name3_lbl);
 		
-		JLabel appliance_name3_lbl = new JLabel("Appliance Name");
-		appliance_name3_lbl.setBounds(56, 180, 83, 14);
-		frame.getContentPane().add(appliance_name3_lbl);
-		
-		JLabel intensity_2_lbl = new JLabel("Volume");
-		intensity_2_lbl.setBounds(270, 180, 48, 14);
-		frame.getContentPane().add(intensity_2_lbl);
+		JLabel volume_2_lbl = new JLabel("");
+		volume_2_lbl.setBounds(270, 180, 48, 14);
+		frame.getContentPane().add(volume_2_lbl);
 		
 		JLabel lblCamera = new JLabel("Camera");
 		lblCamera.setBounds(355, 180, 63, 14);
 		frame.getContentPane().add(lblCamera);
 		
-		JLabel appliance_status3_lbl = new JLabel("Appliance Status");
-		appliance_status3_lbl.setBounds(170, 180, 83, 14);
-		frame.getContentPane().add(appliance_status3_lbl);
+		JLabel Item_status3_lbl = new JLabel("Item Status");
+		Item_status3_lbl.setBounds(170, 180, 83, 14);
+		frame.getContentPane().add(Item_status3_lbl);
 		
-		JLabel appliance_name4_lbl = new JLabel("Appliance Name");
-		appliance_name4_lbl.setBounds(56, 225, 83, 14);
-		frame.getContentPane().add(appliance_name4_lbl);
+		JLabel Item_name4_lbl = new JLabel("Location");
+		Item_name4_lbl.setBounds(56, 225, 83, 14);
+		frame.getContentPane().add(Item_name4_lbl);
 		
-		JLabel appliance_status4_lbl = new JLabel("Appliance Status");
-		appliance_status4_lbl.setBounds(170, 225, 83, 14);
-		frame.getContentPane().add(appliance_status4_lbl);
+		JLabel Item_status4_lbl = new JLabel("Item Status");
+		Item_status4_lbl.setBounds(170, 225, 83, 14);
+		frame.getContentPane().add(Item_status4_lbl);
 		
 		JLabel lblBrigtness = new JLabel("Brightness");
 		lblBrigtness.setBounds(254, 225, 72, 14);
@@ -235,11 +231,11 @@ public class Main {
 		//////////////////////
 		//ComputerControlSystem Volume Buttons
 		//////////////////////
-		JButton computercontrolsystem_intensityUp_btn = new JButton("+");
-		computercontrolsystem_intensityUp_btn.setFont(new Font("Tahoma", Font.BOLD, 5));
-		computercontrolsystem_intensityUp_btn.setBounds(290, 104, 38, 20);
-		frame.getContentPane().add(computercontrolsystem_intensityUp_btn);
-		computercontrolsystem_intensityUp_btn.addActionListener(new ActionListener() {
+		JButton computercontrolsystem_volumeUp_btn = new JButton("+");
+		computercontrolsystem_volumeUp_btn.setFont(new Font("Tahoma", Font.BOLD, 5));
+		computercontrolsystem_volumeUp_btn.setBounds(290, 104, 38, 20);
+		frame.getContentPane().add(computercontrolsystem_volumeUp_btn);
+		computercontrolsystem_volumeUp_btn.addActionListener(new ActionListener() {
 		public void actionPerformed(ActionEvent arg0) {
 			
 			System.out.println(+1);
@@ -247,11 +243,11 @@ public class Main {
 		}
 		});
 
-		JButton computercontrolsystem_intensityDown_btn = new JButton("-");
-		computercontrolsystem_intensityDown_btn.setFont(new Font("Tahoma", Font.BOLD, 5));
-		computercontrolsystem_intensityDown_btn.setBounds(254, 104, 38, 20);
-		frame.getContentPane().add(computercontrolsystem_intensityDown_btn);
-		computercontrolsystem_intensityDown_btn.addActionListener(new ActionListener() {
+		JButton computercontrolsystem_volumeDown_btn = new JButton("-");
+		computercontrolsystem_volumeDown_btn.setFont(new Font("Tahoma", Font.BOLD, 5));
+		computercontrolsystem_volumeDown_btn.setBounds(254, 104, 38, 20);
+		frame.getContentPane().add(computercontrolsystem_volumeDown_btn);
+		computercontrolsystem_volumeDown_btn.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent arg0) {
 				
 		    	System.out.println(-1);
@@ -285,13 +281,13 @@ public class Main {
 		});
 		
 		//////////////////////
-		//Camera Volume Buttons
+		//Camera Brightness Buttons
 		//////////////////////
-		JButton camera_intensityUp_btn = new JButton("+");
-		camera_intensityUp_btn.setFont(new Font("Tahoma", Font.BOLD, 5));
-		camera_intensityUp_btn.setBounds(290, 194, 38, 20);
-		frame.getContentPane().add(camera_intensityUp_btn);
-		camera_intensityUp_btn.addActionListener(new ActionListener() {
+		JButton camera_volumeUp_btn = new JButton("+");
+		camera_volumeUp_btn.setFont(new Font("Tahoma", Font.BOLD, 5));
+		camera_volumeUp_btn.setBounds(290, 194, 38, 20);
+		frame.getContentPane().add(camera_volumeUp_btn);
+		camera_volumeUp_btn.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent arg0) {
 				System.out.println(+1);
 		    	changeVolume(1,"Securitycamera");
@@ -299,11 +295,11 @@ public class Main {
 			
 		});
 		
-		JButton camera_intensityDown_btn = new JButton("-");
-		camera_intensityDown_btn.setFont(new Font("Tahoma", Font.BOLD, 5));
-		camera_intensityDown_btn.setBounds(254, 194, 38, 20);
-		frame.getContentPane().add(camera_intensityDown_btn);
-		camera_intensityDown_btn.addActionListener(new ActionListener() {
+		JButton camera_volumeDown_btn = new JButton("-");
+		camera_volumeDown_btn.setFont(new Font("Tahoma", Font.BOLD, 5));
+		camera_volumeDown_btn.setBounds(254, 194, 38, 20);
+		frame.getContentPane().add(camera_volumeDown_btn);
+		camera_volumeDown_btn.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent arg0) {
 				System.out.println(-1);
 		    	changeVolume(-1,"Securitycamera");
@@ -323,11 +319,11 @@ public class Main {
 					System.out.println("changedUpdate "+ computercontrolsystemName_tf.getText());
 				  }
 				  public void removeUpdate(DocumentEvent e) {
-					  changeApplianceName(computercontrolsystemName_tf.getText(),"ComputerControlSystem");
+					  changeItemName(computercontrolsystemName_tf.getText(),"ComputerControlSystem");
 				  }
 				  public void insertUpdate(DocumentEvent e) {
 					  System.out.println("insertUpdate "+ computercontrolsystemName_tf.getText());
-					  changeApplianceName(computercontrolsystemName_tf.getText(),"ComputerControlSystem");
+					  changeItemName(computercontrolsystemName_tf.getText(),"ComputerControlSystem");
 
 				  }
 
@@ -343,15 +339,15 @@ public class Main {
 					
 				  }
 				  public void removeUpdate(DocumentEvent e) {
-					  changeApplianceName(radiatorsName_tf.getText(),"Radiators");
+					  changeItemName(radiatorsName_tf.getText(),"Radiators");
 				  }
 				  public void insertUpdate(DocumentEvent e) {
 				
-					  changeApplianceName(radiatorsName_tf.getText(),"Radiators");
+					  changeItemName(radiatorsName_tf.getText(),"Radiators");
 				  }
-
-	
-				});	
+				    
+				});
+		
 		
 		camName_tf = new JTextField();
 		camName_tf.setColumns(10);
@@ -362,11 +358,11 @@ public class Main {
 					
 				  }
 				  public void removeUpdate(DocumentEvent e) {
-					  changeApplianceName(camName_tf.getText(),"Securitycamera");
+					  changeItemName(camName_tf.getText(),"Securitycamera");
 				  }
 				  public void insertUpdate(DocumentEvent e) {
 					  System.out.println("insertUpdate "+camName_tf.getText());
-					  changeApplianceName(camName_tf.getText(),"Securitycamera");
+					  changeItemName(camName_tf.getText(),"Securitycamera");
 				  }
 
 	
@@ -381,10 +377,10 @@ public class Main {
 					
 				  }
 				  public void removeUpdate(DocumentEvent e) {
-					  changeApplianceName(lightingName_tf.getText(),"Lighting");
+					  changeItemName(lightingName_tf.getText(),"Lighting");
 				  }
 				  public void insertUpdate(DocumentEvent e) {
-					  changeApplianceName(lightingName_tf.getText(),"Lighting");
+					  changeItemName(lightingName_tf.getText(),"Lighting");
 				  }
 
 	
@@ -460,10 +456,10 @@ public class Main {
 		label_3.setBounds(10, 439, 45, 14);
 		frame.getContentPane().add(label_3);
 		
-		JLabel lblApplianceStatus = new JLabel("Appliance Info");
-		lblApplianceStatus.setFont(new Font("Tahoma", Font.BOLD, 15));
-		lblApplianceStatus.setBounds(10, 288, 143, 14);
-		frame.getContentPane().add(lblApplianceStatus);
+		JLabel lblItemStatus = new JLabel("Item Info");
+		lblItemStatus.setFont(new Font("Tahoma", Font.BOLD, 15));
+		lblItemStatus.setBounds(10, 288, 143, 14);
+		frame.getContentPane().add(lblItemStatus);
 		
 		
 		final JToggleButton computercontrolsystemOnOff_tgl = new JToggleButton("On");
@@ -546,51 +542,7 @@ public class Main {
 			}
 	    });
 		
-		JButton radiators_speedDown_btn = new JButton("-");
-		radiators_speedDown_btn.setFont(new Font("Tahoma", Font.BOLD, 5));
-		radiators_speedDown_btn.setBounds(345, 149, 38, 20);
-		frame.getContentPane().add(radiators_speedDown_btn);
-		radiators_speedDown_btn.addActionListener(new ActionListener() {
-			public void actionPerformed(ActionEvent arg0) {
-				
-		    	System.out.println(-1);
-		    	changeSpeed(-1);
-			}
-		});
-		
-		JButton radiators_speedUp_btn = new JButton("+");
-		radiators_speedUp_btn.setFont(new Font("Tahoma", Font.BOLD, 5));
-		radiators_speedUp_btn.setBounds(381, 149, 38, 20);
-		frame.getContentPane().add(radiators_speedUp_btn);
-		radiators_speedUp_btn.addActionListener(new ActionListener() {
-			public void actionPerformed(ActionEvent e) {
-				System.out.println(+1);
-		    	changeSpeed(1);}
-		});
-		
-		/*JButton computercontrolsystemRangeDown_btn = new JButton("-");
-		computercontrolsystemRangeDown_btn.setFont(new Font("Tahoma", Font.BOLD, 5));
-		computercontrolsystemRangeDown_btn.setBounds(355, 104, 38, 20);
-		frame.getContentPane().add(computercontrolsystemRangeDown_btn);
-		computercontrolsystemRangeDown_btn.addActionListener(new ActionListener() {
-			public void actionPerformed(ActionEvent e) {
-		    	System.out.println(1);
-		    	changeRange(-1);
-			}
-		});*/
-		
-		/*JButton computercontrolsystemRangeUp_btn = new JButton("+");
-		computercontrolsystemRangeUp_btn.setFont(new Font("Tahoma", Font.BOLD, 5));
-		computercontrolsystemRangeUp_btn.setBounds(391, 104, 38, 20);
-		frame.getContentPane().add(computercontrolsystemRangeUp_btn);
-		computercontrolsystemRangeUp_btn.addActionListener(new ActionListener() {
-			public void actionPerformed(ActionEvent e) {
-				System.out.println(+1);
-				changeRange(1);
-			}
-		});*/
-		
-		String[] appNames = {"Select a Camera","Offices", "Garage", "Entrance", "Exit", "Roof", "Stairs" };
+		String[] appNames = {"Select a Camera","Meeting Room", "Reception", "Toilets", "Hallway", "Entrance", "Exit" };
 		JComboBox appList = new JComboBox(appNames);
 		appList.setFont(new Font("Tahoma", Font.PLAIN, 10));
 		appList.setBounds(345, 194, 86, 20);
@@ -604,63 +556,55 @@ public class Main {
 }		
 	});
 		
-		JLabel lblApplianceStatus_1 = new JLabel("Appliance Status");
-		lblApplianceStatus_1.setBounds(170, 90, 83, 14);
-		frame.getContentPane().add(lblApplianceStatus_1);
+		JLabel lblItemStatus_1 = new JLabel("Switch");
+		lblItemStatus_1.setBounds(170, 90, 83, 14);
+		frame.getContentPane().add(lblItemStatus_1);
 		
-		radiatorsInfo_name = new JLabel("Appliance Name");
+		radiatorsInfo_name = new JLabel("Location");
 		radiatorsInfo_name.setBounds(10, 377, 111, 14);
 		frame.getContentPane().add(radiatorsInfo_name);
 		
-		radiatorsInfo_status = new JLabel("Appliance Status");
+		radiatorsInfo_status = new JLabel("Switch");
 		radiatorsInfo_status.setBounds(125, 377, 90, 14);
 		frame.getContentPane().add(radiatorsInfo_status);
 		
 		radiatorsInfo_temperature = new JLabel("Volume");
 		radiatorsInfo_temperature.setBounds(220, 377, 90, 14);
 		frame.getContentPane().add(radiatorsInfo_temperature);
-		
-		radiatorsInfo_speed = new JLabel("Speed");
-		radiatorsInfo_speed.setBounds(320, 377, 38, 14);
-		frame.getContentPane().add(radiatorsInfo_speed);
-		
-		computercontrolsystemInfo_name= new JLabel("Appliance Name");
+	
+		computercontrolsystemInfo_name= new JLabel("Location");
 		computercontrolsystemInfo_name.setBounds(10, 332, 111, 14);
 		frame.getContentPane().add(computercontrolsystemInfo_name);
 		
-		computercontrolsystemInfo_status = new JLabel("Appliance Status");
+		computercontrolsystemInfo_status = new JLabel("Item Status");
 		computercontrolsystemInfo_status.setBounds(125,332, 90, 14);
 		frame.getContentPane().add(computercontrolsystemInfo_status);
 		
-		computercontrolsystemInfo_intensity = new JLabel("Volume");
-		computercontrolsystemInfo_intensity.setBounds(220, 332, 90, 14);
-		frame.getContentPane().add(computercontrolsystemInfo_intensity);
+		computercontrolsystemInfo_volume = new JLabel("Volume");
+		computercontrolsystemInfo_volume.setBounds(220, 332, 90, 14);
+		frame.getContentPane().add(computercontrolsystemInfo_volume);
 		
-		computercontrolsystemInfo_range = new JLabel("Range");
+		computercontrolsystemInfo_range = new JLabel("");
 		computercontrolsystemInfo_range.setBounds(320, 332, 98, 14);
 		frame.getContentPane().add(computercontrolsystemInfo_range);
 		
-		camInfo_name = new JLabel("Appliance Name");
-		camInfo_name.setBounds(10, 418, 111, 14);
-		frame.getContentPane().add(camInfo_name);
-		
-		camInfo_status = new JLabel("Appliance Status");
+		camInfo_status = new JLabel("Item Status");
 		camInfo_status.setBounds(125, 418, 83, 14);
 		frame.getContentPane().add(camInfo_status);
 		
-		camInfo_intensity = new JLabel("Volume");
-		camInfo_intensity.setBounds(220, 418, 83, 14);
-		frame.getContentPane().add(camInfo_intensity);
+		camInfo_brightness = new JLabel("Brightness");
+		camInfo_brightness.setBounds(220, 418, 83, 14);
+		frame.getContentPane().add(camInfo_brightness);
 		
 		camInfo_camera = new JLabel("Camera");
 		camInfo_camera.setBounds(320, 418, 98, 14);
 		frame.getContentPane().add(camInfo_camera);
 		
-		lightingInfo_name = new JLabel("Appliance Name");
+		lightingInfo_name = new JLabel("Location");
 		lightingInfo_name.setBounds(10, 458, 111, 14);
 		frame.getContentPane().add(lightingInfo_name);
 		
-		lightingInfo_status = new JLabel("Appliance Status");
+		lightingInfo_status = new JLabel("Item Status");
 		lightingInfo_status.setBounds(125, 458, 90, 14);
 		frame.getContentPane().add(lightingInfo_status);
 		
@@ -682,16 +626,16 @@ public class Main {
 	//GRPC Methods
 	///////////////////
 	
-	public void changeApplianceName(String newName, String appliance) {
+	public void changeItemName(String newName, String Item) {
 
 		System.out.println("New Name "+ newName);
-		System.out.println("Appliance "+ appliance);
+		System.out.println("Item "+ Item);
 
 		stringRequest req = stringRequest.newBuilder().setText(newName).build();
-		System.out.println("Changing appliance Name");
+		System.out.println("Changing Item Name");
 		
-		if(appliance.equals("ComputerControlSystem")) {
-			System.out.println("Appliance is a ComputerControlSystem");
+		if(Item.equals("ComputerControlSystem")) {
+			System.out.println("Item is a ComputerControlSystem");
 			stringRequest request = stringRequest.newBuilder().setText(newName).build();
 			StreamObserver<stringResponse> responseObserver = new StreamObserver<stringResponse>() {
 
@@ -714,7 +658,7 @@ public class Main {
 				}
 			
 			};
-			computercontrolsystem_asyncStub.changeApplianceName(request,responseObserver);
+			computercontrolsystem_asyncStub.changeItemName(request,responseObserver);
 			try {
 				Thread.sleep(200);
 			}
@@ -724,22 +668,22 @@ public class Main {
 			}
 		}
 		
-		else if(appliance.equals("Radiators")) {
-			System.out.println("Appliance is Radiators");
-			stringResponse response = radiators_blockingStub.changeApplianceName(req);
+		else if(Item.equals("Radiators")) {
+			System.out.println("Item is Radiators");
+			stringResponse response = radiators_blockingStub.changeItemName(req);
 				System.out.println("Radiators Response "+response.getText());
 		        radiatorsInfo_name.setText("Name: "+response.getText());
 
 		}
-		else if(appliance.equals("Lighting")) {
-			System.out.println("Appliance is a Lighting");
-			stringResponse response = lighting_blockingStub.changeApplianceName(req);
+		else if(Item.equals("Lighting")) {
+			System.out.println("Item is a Lighting");
+			stringResponse response = lighting_blockingStub.changeItemName(req);
 			System.out.println("Lighting Response "+response.getText());
 	        lightingInfo_name.setText("Name: "+response.getText());
 
 		}
-		else if(appliance.equals("Securitycamera")) {
-			stringResponse response = securitycamera_blockingStub.changeApplianceName(req);
+		else if(Item.equals("Securitycamera")) {
+			stringResponse response = securitycamera_blockingStub.changeItemName(req);
 			System.out.println("Camera Response "+response.getText());
 	        camInfo_name.setText("Name: "+response.getText());
 		}
@@ -747,18 +691,18 @@ public class Main {
 				
 	}
 	
-	public void changeVolume(int intensity, String appliance) {
-		valueRequest req = valueRequest.newBuilder().setLength(intensity).build();
-		System.out.println("Changing intensity");
+	public void changeVolume(int volume, String Item) {
+		valueRequest req = valueRequest.newBuilder().setLength(volume).build();
+		System.out.println("Changing volume");
 
-		if(appliance.equals("ComputerControlSystem")) {
+		if(Item.equals("ComputerControlSystem")) {
 			StreamObserver<valueResponse> response = new StreamObserver<valueResponse>() {
 				
 				@Override
 				public void onNext(valueResponse value) {
 					System.out.println("Receiving "+value);
 					String vol = String.valueOf(value.getLength());
-			        computercontrolsystemInfo_intensity.setText("Volume"+vol);
+			        computercontrolsystemInfo_volume.setText("Volume"+vol);
 					
 				}
 
@@ -771,24 +715,24 @@ public class Main {
 				@Override
 				public void onCompleted() {
 					// TODO Auto-generated method stub
-					System.out.println("Completed changing intensity");
+					System.out.println("Completed changing volume");
 				}
 				
 				
 			};
-			//Handle appliance to work with
+			//Handle Item to work with
 
 			 computercontrolsystem_asyncStub.changeVolume(req, response);			
 				System.out.println("ComputerControlSystem response "+req.getLength());
 
-		}else if(appliance.equals("Securitycamera")) {
+		}else if(Item.equals("Securitycamera")) {
 			StreamObserver<valueResponse> response = new StreamObserver<valueResponse>() {
 				
 				@Override
 				public void onNext(valueResponse value) {
 					System.out.println("Receiving "+value);
 					String vol = String.valueOf(value.getLength());
-			        camInfo_intensity.setText("Volume: "+vol);
+			        camInfo_brightness.setText("Volume: "+vol);
 				}
 
 				@Override
@@ -800,7 +744,7 @@ public class Main {
 				@Override
 				public void onCompleted() {
 					// TODO Auto-generated method stub
-					System.out.println("Completed changing intensity");
+					System.out.println("Completed changing volume");
 				}
 				
 				
@@ -841,14 +785,14 @@ public class Main {
 
 	}
 	
-	/*public void changeRange(int value) {
+	/*public void change(int value) {
 		valueRequest req = valueRequest.newBuilder().setLength(value).build();
-		System.out.println("Changing Range");
+		System.out.println("Changing ");
 		
 		Iterator<valueResponse> response;
 		//Error Handling
 		try {
-			 response =computercontrolsystem_blockingStub.changeRange(req);
+			 response =computercontrolsystem_blockingStub.change(req);
 
 		}catch(StatusRuntimeException e) {
 			System.out.println("RPC failed: {0}"+ e.getStatus());
@@ -857,7 +801,7 @@ public class Main {
 		
 		System.out.println("ComputerControlSystem range response"+((DocumentEvent) response).getLength());
 		String range = String.valueOf(((DocumentEvent) response).getLength());
-        computercontrolsystemInfo_range.setText("Range No: "+range);
+        computercontrolsystemInfo_range.setText(" No: "+range);
 
 
 	}*/
@@ -890,7 +834,7 @@ public class Main {
 				
 				
 			};
-			//Handle appliance to work with
+			//Handle Item to work with
 
 			radiators_asyncStub.changeTemperature(req, response);			
 			System.out.println("Temperature response "+req.getLength());
@@ -925,75 +869,19 @@ public class Main {
 				
 				
 			};
-			//Handle appliance to work with
+			//Handle Item to work with
 
 			securitycamera_asyncStub.changeCamera(req, response);			
 			System.out.println("Channel response "+req.getText());
 
 	}
-	
-	
-	/*public void changeCamera(String camera) {
-		stringRequest req = stringRequest.newBuilder().setText(camera).build();
-		System.out.println("Changing application to "+ req.getText());
-		stringResponse response;
 		
-		
-		//Error Handling
-		try {
-			 response = securitycamera_blockingStub.changeCamera(req);
-
-		}catch(StatusRuntimeException e) {
-			System.out.println("RPC failed: {0}"+ e.getStatus());
-			return;
-		}
-		System.out.println("Camera response"+(response).getText());
-		String cam = String.valueOf((response).getText());
-        camInfo_camera.setText("Cam: "+cam);
-
-	}*/
-	
-	public void changeSpeed(int speed) {
-		valueRequest req = valueRequest.newBuilder().setLength(speed).build();
-		System.out.println("Changing speed");
-
-			StreamObserver<valueResponse> response = new StreamObserver<valueResponse>() {
-				
-				@Override
-				public void onNext(valueResponse value) {
-					System.out.println("Receiving "+value);
-					String spd = String.valueOf(value.getLength());
-			        radiatorsInfo_speed.setText("Speed"+spd);
-					
-				}
-
-				@Override
-				public void onError(Throwable t) {
-					// TODO Auto-generated method stub
-					t.printStackTrace();
-				}
-
-				@Override
-				public void onCompleted() {
-					// TODO Auto-generated method stub
-					System.out.println("Completed changing speed");
-				}
-				
-				
-			};
-			//Handle appliance to work with
-
-			radiators_asyncStub.changeFan(req, response);			
-			System.out.println("Speed response "+req.getLength());
-
-	}
-	
-	public void onOff(boolean onOff, String appliance) {
+	public void onOff(boolean onOff, String Item) {
 		booleanRequest req = booleanRequest.newBuilder().setMsg(onOff).build();
 		System.out.println("On Off");
 
-	//Handle appliance to work with
-		if(appliance.equals("ComputerControlSystem")) {
+	//Handle Item to work with
+		if(Item.equals("ComputerControlSystem")) {
 			booleanResponse response;
 			//Error Handling
 			try {
@@ -1012,7 +900,7 @@ public class Main {
 				computercontrolsystemInfo_status.setText("Status: Off");
 			}
 		}
-		else if(appliance.equals("Radiators")) {
+		else if(Item.equals("Radiators")) {
 			booleanResponse response;
 			//Error Handling
 			try {
@@ -1030,7 +918,7 @@ public class Main {
 					radiatorsInfo_status.setText("Status: Off");
 				}
 		}
-		else if(appliance.equals("Securitycamera")) {
+		else if(Item.equals("Securitycamera")) {
 			System.out.println("SecurityCamera Response ");
 
 			booleanResponse response;
@@ -1051,7 +939,7 @@ public class Main {
 				camInfo_status.setText("Status: Off");
 			}
 		}
-		else if(appliance.equals("Lighting")) {
+		else if(Item.equals("Lighting")) {
 			booleanResponse response;
 			
 			//Error Handling
@@ -1079,7 +967,7 @@ public class Main {
 		radiatorsResponse response;
 		//Error Handling
 		try {
-			 response = radiators_blockingStub.initialAppliance(req);
+			 response = radiators_blockingStub.initialItem(req);
 
 		}catch(StatusRuntimeException e) {
 			System.out.println("RPC failed: {0}"+ e.getStatus());
@@ -1099,7 +987,7 @@ public class Main {
 		
 		//Error Handling
 		try {
-			 response = computercontrolsystem_blockingStub.initialAppliance(req);
+			 response = computercontrolsystem_blockingStub.initialItem(req);
 
 		}catch(StatusRuntimeException e) {
 			System.out.println("RPC failed: {0}"+ e.getStatus());
@@ -1107,8 +995,8 @@ public class Main {
 		}		
 		computercontrolsystemInfo_name.setText("Name: "+response.getAname());
 		computercontrolsystemInfo_status.setText("Status: "+response.getStatus());
-		String intensity = String.valueOf(response.getVolume());
-		computercontrolsystemInfo_intensity.setText("Volume: "+intensity);
+		String volume = String.valueOf(response.getVolume());
+		computercontrolsystemInfo_volume.setText("Volume: "+volume);
 
 
 	}
@@ -1119,7 +1007,7 @@ public class Main {
 		lightingResponse response;
 		//Error Handling
 		try {
-			 response = lighting_blockingStub.initialAppliance(req);
+			 response = lighting_blockingStub.initialItem(req);
 
 		}catch(StatusRuntimeException e) {
 			System.out.println("RPC failed: {0}"+ e.getStatus());
@@ -1140,7 +1028,7 @@ public class Main {
 		
 		//Error Handling
 		try {
-			 response = securitycamera_blockingStub.initialAppliance(req);
+			 response = securitycamera_blockingStub.initialItem(req);
 
 		}catch(StatusRuntimeException e) {
 			System.out.println("RPC failed: {0}"+ e.getStatus());
@@ -1151,7 +1039,7 @@ public class Main {
 		camInfo_status.setText("Status: "+response.getStatus());
 		String volume = String.valueOf(response.getVolume());
 		camInfo_camera.setText("App: "+ response.getCam());
-		camInfo_intensity.setText("Volume:"+volume);
+		camInfo_brightness.setText("Volume:"+volume);
 	}
 		
 

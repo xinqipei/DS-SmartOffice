@@ -24,39 +24,39 @@ public final class SecuritycameraServiceGrpc {
 
   private SecuritycameraServiceGrpc() {}
 
-  public static final String SERVICE_NAME = "SmartFarmingGRPC.SecuritycameraService";
+  public static final String SERVICE_NAME = "SmartOfficeGRPC.SecuritycameraService";
 
   // Static method descriptors that strictly reflect the proto.
   private static volatile io.grpc.MethodDescriptor<org.DS.xinqipeiproject.SmartOfficeGRPC.Empty,
-      org.DS.xinqipeiproject.SmartOfficeGRPC.cameraResponse> getInitialApplianceMethod;
+      org.DS.xinqipeiproject.SmartOfficeGRPC.cameraResponse> getInitialItemMethod;
 
   @io.grpc.stub.annotations.RpcMethod(
-      fullMethodName = SERVICE_NAME + '/' + "initialAppliance",
+      fullMethodName = SERVICE_NAME + '/' + "initialItem",
       requestType = org.DS.xinqipeiproject.SmartOfficeGRPC.Empty.class,
       responseType = org.DS.xinqipeiproject.SmartOfficeGRPC.cameraResponse.class,
       methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
   public static io.grpc.MethodDescriptor<org.DS.xinqipeiproject.SmartOfficeGRPC.Empty,
-      org.DS.xinqipeiproject.SmartOfficeGRPC.cameraResponse> getInitialApplianceMethod() {
-    io.grpc.MethodDescriptor<org.DS.xinqipeiproject.SmartOfficeGRPC.Empty, org.DS.xinqipeiproject.SmartOfficeGRPC.cameraResponse> getInitialApplianceMethod;
-    if ((getInitialApplianceMethod = SecuritycameraServiceGrpc.getInitialApplianceMethod) == null) {
+      org.DS.xinqipeiproject.SmartOfficeGRPC.cameraResponse> getInitialItemMethod() {
+    io.grpc.MethodDescriptor<org.DS.xinqipeiproject.SmartOfficeGRPC.Empty, org.DS.xinqipeiproject.SmartOfficeGRPC.cameraResponse> getInitialItemMethod;
+    if ((getInitialItemMethod = SecuritycameraServiceGrpc.getInitialItemMethod) == null) {
       synchronized (SecuritycameraServiceGrpc.class) {
-        if ((getInitialApplianceMethod = SecuritycameraServiceGrpc.getInitialApplianceMethod) == null) {
-          SecuritycameraServiceGrpc.getInitialApplianceMethod = getInitialApplianceMethod = 
+        if ((getInitialItemMethod = SecuritycameraServiceGrpc.getInitialItemMethod) == null) {
+          SecuritycameraServiceGrpc.getInitialItemMethod = getInitialItemMethod = 
               io.grpc.MethodDescriptor.<org.DS.xinqipeiproject.SmartOfficeGRPC.Empty, org.DS.xinqipeiproject.SmartOfficeGRPC.cameraResponse>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
               .setFullMethodName(generateFullMethodName(
-                  "SmartFarmingGRPC.SecuritycameraService", "initialAppliance"))
+                  "SmartOfficeGRPC.SecuritycameraService", "initialItem"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   org.DS.xinqipeiproject.SmartOfficeGRPC.Empty.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   org.DS.xinqipeiproject.SmartOfficeGRPC.cameraResponse.getDefaultInstance()))
-                  .setSchemaDescriptor(new SecuritycameraServiceMethodDescriptorSupplier("initialAppliance"))
+                  .setSchemaDescriptor(new SecuritycameraServiceMethodDescriptorSupplier("initialItem"))
                   .build();
           }
         }
      }
-     return getInitialApplianceMethod;
+     return getInitialItemMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<org.DS.xinqipeiproject.SmartOfficeGRPC.stringRequest,
@@ -77,7 +77,7 @@ public final class SecuritycameraServiceGrpc {
               io.grpc.MethodDescriptor.<org.DS.xinqipeiproject.SmartOfficeGRPC.stringRequest, org.DS.xinqipeiproject.SmartOfficeGRPC.stringResponse>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.SERVER_STREAMING)
               .setFullMethodName(generateFullMethodName(
-                  "SmartFarmingGRPC.SecuritycameraService", "changeCamera"))
+                  "SmartOfficeGRPC.SecuritycameraService", "changeCamera"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   org.DS.xinqipeiproject.SmartOfficeGRPC.stringRequest.getDefaultInstance()))
@@ -109,7 +109,7 @@ public final class SecuritycameraServiceGrpc {
               io.grpc.MethodDescriptor.<org.DS.xinqipeiproject.SmartOfficeGRPC.valueRequest, org.DS.xinqipeiproject.SmartOfficeGRPC.valueResponse>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.SERVER_STREAMING)
               .setFullMethodName(generateFullMethodName(
-                  "SmartFarmingGRPC.SecuritycameraService", "changeVolume"))
+                  "SmartOfficeGRPC.SecuritycameraService", "changeVolume"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   org.DS.xinqipeiproject.SmartOfficeGRPC.valueRequest.getDefaultInstance()))
@@ -141,7 +141,7 @@ public final class SecuritycameraServiceGrpc {
               io.grpc.MethodDescriptor.<org.DS.xinqipeiproject.SmartOfficeGRPC.booleanRequest, org.DS.xinqipeiproject.SmartOfficeGRPC.booleanResponse>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
               .setFullMethodName(generateFullMethodName(
-                  "SmartFarmingGRPC.SecuritycameraService", "onOff"))
+                  "SmartOfficeGRPC.SecuritycameraService", "onOff"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   org.DS.xinqipeiproject.SmartOfficeGRPC.booleanRequest.getDefaultInstance()))
@@ -156,35 +156,35 @@ public final class SecuritycameraServiceGrpc {
   }
 
   private static volatile io.grpc.MethodDescriptor<org.DS.xinqipeiproject.SmartOfficeGRPC.stringRequest,
-      org.DS.xinqipeiproject.SmartOfficeGRPC.stringResponse> getChangeApplianceNameMethod;
+      org.DS.xinqipeiproject.SmartOfficeGRPC.stringResponse> getChangeItemNameMethod;
 
   @io.grpc.stub.annotations.RpcMethod(
-      fullMethodName = SERVICE_NAME + '/' + "changeApplianceName",
+      fullMethodName = SERVICE_NAME + '/' + "changeItemName",
       requestType = org.DS.xinqipeiproject.SmartOfficeGRPC.stringRequest.class,
       responseType = org.DS.xinqipeiproject.SmartOfficeGRPC.stringResponse.class,
       methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
   public static io.grpc.MethodDescriptor<org.DS.xinqipeiproject.SmartOfficeGRPC.stringRequest,
-      org.DS.xinqipeiproject.SmartOfficeGRPC.stringResponse> getChangeApplianceNameMethod() {
-    io.grpc.MethodDescriptor<org.DS.xinqipeiproject.SmartOfficeGRPC.stringRequest, org.DS.xinqipeiproject.SmartOfficeGRPC.stringResponse> getChangeApplianceNameMethod;
-    if ((getChangeApplianceNameMethod = SecuritycameraServiceGrpc.getChangeApplianceNameMethod) == null) {
+      org.DS.xinqipeiproject.SmartOfficeGRPC.stringResponse> getChangeItemNameMethod() {
+    io.grpc.MethodDescriptor<org.DS.xinqipeiproject.SmartOfficeGRPC.stringRequest, org.DS.xinqipeiproject.SmartOfficeGRPC.stringResponse> getChangeItemNameMethod;
+    if ((getChangeItemNameMethod = SecuritycameraServiceGrpc.getChangeItemNameMethod) == null) {
       synchronized (SecuritycameraServiceGrpc.class) {
-        if ((getChangeApplianceNameMethod = SecuritycameraServiceGrpc.getChangeApplianceNameMethod) == null) {
-          SecuritycameraServiceGrpc.getChangeApplianceNameMethod = getChangeApplianceNameMethod = 
+        if ((getChangeItemNameMethod = SecuritycameraServiceGrpc.getChangeItemNameMethod) == null) {
+          SecuritycameraServiceGrpc.getChangeItemNameMethod = getChangeItemNameMethod = 
               io.grpc.MethodDescriptor.<org.DS.xinqipeiproject.SmartOfficeGRPC.stringRequest, org.DS.xinqipeiproject.SmartOfficeGRPC.stringResponse>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
               .setFullMethodName(generateFullMethodName(
-                  "SmartFarmingGRPC.SecuritycameraService", "changeApplianceName"))
+                  "SmartOfficeGRPC.SecuritycameraService", "changeItemName"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   org.DS.xinqipeiproject.SmartOfficeGRPC.stringRequest.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   org.DS.xinqipeiproject.SmartOfficeGRPC.stringResponse.getDefaultInstance()))
-                  .setSchemaDescriptor(new SecuritycameraServiceMethodDescriptorSupplier("changeApplianceName"))
+                  .setSchemaDescriptor(new SecuritycameraServiceMethodDescriptorSupplier("changeItemName"))
                   .build();
           }
         }
      }
-     return getChangeApplianceNameMethod;
+     return getChangeItemNameMethod;
   }
 
   /**
@@ -216,9 +216,9 @@ public final class SecuritycameraServiceGrpc {
 
     /**
      */
-    public void initialAppliance(org.DS.xinqipeiproject.SmartOfficeGRPC.Empty request,
+    public void initialItem(org.DS.xinqipeiproject.SmartOfficeGRPC.Empty request,
         io.grpc.stub.StreamObserver<org.DS.xinqipeiproject.SmartOfficeGRPC.cameraResponse> responseObserver) {
-      asyncUnimplementedUnaryCall(getInitialApplianceMethod(), responseObserver);
+      asyncUnimplementedUnaryCall(getInitialItemMethod(), responseObserver);
     }
 
     /**
@@ -244,20 +244,20 @@ public final class SecuritycameraServiceGrpc {
 
     /**
      */
-    public void changeApplianceName(org.DS.xinqipeiproject.SmartOfficeGRPC.stringRequest request,
+    public void changeItemName(org.DS.xinqipeiproject.SmartOfficeGRPC.stringRequest request,
         io.grpc.stub.StreamObserver<org.DS.xinqipeiproject.SmartOfficeGRPC.stringResponse> responseObserver) {
-      asyncUnimplementedUnaryCall(getChangeApplianceNameMethod(), responseObserver);
+      asyncUnimplementedUnaryCall(getChangeItemNameMethod(), responseObserver);
     }
 
     @java.lang.Override public final io.grpc.ServerServiceDefinition bindService() {
       return io.grpc.ServerServiceDefinition.builder(getServiceDescriptor())
           .addMethod(
-            getInitialApplianceMethod(),
+            getInitialItemMethod(),
             asyncUnaryCall(
               new MethodHandlers<
                 org.DS.xinqipeiproject.SmartOfficeGRPC.Empty,
                 org.DS.xinqipeiproject.SmartOfficeGRPC.cameraResponse>(
-                  this, METHODID_INITIAL_APPLIANCE)))
+                  this, METHODID_INITIAL_ITEM)))
           .addMethod(
             getChangeCameraMethod(),
             asyncServerStreamingCall(
@@ -280,12 +280,12 @@ public final class SecuritycameraServiceGrpc {
                 org.DS.xinqipeiproject.SmartOfficeGRPC.booleanResponse>(
                   this, METHODID_ON_OFF)))
           .addMethod(
-            getChangeApplianceNameMethod(),
+            getChangeItemNameMethod(),
             asyncUnaryCall(
               new MethodHandlers<
                 org.DS.xinqipeiproject.SmartOfficeGRPC.stringRequest,
                 org.DS.xinqipeiproject.SmartOfficeGRPC.stringResponse>(
-                  this, METHODID_CHANGE_APPLIANCE_NAME)))
+                  this, METHODID_CHANGE_ITEM_NAME)))
           .build();
     }
   }
@@ -310,10 +310,10 @@ public final class SecuritycameraServiceGrpc {
 
     /**
      */
-    public void initialAppliance(org.DS.xinqipeiproject.SmartOfficeGRPC.Empty request,
+    public void initialItem(org.DS.xinqipeiproject.SmartOfficeGRPC.Empty request,
         io.grpc.stub.StreamObserver<org.DS.xinqipeiproject.SmartOfficeGRPC.cameraResponse> responseObserver) {
       asyncUnaryCall(
-          getChannel().newCall(getInitialApplianceMethod(), getCallOptions()), request, responseObserver);
+          getChannel().newCall(getInitialItemMethod(), getCallOptions()), request, responseObserver);
     }
 
     /**
@@ -342,10 +342,10 @@ public final class SecuritycameraServiceGrpc {
 
     /**
      */
-    public void changeApplianceName(org.DS.xinqipeiproject.SmartOfficeGRPC.stringRequest request,
+    public void changeItemName(org.DS.xinqipeiproject.SmartOfficeGRPC.stringRequest request,
         io.grpc.stub.StreamObserver<org.DS.xinqipeiproject.SmartOfficeGRPC.stringResponse> responseObserver) {
       asyncUnaryCall(
-          getChannel().newCall(getChangeApplianceNameMethod(), getCallOptions()), request, responseObserver);
+          getChannel().newCall(getChangeItemNameMethod(), getCallOptions()), request, responseObserver);
     }
   }
 
@@ -369,9 +369,9 @@ public final class SecuritycameraServiceGrpc {
 
     /**
      */
-    public org.DS.xinqipeiproject.SmartOfficeGRPC.cameraResponse initialAppliance(org.DS.xinqipeiproject.SmartOfficeGRPC.Empty request) {
+    public org.DS.xinqipeiproject.SmartOfficeGRPC.cameraResponse initialItem(org.DS.xinqipeiproject.SmartOfficeGRPC.Empty request) {
       return blockingUnaryCall(
-          getChannel(), getInitialApplianceMethod(), getCallOptions(), request);
+          getChannel(), getInitialItemMethod(), getCallOptions(), request);
     }
 
     /**
@@ -399,9 +399,9 @@ public final class SecuritycameraServiceGrpc {
 
     /**
      */
-    public org.DS.xinqipeiproject.SmartOfficeGRPC.stringResponse changeApplianceName(org.DS.xinqipeiproject.SmartOfficeGRPC.stringRequest request) {
+    public org.DS.xinqipeiproject.SmartOfficeGRPC.stringResponse changeItemName(org.DS.xinqipeiproject.SmartOfficeGRPC.stringRequest request) {
       return blockingUnaryCall(
-          getChannel(), getChangeApplianceNameMethod(), getCallOptions(), request);
+          getChannel(), getChangeItemNameMethod(), getCallOptions(), request);
     }
   }
 
@@ -425,10 +425,10 @@ public final class SecuritycameraServiceGrpc {
 
     /**
      */
-    public com.google.common.util.concurrent.ListenableFuture<org.DS.xinqipeiproject.SmartOfficeGRPC.cameraResponse> initialAppliance(
+    public com.google.common.util.concurrent.ListenableFuture<org.DS.xinqipeiproject.SmartOfficeGRPC.cameraResponse> initialItem(
         org.DS.xinqipeiproject.SmartOfficeGRPC.Empty request) {
       return futureUnaryCall(
-          getChannel().newCall(getInitialApplianceMethod(), getCallOptions()), request);
+          getChannel().newCall(getInitialItemMethod(), getCallOptions()), request);
     }
 
     /**
@@ -441,18 +441,18 @@ public final class SecuritycameraServiceGrpc {
 
     /**
      */
-    public com.google.common.util.concurrent.ListenableFuture<org.DS.xinqipeiproject.SmartOfficeGRPC.stringResponse> changeApplianceName(
+    public com.google.common.util.concurrent.ListenableFuture<org.DS.xinqipeiproject.SmartOfficeGRPC.stringResponse> changeItemName(
         org.DS.xinqipeiproject.SmartOfficeGRPC.stringRequest request) {
       return futureUnaryCall(
-          getChannel().newCall(getChangeApplianceNameMethod(), getCallOptions()), request);
+          getChannel().newCall(getChangeItemNameMethod(), getCallOptions()), request);
     }
   }
 
-  private static final int METHODID_INITIAL_APPLIANCE = 0;
+  private static final int METHODID_INITIAL_ITEM = 0;
   private static final int METHODID_CHANGE_CAMERA = 1;
   private static final int METHODID_CHANGE_VOLUME = 2;
   private static final int METHODID_ON_OFF = 3;
-  private static final int METHODID_CHANGE_APPLIANCE_NAME = 4;
+  private static final int METHODID_CHANGE_ITEM_NAME = 4;
 
   private static final class MethodHandlers<Req, Resp> implements
       io.grpc.stub.ServerCalls.UnaryMethod<Req, Resp>,
@@ -471,8 +471,8 @@ public final class SecuritycameraServiceGrpc {
     @java.lang.SuppressWarnings("unchecked")
     public void invoke(Req request, io.grpc.stub.StreamObserver<Resp> responseObserver) {
       switch (methodId) {
-        case METHODID_INITIAL_APPLIANCE:
-          serviceImpl.initialAppliance((org.DS.xinqipeiproject.SmartOfficeGRPC.Empty) request,
+        case METHODID_INITIAL_ITEM:
+          serviceImpl.initialItem((org.DS.xinqipeiproject.SmartOfficeGRPC.Empty) request,
               (io.grpc.stub.StreamObserver<org.DS.xinqipeiproject.SmartOfficeGRPC.cameraResponse>) responseObserver);
           break;
         case METHODID_CHANGE_CAMERA:
@@ -487,8 +487,8 @@ public final class SecuritycameraServiceGrpc {
           serviceImpl.onOff((org.DS.xinqipeiproject.SmartOfficeGRPC.booleanRequest) request,
               (io.grpc.stub.StreamObserver<org.DS.xinqipeiproject.SmartOfficeGRPC.booleanResponse>) responseObserver);
           break;
-        case METHODID_CHANGE_APPLIANCE_NAME:
-          serviceImpl.changeApplianceName((org.DS.xinqipeiproject.SmartOfficeGRPC.stringRequest) request,
+        case METHODID_CHANGE_ITEM_NAME:
+          serviceImpl.changeItemName((org.DS.xinqipeiproject.SmartOfficeGRPC.stringRequest) request,
               (io.grpc.stub.StreamObserver<org.DS.xinqipeiproject.SmartOfficeGRPC.stringResponse>) responseObserver);
           break;
         default:
@@ -552,11 +552,11 @@ public final class SecuritycameraServiceGrpc {
         if (result == null) {
           serviceDescriptor = result = io.grpc.ServiceDescriptor.newBuilder(SERVICE_NAME)
               .setSchemaDescriptor(new SecuritycameraServiceFileDescriptorSupplier())
-              .addMethod(getInitialApplianceMethod())
+              .addMethod(getInitialItemMethod())
               .addMethod(getChangeCameraMethod())
               .addMethod(getChangeVolumeMethod())
               .addMethod(getOnOffMethod())
-              .addMethod(getChangeApplianceNameMethod())
+              .addMethod(getChangeItemNameMethod())
               .build();
         }
       }

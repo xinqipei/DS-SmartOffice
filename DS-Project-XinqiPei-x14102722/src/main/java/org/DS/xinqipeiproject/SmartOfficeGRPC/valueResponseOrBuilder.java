@@ -4,7 +4,7 @@
 package org.DS.xinqipeiproject.SmartOfficeGRPC;
 
 public interface valueResponseOrBuilder extends
-    // @@protoc_insertion_point(interface_extends:SmartFarmingGRPC.valueResponse)
+    // @@protoc_insertion_point(interface_extends:SmartOfficeGRPC.valueResponse)
     com.google.protobuf.MessageOrBuilder {
 
   /**

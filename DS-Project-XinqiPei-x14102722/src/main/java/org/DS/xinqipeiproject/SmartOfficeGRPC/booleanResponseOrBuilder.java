@@ -4,7 +4,7 @@
 package org.DS.xinqipeiproject.SmartOfficeGRPC;
 
 public interface booleanResponseOrBuilder extends
-    // @@protoc_insertion_point(interface_extends:SmartFarmingGRPC.booleanResponse)
+    // @@protoc_insertion_point(interface_extends:SmartOfficeGRPC.booleanResponse)
     com.google.protobuf.MessageOrBuilder {
 
   /**

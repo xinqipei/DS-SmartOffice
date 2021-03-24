@@ -15,8 +15,8 @@ public class Discovering {
 		return ComputerControlSystemPort;
 	}
 
-	public void setComputerControlSystemPort(int sprinklerPort) {
-		ComputerControlSystemPort = sprinklerPort;
+	public void setComputerControlSystemPort(int computercontrolsystemPort) {
+		ComputerControlSystemPort = computercontrolsystemPort;
 	}
 
 	public static class SampleListener implements ServiceListener {

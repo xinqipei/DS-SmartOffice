@@ -1,31 +1,31 @@
 package Models;
 
 public class Lighting {
-	private String appliance, applianceName;
+	private String item, itemName;
 	private boolean on;
 	private int brightness;
 	
 	public Lighting() {
-		this.appliance="Lighting";
+		this.item="Lighting";
 		this.on=true;
-		this.applianceName="Lighting Name";
+		this.itemName="Lighting Name";
 		this.brightness=30;
 	}
 
-	public String getAppliance() {
-		return appliance;
+	public String getitem() {
+		return item;
 	}
 
-	public void setAppliance(String appliance) {
-		this.appliance = appliance;
+	public void setitem(String item) {
+		this.item = item;
 	}
 
-	public String getApplianceName() {
-		return applianceName;
+	public String getitemName() {
+		return itemName;
 	}
 
-	public void setApplianceName(String applianceName) {
-		this.applianceName = applianceName;
+	public void setitemName(String itemName) {
+		this.itemName = itemName;
 	}
 
 	public boolean isOn() {

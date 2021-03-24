@@ -4,11 +4,11 @@
 package org.DS.xinqipeiproject.SmartOfficeGRPC;
 
 /**
- * Protobuf type {@code SmartFarmingGRPC.cameraResponse}
+ * Protobuf type {@code SmartOfficeGRPC.cameraResponse}
  */
 public  final class cameraResponse extends
     com.google.protobuf.GeneratedMessageV3 implements
-    // @@protoc_insertion_point(message_implements:SmartFarmingGRPC.cameraResponse)
+    // @@protoc_insertion_point(message_implements:SmartOfficeGRPC.cameraResponse)
     cameraResponseOrBuilder {
 private static final long serialVersionUID = 0L;
   // Use cameraResponse.newBuilder() to construct.
@@ -90,13 +90,13 @@ private static final long serialVersionUID = 0L;
   }
   public static final com.google.protobuf.Descriptors.Descriptor
       getDescriptor() {
-    return org.DS.xinqipeiproject.SmartOfficeGRPC.SecuritycameraServiceImpl.internal_static_SmartFarmingGRPC_cameraResponse_descriptor;
+    return org.DS.xinqipeiproject.SmartOfficeGRPC.SecuritycameraServiceImpl.internal_static_SmartOfficeGRPC_cameraResponse_descriptor;
   }
 
   @java.lang.Override
   protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internalGetFieldAccessorTable() {
-    return org.DS.xinqipeiproject.SmartOfficeGRPC.SecuritycameraServiceImpl.internal_static_SmartFarmingGRPC_cameraResponse_fieldAccessorTable
+    return org.DS.xinqipeiproject.SmartOfficeGRPC.SecuritycameraServiceImpl.internal_static_SmartOfficeGRPC_cameraResponse_fieldAccessorTable
         .ensureFieldAccessorsInitialized(
             org.DS.xinqipeiproject.SmartOfficeGRPC.cameraResponse.class, org.DS.xinqipeiproject.SmartOfficeGRPC.cameraResponse.Builder.class);
   }
@@ -399,21 +399,21 @@ private static final long serialVersionUID = 0L;
     return builder;
   }
   /**
-   * Protobuf type {@code SmartFarmingGRPC.cameraResponse}
+   * Protobuf type {@code SmartOfficeGRPC.cameraResponse}
    */
   public static final class Builder extends
       com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
-      // @@protoc_insertion_point(builder_implements:SmartFarmingGRPC.cameraResponse)
+      // @@protoc_insertion_point(builder_implements:SmartOfficeGRPC.cameraResponse)
       org.DS.xinqipeiproject.SmartOfficeGRPC.cameraResponseOrBuilder {
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return org.DS.xinqipeiproject.SmartOfficeGRPC.SecuritycameraServiceImpl.internal_static_SmartFarmingGRPC_cameraResponse_descriptor;
+      return org.DS.xinqipeiproject.SmartOfficeGRPC.SecuritycameraServiceImpl.internal_static_SmartOfficeGRPC_cameraResponse_descriptor;
     }
 
     @java.lang.Override
     protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return org.DS.xinqipeiproject.SmartOfficeGRPC.SecuritycameraServiceImpl.internal_static_SmartFarmingGRPC_cameraResponse_fieldAccessorTable
+      return org.DS.xinqipeiproject.SmartOfficeGRPC.SecuritycameraServiceImpl.internal_static_SmartOfficeGRPC_cameraResponse_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
               org.DS.xinqipeiproject.SmartOfficeGRPC.cameraResponse.class, org.DS.xinqipeiproject.SmartOfficeGRPC.cameraResponse.Builder.class);
     }
@@ -450,7 +450,7 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public com.google.protobuf.Descriptors.Descriptor
         getDescriptorForType() {
-      return org.DS.xinqipeiproject.SmartOfficeGRPC.SecuritycameraServiceImpl.internal_static_SmartFarmingGRPC_cameraResponse_descriptor;
+      return org.DS.xinqipeiproject.SmartOfficeGRPC.SecuritycameraServiceImpl.internal_static_SmartOfficeGRPC_cameraResponse_descriptor;
     }
 
     @java.lang.Override
@@ -811,10 +811,10 @@ private static final long serialVersionUID = 0L;
     }
 
 
-    // @@protoc_insertion_point(builder_scope:SmartFarmingGRPC.cameraResponse)
+    // @@protoc_insertion_point(builder_scope:SmartOfficeGRPC.cameraResponse)
   }
 
-  // @@protoc_insertion_point(class_scope:SmartFarmingGRPC.cameraResponse)
+  // @@protoc_insertion_point(class_scope:SmartOfficeGRPC.cameraResponse)
   private static final org.DS.xinqipeiproject.SmartOfficeGRPC.cameraResponse DEFAULT_INSTANCE;
   static {
     DEFAULT_INSTANCE = new org.DS.xinqipeiproject.SmartOfficeGRPC.cameraResponse();

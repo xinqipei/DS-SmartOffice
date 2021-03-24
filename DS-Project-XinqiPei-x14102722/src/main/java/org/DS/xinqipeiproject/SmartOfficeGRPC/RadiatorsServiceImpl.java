@@ -15,45 +15,45 @@ public final class RadiatorsServiceImpl {
         (com.google.protobuf.ExtensionRegistryLite) registry);
   }
   static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_SmartFarmingGRPC_Empty_descriptor;
+    internal_static_SmartOfficeGRPC_Empty_descriptor;
   static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_SmartFarmingGRPC_Empty_fieldAccessorTable;
+      internal_static_SmartOfficeGRPC_Empty_fieldAccessorTable;
   static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_SmartFarmingGRPC_stringRequest_descriptor;
+    internal_static_SmartOfficeGRPC_stringRequest_descriptor;
   static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_SmartFarmingGRPC_stringRequest_fieldAccessorTable;
+      internal_static_SmartOfficeGRPC_stringRequest_fieldAccessorTable;
   static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_SmartFarmingGRPC_stringResponse_descriptor;
+    internal_static_SmartOfficeGRPC_stringResponse_descriptor;
   static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_SmartFarmingGRPC_stringResponse_fieldAccessorTable;
+      internal_static_SmartOfficeGRPC_stringResponse_fieldAccessorTable;
   static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_SmartFarmingGRPC_booleanRequest_descriptor;
+    internal_static_SmartOfficeGRPC_booleanRequest_descriptor;
   static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_SmartFarmingGRPC_booleanRequest_fieldAccessorTable;
+      internal_static_SmartOfficeGRPC_booleanRequest_fieldAccessorTable;
   static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_SmartFarmingGRPC_booleanResponse_descriptor;
+    internal_static_SmartOfficeGRPC_booleanResponse_descriptor;
   static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_SmartFarmingGRPC_booleanResponse_fieldAccessorTable;
+      internal_static_SmartOfficeGRPC_booleanResponse_fieldAccessorTable;
   static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_SmartFarmingGRPC_valueRequest_descriptor;
+    internal_static_SmartOfficeGRPC_valueRequest_descriptor;
   static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_SmartFarmingGRPC_valueRequest_fieldAccessorTable;
+      internal_static_SmartOfficeGRPC_valueRequest_fieldAccessorTable;
   static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_SmartFarmingGRPC_valueResponse_descriptor;
+    internal_static_SmartOfficeGRPC_valueResponse_descriptor;
   static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_SmartFarmingGRPC_valueResponse_fieldAccessorTable;
+      internal_static_SmartOfficeGRPC_valueResponse_fieldAccessorTable;
   static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_SmartFarmingGRPC_radiatorsResponse_descriptor;
+    internal_static_SmartOfficeGRPC_radiatorsResponse_descriptor;
   static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_SmartFarmingGRPC_radiatorsResponse_fieldAccessorTable;
+      internal_static_SmartOfficeGRPC_radiatorsResponse_fieldAccessorTable;
 
   public static com.google.protobuf.Descriptors.FileDescriptor
       getDescriptor() {
@@ -63,28 +63,27 @@ public final class RadiatorsServiceImpl {
       descriptor;
   static {
     java.lang.String[] descriptorData = {
-      "\n\017Radiators.proto\022\020SmartFarmingGRPC\"\007\n\005E" +
-      "mpty\"\035\n\rstringRequest\022\014\n\004text\030\001 \001(\t\"\036\n\016s" +
-      "tringResponse\022\014\n\004text\030\001 \001(\t\"\035\n\016booleanRe" +
-      "quest\022\013\n\003msg\030\002 \001(\010\"\036\n\017booleanResponse\022\013\n" +
-      "\003msg\030\002 \001(\010\"\036\n\014valueRequest\022\016\n\006length\030\003 \001" +
-      "(\005\"\037\n\rvalueResponse\022\016\n\006length\030\003 \001(\005\"T\n\021r" +
-      "adiatorsResponse\022\r\n\005aname\030\004 \001(\t\022\016\n\006statu" +
-      "s\030\005 \001(\t\022\023\n\013temperature\030\006 \001(\005\022\013\n\003fan\030\007 \001(" +
-      "\0052\276\003\n\020RadiatorsService\022R\n\020initialApplian" +
-      "ce\022\027.SmartFarmingGRPC.Empty\032#.SmartFarmi" +
-      "ngGRPC.radiatorsResponse\"\000\022X\n\021changeTemp" +
-      "erature\022\036.SmartFarmingGRPC.valueRequest\032" +
-      "\037.SmartFarmingGRPC.valueResponse\"\0000\001\022P\n\t" +
-      "changeFan\022\036.SmartFarmingGRPC.valueReques" +
-      "t\032\037.SmartFarmingGRPC.valueResponse\"\0000\001\022N" +
-      "\n\005onOff\022 .SmartFarmingGRPC.booleanReques" +
-      "t\032!.SmartFarmingGRPC.booleanResponse\"\000\022Z" +
-      "\n\023changeApplianceName\022\037.SmartFarmingGRPC" +
-      ".stringRequest\032 .SmartFarmingGRPC.string" +
-      "Response\"\000B@\n&org.DS.xinqipeiproject.Sma" +
-      "rtOfficeGRPCB\024RadiatorsServiceImplP\001b\006pr" +
-      "oto3"
+      "\n\017Radiators.proto\022\017SmartOfficeGRPC\"\007\n\005Em" +
+      "pty\"\035\n\rstringRequest\022\014\n\004text\030\001 \001(\t\"\036\n\016st" +
+      "ringResponse\022\014\n\004text\030\001 \001(\t\"\035\n\016booleanReq" +
+      "uest\022\013\n\003msg\030\002 \001(\010\"\036\n\017booleanResponse\022\013\n\003" +
+      "msg\030\002 \001(\010\"\036\n\014valueRequest\022\016\n\006length\030\003 \001(" +
+      "\005\"\037\n\rvalueResponse\022\016\n\006length\030\003 \001(\005\"T\n\021ra" +
+      "diatorsResponse\022\r\n\005aname\030\004 \001(\t\022\016\n\006status" +
+      "\030\005 \001(\t\022\023\n\013temperature\030\006 \001(\005\022\013\n\003fan\030\007 \001(\005" +
+      "2\252\003\n\020RadiatorsService\022K\n\013initialItem\022\026.S" +
+      "martOfficeGRPC.Empty\032\".SmartOfficeGRPC.r" +
+      "adiatorsResponse\"\000\022V\n\021changeTemperature\022" +
+      "\035.SmartOfficeGRPC.valueRequest\032\036.SmartOf" +
+      "ficeGRPC.valueResponse\"\0000\001\022N\n\tchangeFan\022" +
+      "\035.SmartOfficeGRPC.valueRequest\032\036.SmartOf" +
+      "ficeGRPC.valueResponse\"\0000\001\022L\n\005onOff\022\037.Sm" +
+      "artOfficeGRPC.booleanRequest\032 .SmartOffi" +
+      "ceGRPC.booleanResponse\"\000\022S\n\016changeItemNa" +
+      "me\022\036.SmartOfficeGRPC.stringRequest\032\037.Sma" +
+      "rtOfficeGRPC.stringResponse\"\000B@\n&org.DS." +
+      "xinqipeiproject.SmartOfficeGRPCB\024Radiato" +
+      "rsServiceImplP\001b\006proto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
@@ -98,53 +97,53 @@ public final class RadiatorsServiceImpl {
       .internalBuildGeneratedFileFrom(descriptorData,
         new com.google.protobuf.Descriptors.FileDescriptor[] {
         }, assigner);
-    internal_static_SmartFarmingGRPC_Empty_descriptor =
+    internal_static_SmartOfficeGRPC_Empty_descriptor =
       getDescriptor().getMessageTypes().get(0);
-    internal_static_SmartFarmingGRPC_Empty_fieldAccessorTable = new
+    internal_static_SmartOfficeGRPC_Empty_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_SmartFarmingGRPC_Empty_descriptor,
+        internal_static_SmartOfficeGRPC_Empty_descriptor,
         new java.lang.String[] { });
-    internal_static_SmartFarmingGRPC_stringRequest_descriptor =
+    internal_static_SmartOfficeGRPC_stringRequest_descriptor =
       getDescriptor().getMessageTypes().get(1);
-    internal_static_SmartFarmingGRPC_stringRequest_fieldAccessorTable = new
+    internal_static_SmartOfficeGRPC_stringRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_SmartFarmingGRPC_stringRequest_descriptor,
+        internal_static_SmartOfficeGRPC_stringRequest_descriptor,
         new java.lang.String[] { "Text", });
-    internal_static_SmartFarmingGRPC_stringResponse_descriptor =
+    internal_static_SmartOfficeGRPC_stringResponse_descriptor =
       getDescriptor().getMessageTypes().get(2);
-    internal_static_SmartFarmingGRPC_stringResponse_fieldAccessorTable = new
+    internal_static_SmartOfficeGRPC_stringResponse_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_SmartFarmingGRPC_stringResponse_descriptor,
+        internal_static_SmartOfficeGRPC_stringResponse_descriptor,
         new java.lang.String[] { "Text", });
-    internal_static_SmartFarmingGRPC_booleanRequest_descriptor =
+    internal_static_SmartOfficeGRPC_booleanRequest_descriptor =
       getDescriptor().getMessageTypes().get(3);
-    internal_static_SmartFarmingGRPC_booleanRequest_fieldAccessorTable = new
+    internal_static_SmartOfficeGRPC_booleanRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_SmartFarmingGRPC_booleanRequest_descriptor,
+        internal_static_SmartOfficeGRPC_booleanRequest_descriptor,
         new java.lang.String[] { "Msg", });
-    internal_static_SmartFarmingGRPC_booleanResponse_descriptor =
+    internal_static_SmartOfficeGRPC_booleanResponse_descriptor =
       getDescriptor().getMessageTypes().get(4);
-    internal_static_SmartFarmingGRPC_booleanResponse_fieldAccessorTable = new
+    internal_static_SmartOfficeGRPC_booleanResponse_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_SmartFarmingGRPC_booleanResponse_descriptor,
+        internal_static_SmartOfficeGRPC_booleanResponse_descriptor,
         new java.lang.String[] { "Msg", });
-    internal_static_SmartFarmingGRPC_valueRequest_descriptor =
+    internal_static_SmartOfficeGRPC_valueRequest_descriptor =
       getDescriptor().getMessageTypes().get(5);
-    internal_static_SmartFarmingGRPC_valueRequest_fieldAccessorTable = new
+    internal_static_SmartOfficeGRPC_valueRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_SmartFarmingGRPC_valueRequest_descriptor,
+        internal_static_SmartOfficeGRPC_valueRequest_descriptor,
         new java.lang.String[] { "Length", });
-    internal_static_SmartFarmingGRPC_valueResponse_descriptor =
+    internal_static_SmartOfficeGRPC_valueResponse_descriptor =
       getDescriptor().getMessageTypes().get(6);
-    internal_static_SmartFarmingGRPC_valueResponse_fieldAccessorTable = new
+    internal_static_SmartOfficeGRPC_valueResponse_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_SmartFarmingGRPC_valueResponse_descriptor,
+        internal_static_SmartOfficeGRPC_valueResponse_descriptor,
         new java.lang.String[] { "Length", });
-    internal_static_SmartFarmingGRPC_radiatorsResponse_descriptor =
+    internal_static_SmartOfficeGRPC_radiatorsResponse_descriptor =
       getDescriptor().getMessageTypes().get(7);
-    internal_static_SmartFarmingGRPC_radiatorsResponse_fieldAccessorTable = new
+    internal_static_SmartOfficeGRPC_radiatorsResponse_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_SmartFarmingGRPC_radiatorsResponse_descriptor,
+        internal_static_SmartOfficeGRPC_radiatorsResponse_descriptor,
         new java.lang.String[] { "Aname", "Status", "Temperature", "Fan", });
   }
 
