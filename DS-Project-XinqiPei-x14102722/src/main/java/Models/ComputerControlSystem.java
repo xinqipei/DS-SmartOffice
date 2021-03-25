@@ -9,7 +9,7 @@ public class ComputerControlSystem {
 		this.item = "ComputerControlSystem";
 		this.on = true;
 		this.itemName = "ComputerControlSystem Name";
-		this.volume = 50;
+		this.volume = 100;
 	}
 
 	public String getitem() {

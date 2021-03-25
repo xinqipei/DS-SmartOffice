@@ -10,7 +10,7 @@ public class Radiators {
 		this.item="Radiators";
 		this.on=true;
 		this.itemName="Radiators Name";
-		this.temperature=30;
+		this.temperature=35;
 		
 	}
 

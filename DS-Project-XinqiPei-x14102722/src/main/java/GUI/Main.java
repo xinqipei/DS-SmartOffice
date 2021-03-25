@@ -74,7 +74,7 @@ public class Main {
 	public JLabel computercontrolsystemInfo_name;
 	public JLabel computercontrolsystemInfo_status;
 	public JLabel computercontrolsystemInfo_volume;
-	public JLabel computercontrolsystemInfo_range;
+	
 	
 	public JLabel lightingInfo_name;
 	public JLabel lightingInfo_status;
@@ -88,7 +88,7 @@ public class Main {
 	public JLabel radiatorsInfo_name;
 	public JLabel radiatorsInfo_status;
 	public JLabel radiatorsInfo_temperature;
-	public JLabel radiatorsInfo_speed;
+	
 	
 	int radiatorsPort =1234;
 	int computercontrolsystemPort =1235;
@@ -159,7 +159,7 @@ public class Main {
 	
 	private void initialize() {
 		frame = new JFrame();
-		frame.getContentPane().setBackground(Color.GREEN);
+		frame.getContentPane().setBackground(Color.orange);
 		frame.setBounds(100, 100, 468, 525);
 		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		frame.getContentPane().setLayout(null);
@@ -584,9 +584,9 @@ public class Main {
 		computercontrolsystemInfo_volume.setBounds(220, 332, 90, 14);
 		frame.getContentPane().add(computercontrolsystemInfo_volume);
 		
-		computercontrolsystemInfo_range = new JLabel("");
+		/*computercontrolsystemInfo_range = new JLabel("");
 		computercontrolsystemInfo_range.setBounds(320, 332, 98, 14);
-		frame.getContentPane().add(computercontrolsystemInfo_range);
+		frame.getContentPane().add(computercontrolsystemInfo_range);*/
 		
 		camInfo_status = new JLabel("Item Status");
 		camInfo_status.setBounds(125, 418, 83, 14);
@@ -785,26 +785,6 @@ public class Main {
 
 	}
 	
-	/*public void change(int value) {
-		valueRequest req = valueRequest.newBuilder().setLength(value).build();
-		System.out.println("Changing ");
-		
-		Iterator<valueResponse> response;
-		//Error Handling
-		try {
-			 response =computercontrolsystem_blockingStub.change(req);
-
-		}catch(StatusRuntimeException e) {
-			System.out.println("RPC failed: {0}"+ e.getStatus());
-			return;
-		}
-		
-		System.out.println("ComputerControlSystem range response"+((DocumentEvent) response).getLength());
-		String range = String.valueOf(((DocumentEvent) response).getLength());
-        computercontrolsystemInfo_range.setText(" No: "+range);
-
-
-	}*/
 	
 	public void changeTemperature(int temperature) {
 		valueRequest req = valueRequest.newBuilder().setLength(temperature).build();

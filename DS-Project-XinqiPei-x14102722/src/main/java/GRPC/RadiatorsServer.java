@@ -132,8 +132,8 @@ public class RadiatorsServer extends RadiatorsServiceImplBase{
 		
 		System.out.println("Updated new radiator temperature " + currentTemperature);
 		int newTemperature = currentTemperature + changeTemperature;
-		if(newTemperature > 30 || newTemperature < 15 ) {//start if
-			System.out.println("Temperature cannot go over 40 or less than 15: " + newTemperature);
+		if(newTemperature > 35 || newTemperature < 15 ) {//start if
+			System.out.println("Temperature cannot go over 35 or less than 15: " + newTemperature);
 			System.out.println("The temperature is: " + myRadiators.getTemperature());
 			
 			valueResponse response = valueResponse.newBuilder().setLength(myRadiators.getTemperature()).build();
