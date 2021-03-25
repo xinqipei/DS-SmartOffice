@@ -7,7 +7,7 @@ var camAppliance = {
     aname: "SecurityCam",
     status: "On",
     cam: "No Cam Selected",
-    volume: 30
+    distance: 30
 };
 var server = new grpc.Server();
 server.bind("0.0.0.0:1237", grpc.ServerCredentials.createInsecure());
@@ -29,14 +29,14 @@ server.addService(camProto.org.DS.xinqipeiproject.SmartOfficeGRPC.Securitycamera
         return callback(null, camAppliance.cam);
     },
 
-    changeVolume: function (call, callback) {
-        var requestVolume = call.request.length;
-        var newVolume = camAppliance.volume + requestVolume
-        if (newVolume < 100 && newVolume >= 0) {
-            camAppliance.volume = newVolume;
+    changeDistance function (call, callback) {
+        var requestDistance = call.request.length;
+        var newDistance = camAppliance.distance + requestDistance
+        if (newDistance < 100 && newDistance >= 0) {
+            camAppliance.distance = newDistance;
         }
         console.log(camAppliance);
-        return callback(null, camAppliance.volume);
+        return callback(null, camAppliance.distance);
     },
     onOff: function (call, callback) {
         var requestValue = call.request.msg

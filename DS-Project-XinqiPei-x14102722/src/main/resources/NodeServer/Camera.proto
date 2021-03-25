@@ -6,7 +6,7 @@ service SecuritycameraService{
   
   rpc changeCamera(stringRequest) returns (stream stringResponse) {}
   
-  rpc changeVolume(valueRequest) returns (stream valueResponse) {}
+  rpc changeDistance(valueRequest) returns (stream valueResponse) {}
   
   rpc onOff(booleanRequest) returns (booleanResponse) {}
   
@@ -46,5 +46,5 @@ message cameraResponse{
   string aname = 4;
   string status = 5;
   string cam = 6;
-  int32 volume = 7;
+  int32 distance = 7;
 }

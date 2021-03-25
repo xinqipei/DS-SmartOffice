@@ -3,13 +3,13 @@ package Models;
 public class ComputerControlSystem {
 	private String item, itemName;
 	private boolean on;
-	private int volume;
+	private int distance;
 	
 	public ComputerControlSystem() {
 		this.item = "ComputerControlSystem";
 		this.on = true;
 		this.itemName = "ComputerControlSystem Name";
-		this.volume = 100;
+		this.distance = 100;
 	}
 
 	public String getitem() {
@@ -36,12 +36,12 @@ public class ComputerControlSystem {
 		this.on = on;
 	}
 
-	public int getvolume() {
-		return volume;
+	public int getdistance() {
+		return distance;
 	}
 
-	public void setvolume(int volume) {
-		this.volume = volume;
+	public void setdistance(int distance) {
+		this.distance = distance;
 	}
 	
 }
