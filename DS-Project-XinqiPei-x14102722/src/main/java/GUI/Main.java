@@ -308,7 +308,7 @@ public class Main {
 		});
 		
 		/////////////
-		//Text Fields
+		//Text Fields for computer control system
 		/////////////
 		computercontrolsystemName_tf = new JTextField();
 		computercontrolsystemName_tf.setBounds(56, 105, 86, 20);
