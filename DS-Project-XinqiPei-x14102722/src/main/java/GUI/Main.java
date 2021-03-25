@@ -182,11 +182,7 @@ public class Main {
 		
 		JLabel volume_lbl = new JLabel("Volume");
 		volume_lbl.setBounds(275, 90, 48, 14);
-		frame.getContentPane().add(volume_lbl);
-		
-		JLabel lblChannel = new JLabel("");
-		lblChannel.setBounds(370, 90, 48, 14);
-		frame.getContentPane().add(lblChannel);
+		frame.getContentPane().add(volume_lbl);		
 		
 		JLabel Item_name2_lblabel = new JLabel("Location");
 		Item_name2_lblabel.setBounds(56, 135, 83, 14);
@@ -204,7 +200,7 @@ public class Main {
 		Item_name3_lbl.setBounds(56, 180, 83, 14);
 		frame.getContentPane().add(Item_name3_lbl);
 		
-		JLabel volume_2_lbl = new JLabel("");
+		JLabel volume_2_lbl = new JLabel("Distance");
 		volume_2_lbl.setBounds(270, 180, 48, 14);
 		frame.getContentPane().add(volume_2_lbl);
 		
@@ -238,7 +234,7 @@ public class Main {
 		computercontrolsystem_volumeUp_btn.addActionListener(new ActionListener() {
 		public void actionPerformed(ActionEvent arg0) {
 			
-			System.out.println(+1);
+			System.out.println("another conmputer being turned on + 1 ");
 			changeVolume(1,"ComputerControlSystem");
 		}
 		});
@@ -250,7 +246,7 @@ public class Main {
 		computercontrolsystem_volumeDown_btn.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent arg0) {
 				
-		    	System.out.println(-1);
+		    	System.out.println("another conmputer being turned on - 1");
 		    	changeVolume(-1,"ComputerControlSystem");
 			}
 		});
@@ -1017,7 +1013,7 @@ public class Main {
 		
 		camInfo_name.setText("Name: "+response.getAname());
 		camInfo_status.setText("Status: "+response.getStatus());
-		String volume = String.valueOf(response.getVolume());
+		String volume = String.valueOf(response.getDistance());
 		camInfo_camera.setText("App: "+ response.getCam());
 		camInfo_brightness.setText("Volume:"+volume);
 	}

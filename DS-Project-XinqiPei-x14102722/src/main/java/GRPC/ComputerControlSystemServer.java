@@ -116,7 +116,7 @@ public class ComputerControlSystemServer extends ComputerControlSystemServiceImp
 		}
 		String aName = myComputerControlSystem.getitemName();
 		String aStatus = status;
-		//Integer aVolume = myComputerControlSystem.getVolume();
+		Integer aVolume = myComputerControlSystem.getvolume();
 		
 		computercontrolsystemResponse response = computercontrolsystemResponse.newBuilder().setAname(aName).setStatus(aStatus).build();
 		responseObserver.onNext(response);
