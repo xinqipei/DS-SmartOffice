@@ -16,7 +16,7 @@ private static final long serialVersionUID = 0L;
     super(builder);
   }
   private cameraResponse() {
-    aname_ = "";
+    secname_ = "";
     status_ = "";
     cam_ = "";
     distance_ = 0;
@@ -49,7 +49,7 @@ private static final long serialVersionUID = 0L;
           case 34: {
             java.lang.String s = input.readStringRequireUtf8();
 
-            aname_ = s;
+            secname_ = s;
             break;
           }
           case 42: {
@@ -90,45 +90,45 @@ private static final long serialVersionUID = 0L;
   }
   public static final com.google.protobuf.Descriptors.Descriptor
       getDescriptor() {
-    return org.DS.xinqipeiproject.SmartOfficeGRPC.SecuritycameraServiceImpl.internal_static_SmartOfficeGRPC_cameraResponse_descriptor;
+    return org.DS.xinqipeiproject.SmartOfficeGRPC.CameraSecServiceImpl.internal_static_SmartOfficeGRPC_cameraResponse_descriptor;
   }
 
   @java.lang.Override
   protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internalGetFieldAccessorTable() {
-    return org.DS.xinqipeiproject.SmartOfficeGRPC.SecuritycameraServiceImpl.internal_static_SmartOfficeGRPC_cameraResponse_fieldAccessorTable
+    return org.DS.xinqipeiproject.SmartOfficeGRPC.CameraSecServiceImpl.internal_static_SmartOfficeGRPC_cameraResponse_fieldAccessorTable
         .ensureFieldAccessorsInitialized(
             org.DS.xinqipeiproject.SmartOfficeGRPC.cameraResponse.class, org.DS.xinqipeiproject.SmartOfficeGRPC.cameraResponse.Builder.class);
   }
 
-  public static final int ANAME_FIELD_NUMBER = 4;
-  private volatile java.lang.Object aname_;
+  public static final int SECNAME_FIELD_NUMBER = 4;
+  private volatile java.lang.Object secname_;
   /**
-   * <code>string aname = 4;</code>
+   * <code>string secname = 4;</code>
    */
-  public java.lang.String getAname() {
-    java.lang.Object ref = aname_;
+  public java.lang.String getSecname() {
+    java.lang.Object ref = secname_;
     if (ref instanceof java.lang.String) {
       return (java.lang.String) ref;
     } else {
       com.google.protobuf.ByteString bs = 
           (com.google.protobuf.ByteString) ref;
       java.lang.String s = bs.toStringUtf8();
-      aname_ = s;
+      secname_ = s;
       return s;
     }
   }
   /**
-   * <code>string aname = 4;</code>
+   * <code>string secname = 4;</code>
    */
   public com.google.protobuf.ByteString
-      getAnameBytes() {
-    java.lang.Object ref = aname_;
+      getSecnameBytes() {
+    java.lang.Object ref = secname_;
     if (ref instanceof java.lang.String) {
       com.google.protobuf.ByteString b = 
           com.google.protobuf.ByteString.copyFromUtf8(
               (java.lang.String) ref);
-      aname_ = b;
+      secname_ = b;
       return b;
     } else {
       return (com.google.protobuf.ByteString) ref;
@@ -226,8 +226,8 @@ private static final long serialVersionUID = 0L;
   @java.lang.Override
   public void writeTo(com.google.protobuf.CodedOutputStream output)
                       throws java.io.IOException {
-    if (!getAnameBytes().isEmpty()) {
-      com.google.protobuf.GeneratedMessageV3.writeString(output, 4, aname_);
+    if (!getSecnameBytes().isEmpty()) {
+      com.google.protobuf.GeneratedMessageV3.writeString(output, 4, secname_);
     }
     if (!getStatusBytes().isEmpty()) {
       com.google.protobuf.GeneratedMessageV3.writeString(output, 5, status_);
@@ -247,8 +247,8 @@ private static final long serialVersionUID = 0L;
     if (size != -1) return size;
 
     size = 0;
-    if (!getAnameBytes().isEmpty()) {
-      size += com.google.protobuf.GeneratedMessageV3.computeStringSize(4, aname_);
+    if (!getSecnameBytes().isEmpty()) {
+      size += com.google.protobuf.GeneratedMessageV3.computeStringSize(4, secname_);
     }
     if (!getStatusBytes().isEmpty()) {
       size += com.google.protobuf.GeneratedMessageV3.computeStringSize(5, status_);
@@ -276,8 +276,8 @@ private static final long serialVersionUID = 0L;
     org.DS.xinqipeiproject.SmartOfficeGRPC.cameraResponse other = (org.DS.xinqipeiproject.SmartOfficeGRPC.cameraResponse) obj;
 
     boolean result = true;
-    result = result && getAname()
-        .equals(other.getAname());
+    result = result && getSecname()
+        .equals(other.getSecname());
     result = result && getStatus()
         .equals(other.getStatus());
     result = result && getCam()
@@ -295,8 +295,8 @@ private static final long serialVersionUID = 0L;
     }
     int hash = 41;
     hash = (19 * hash) + getDescriptor().hashCode();
-    hash = (37 * hash) + ANAME_FIELD_NUMBER;
-    hash = (53 * hash) + getAname().hashCode();
+    hash = (37 * hash) + SECNAME_FIELD_NUMBER;
+    hash = (53 * hash) + getSecname().hashCode();
     hash = (37 * hash) + STATUS_FIELD_NUMBER;
     hash = (53 * hash) + getStatus().hashCode();
     hash = (37 * hash) + CAM_FIELD_NUMBER;
@@ -407,13 +407,13 @@ private static final long serialVersionUID = 0L;
       org.DS.xinqipeiproject.SmartOfficeGRPC.cameraResponseOrBuilder {
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return org.DS.xinqipeiproject.SmartOfficeGRPC.SecuritycameraServiceImpl.internal_static_SmartOfficeGRPC_cameraResponse_descriptor;
+      return org.DS.xinqipeiproject.SmartOfficeGRPC.CameraSecServiceImpl.internal_static_SmartOfficeGRPC_cameraResponse_descriptor;
     }
 
     @java.lang.Override
     protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return org.DS.xinqipeiproject.SmartOfficeGRPC.SecuritycameraServiceImpl.internal_static_SmartOfficeGRPC_cameraResponse_fieldAccessorTable
+      return org.DS.xinqipeiproject.SmartOfficeGRPC.CameraSecServiceImpl.internal_static_SmartOfficeGRPC_cameraResponse_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
               org.DS.xinqipeiproject.SmartOfficeGRPC.cameraResponse.class, org.DS.xinqipeiproject.SmartOfficeGRPC.cameraResponse.Builder.class);
     }
@@ -436,7 +436,7 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public Builder clear() {
       super.clear();
-      aname_ = "";
+      secname_ = "";
 
       status_ = "";
 
@@ -450,7 +450,7 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public com.google.protobuf.Descriptors.Descriptor
         getDescriptorForType() {
-      return org.DS.xinqipeiproject.SmartOfficeGRPC.SecuritycameraServiceImpl.internal_static_SmartOfficeGRPC_cameraResponse_descriptor;
+      return org.DS.xinqipeiproject.SmartOfficeGRPC.CameraSecServiceImpl.internal_static_SmartOfficeGRPC_cameraResponse_descriptor;
     }
 
     @java.lang.Override
@@ -470,7 +470,7 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public org.DS.xinqipeiproject.SmartOfficeGRPC.cameraResponse buildPartial() {
       org.DS.xinqipeiproject.SmartOfficeGRPC.cameraResponse result = new org.DS.xinqipeiproject.SmartOfficeGRPC.cameraResponse(this);
-      result.aname_ = aname_;
+      result.secname_ = secname_;
       result.status_ = status_;
       result.cam_ = cam_;
       result.distance_ = distance_;
@@ -522,8 +522,8 @@ private static final long serialVersionUID = 0L;
 
     public Builder mergeFrom(org.DS.xinqipeiproject.SmartOfficeGRPC.cameraResponse other) {
       if (other == org.DS.xinqipeiproject.SmartOfficeGRPC.cameraResponse.getDefaultInstance()) return this;
-      if (!other.getAname().isEmpty()) {
-        aname_ = other.aname_;
+      if (!other.getSecname().isEmpty()) {
+        secname_ = other.secname_;
         onChanged();
       }
       if (!other.getStatus().isEmpty()) {
@@ -566,71 +566,71 @@ private static final long serialVersionUID = 0L;
       return this;
     }
 
-    private java.lang.Object aname_ = "";
+    private java.lang.Object secname_ = "";
     /**
-     * <code>string aname = 4;</code>
+     * <code>string secname = 4;</code>
      */
-    public java.lang.String getAname() {
-      java.lang.Object ref = aname_;
+    public java.lang.String getSecname() {
+      java.lang.Object ref = secname_;
       if (!(ref instanceof java.lang.String)) {
         com.google.protobuf.ByteString bs =
             (com.google.protobuf.ByteString) ref;
         java.lang.String s = bs.toStringUtf8();
-        aname_ = s;
+        secname_ = s;
         return s;
       } else {
         return (java.lang.String) ref;
       }
     }
     /**
-     * <code>string aname = 4;</code>
+     * <code>string secname = 4;</code>
      */
     public com.google.protobuf.ByteString
-        getAnameBytes() {
-      java.lang.Object ref = aname_;
+        getSecnameBytes() {
+      java.lang.Object ref = secname_;
       if (ref instanceof String) {
         com.google.protobuf.ByteString b = 
             com.google.protobuf.ByteString.copyFromUtf8(
                 (java.lang.String) ref);
-        aname_ = b;
+        secname_ = b;
         return b;
       } else {
         return (com.google.protobuf.ByteString) ref;
       }
     }
     /**
-     * <code>string aname = 4;</code>
+     * <code>string secname = 4;</code>
      */
-    public Builder setAname(
+    public Builder setSecname(
         java.lang.String value) {
       if (value == null) {
     throw new NullPointerException();
   }
   
-      aname_ = value;
+      secname_ = value;
       onChanged();
       return this;
     }
     /**
-     * <code>string aname = 4;</code>
+     * <code>string secname = 4;</code>
      */
-    public Builder clearAname() {
+    public Builder clearSecname() {
       
-      aname_ = getDefaultInstance().getAname();
+      secname_ = getDefaultInstance().getSecname();
       onChanged();
       return this;
     }
     /**
-     * <code>string aname = 4;</code>
+     * <code>string secname = 4;</code>
      */
-    public Builder setAnameBytes(
+    public Builder setSecnameBytes(
         com.google.protobuf.ByteString value) {
       if (value == null) {
     throw new NullPointerException();
   }
   checkByteStringIsUtf8(value);
       
-      aname_ = value;
+      secname_ = value;
       onChanged();
       return this;
     }

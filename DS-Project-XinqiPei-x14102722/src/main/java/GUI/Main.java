@@ -949,7 +949,7 @@ public class Main {
 			System.out.println("RPC failed: {0}"+ e.getStatus());
 			return;
 		}		
-		radiatorsInfo_name.setText("Name: "+response.getAname());
+		radiatorsInfo_name.setText("Name: "+response.getRadname());
 		radiatorsInfo_status.setText("Status: "+response.getStatus());
 		String temp = String.valueOf(response.getTemperature());
 		radiatorsInfo_temperature.setText("Temperature: "+temp);
@@ -971,8 +971,8 @@ public class Main {
 		}		
 		computercontrolsystemInfo_name.setText("Name: "+response.getAname());
 		computercontrolsystemInfo_status.setText("Status: "+response.getStatus());
-		String volume = String.valueOf(response.getVolume());
-		computercontrolsystemInfo_volume.setText("Volume: "+volume);
+		String distance = String.valueOf(response.getDistance());
+		computercontrolsystemInfo_volume.setText("Volume: "+distance);
 
 
 	}
@@ -1011,7 +1011,7 @@ public class Main {
 			return;
 		}		
 		
-		camInfo_name.setText("Name: "+response.getAname());
+		camInfo_name.setText("Name: "+response.getSecname());
 		camInfo_status.setText("Status: "+response.getStatus());
 		String volume = String.valueOf(response.getDistance());
 		camInfo_camera.setText("App: "+ response.getCam());

@@ -8,14 +8,14 @@ public interface cameraResponseOrBuilder extends
     com.google.protobuf.MessageOrBuilder {
 
   /**
-   * <code>string aname = 4;</code>
+   * <code>string secname = 4;</code>
    */
-  java.lang.String getAname();
+  java.lang.String getSecname();
   /**
-   * <code>string aname = 4;</code>
+   * <code>string secname = 4;</code>
    */
   com.google.protobuf.ByteString
-      getAnameBytes();
+      getSecnameBytes();
 
   /**
    * <code>string status = 5;</code>

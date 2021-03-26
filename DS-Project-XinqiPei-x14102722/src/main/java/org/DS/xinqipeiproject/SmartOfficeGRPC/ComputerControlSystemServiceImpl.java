@@ -69,20 +69,20 @@ public final class ComputerControlSystemServiceImpl {
       "\n\016booleanRequest\022\013\n\003msg\030\002 \001(\010\"\036\n\017boolean" +
       "Response\022\013\n\003msg\030\002 \001(\010\"\036\n\014valueRequest\022\016\n" +
       "\006length\030\003 \001(\005\"\037\n\rvalueResponse\022\016\n\006length" +
-      "\030\003 \001(\005\"N\n\035computercontrolsystemResponse\022" +
-      "\r\n\005aname\030\004 \001(\t\022\016\n\006status\030\005 \001(\t\022\016\n\006volume" +
-      "\030\006 \001(\0052\355\002\n\034ComputerControlSystemService\022" +
-      "W\n\013initialItem\022\026.SmartOfficeGRPC.Empty\032." +
-      ".SmartOfficeGRPC.computercontrolsystemRe" +
-      "sponse\"\000\022Q\n\014changeVolume\022\035.SmartOfficeGR" +
-      "PC.valueRequest\032\036.SmartOfficeGRPC.valueR" +
-      "esponse\"\0000\001\022L\n\005onOff\022\037.SmartOfficeGRPC.b" +
-      "ooleanRequest\032 .SmartOfficeGRPC.booleanR" +
-      "esponse\"\000\022S\n\016changeItemName\022\036.SmartOffic" +
-      "eGRPC.stringRequest\032\037.SmartOfficeGRPC.st" +
-      "ringResponse\"\000BL\n&org.DS.xinqipeiproject" +
-      ".SmartOfficeGRPCB ComputerControlSystemS" +
-      "erviceImplP\001b\006proto3"
+      "\030\003 \001(\005\"P\n\035computercontrolsystemResponse\022" +
+      "\r\n\005aname\030\004 \001(\t\022\016\n\006status\030\005 \001(\t\022\020\n\010distan" +
+      "ce\030\006 \001(\0052\355\002\n\034ComputerControlSystemServic" +
+      "e\022W\n\013initialItem\022\026.SmartOfficeGRPC.Empty" +
+      "\032..SmartOfficeGRPC.computercontrolsystem" +
+      "Response\"\000\022Q\n\014changeVolume\022\035.SmartOffice" +
+      "GRPC.valueRequest\032\036.SmartOfficeGRPC.valu" +
+      "eResponse\"\0000\001\022L\n\005onOff\022\037.SmartOfficeGRPC" +
+      ".booleanRequest\032 .SmartOfficeGRPC.boolea" +
+      "nResponse\"\000\022S\n\016changeItemName\022\036.SmartOff" +
+      "iceGRPC.stringRequest\032\037.SmartOfficeGRPC." +
+      "stringResponse\"\000BL\n&org.DS.xinqipeiproje" +
+      "ct.SmartOfficeGRPCB ComputerControlSyste" +
+      "mServiceImplP\001b\006proto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
@@ -143,7 +143,7 @@ public final class ComputerControlSystemServiceImpl {
     internal_static_SmartOfficeGRPC_computercontrolsystemResponse_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_SmartOfficeGRPC_computercontrolsystemResponse_descriptor,
-        new java.lang.String[] { "Aname", "Status", "Volume", });
+        new java.lang.String[] { "Aname", "Status", "Distance", });
   }
 
   // @@protoc_insertion_point(outer_class_scope)

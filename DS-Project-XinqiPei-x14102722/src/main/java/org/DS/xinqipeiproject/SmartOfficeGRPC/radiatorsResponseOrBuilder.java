@@ -8,14 +8,14 @@ public interface radiatorsResponseOrBuilder extends
     com.google.protobuf.MessageOrBuilder {
 
   /**
-   * <code>string aname = 4;</code>
+   * <code>string radname = 4;</code>
    */
-  java.lang.String getAname();
+  java.lang.String getRadname();
   /**
-   * <code>string aname = 4;</code>
+   * <code>string radname = 4;</code>
    */
   com.google.protobuf.ByteString
-      getAnameBytes();
+      getRadnameBytes();
 
   /**
    * <code>string status = 5;</code>

@@ -1,54 +1,54 @@
 var grpc = require("grpc");
 var events = require("events");
 // add the bookStream global variable
-var camStream = new events.EventEmitter();
-var camProto = grpc.load("Camera.proto");
-var camAppliance = {
-    aname: "SecurityCam",
-    status: "On",
-    cam: "No Cam Selected",
-    distance: 30
+var secStream = new events.EventEmitter();
+var secProto = grpc.load("Camera.proto");
+var secItem = {
+    secname: "Camera",
+    position: "On",
+    sec: "There's no camera choosed",
+    distance: 7
 };
 var server = new grpc.Server();
 server.bind("0.0.0.0:1237", grpc.ServerCredentials.createInsecure());
 console.log("Server running at http://0.0.0.0:1237");
 
-server.addService(camProto.org.DS.xinqipeiproject.SmartOfficeGRPC.SecuritycameraService.service, {
+server.addService(secProto.org.DS.xinqipeiproject.SmartOfficeGRPC.CameraSecService.service, {
     initialItem: function (call, callback) {
-        callback(null, camAppliance);
+        callback(null, secItem);
     },
     changeCamera: function (call, callback) {
-        var camName = call.request.text;
-        if (camName == "Select a Camera") {
-            camAppliance.cam = "No Camera On";
+        var secName = call.request.text;
+        if (secName == "Camera") {
+            secItem.sec = "There's no camera choosed";
         } 
         else {
-            camName.cam = camName
+            secName.sec = secName
         }
 
-        return callback(null, camAppliance.cam);
+        return callback(null, secItem.sec);
     },
 
-    changeDistance function (call, callback) {
+    changeDistance: function (call, callback) {
         var requestDistance = call.request.length;
-        var newDistance = camAppliance.distance + requestDistance
+        var newDistance = secItem.distance + requestDistance
         if (newDistance < 100 && newDistance >= 0) {
-            camAppliance.distance = newDistance;
+            secItem.distance = newDistance;
         }
-        console.log(camAppliance);
-        return callback(null, camAppliance.distance);
+        console.log(secItem);
+        return callback(null, secItem.distance);
     },
     onOff: function (call, callback) {
         var requestValue = call.request.msg
         console.log(requestValue)
         if (requestValue == true) {
-            camAppliance.status = "On"
+            secItem.status = "Power On"
         } 
         else {
-            camAppliance.status = "Off"
+            secItem.status = "Power Off"
         }
         var response;
-        if (camAppliance.status == "On") {
+        if (secItem.status == "Power On") {
             response = true;
         } 
         else {
@@ -58,10 +58,10 @@ server.addService(camProto.org.DS.xinqipeiproject.SmartOfficeGRPC.Securitycamera
     },
     changeItemName: function (call, callback) {
         var requestName = call.request.text
-        camAppliance.aname = requestName
-        console.log("Name" + camAppliance.aname);
+        secItem.sec = requestName
+        console.log("ID" + secItem.sec);
 
-        callback(null, camAppliance.aname);
+        callback(null, secItem.sec);
     }
 });
 

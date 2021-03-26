@@ -48,7 +48,7 @@ message valueResponse {
 }
 
 message radiatorsResponse {
-	string aname = 4;
+	string radname = 4;
 	string status = 5;
 	int32 temperature = 6;
 	int32 fan = 7;

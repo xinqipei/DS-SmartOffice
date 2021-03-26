@@ -48,5 +48,5 @@ message valueResponse {
 message computercontrolsystemResponse {
 	string aname = 4;
 	string status = 5;
-	int32 volume = 6;
+	int32 distance = 6;
 }

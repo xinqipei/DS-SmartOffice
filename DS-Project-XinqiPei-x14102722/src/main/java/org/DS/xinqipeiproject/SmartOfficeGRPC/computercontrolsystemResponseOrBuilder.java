@@ -28,7 +28,7 @@ public interface computercontrolsystemResponseOrBuilder extends
       getStatusBytes();
 
   /**
-   * <code>int32 volume = 6;</code>
+   * <code>int32 distance = 6;</code>
    */
-  int getVolume();
+  int getDistance();
 }

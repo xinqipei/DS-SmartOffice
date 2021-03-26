@@ -3437,14 +3437,14 @@ public final class Camera {
       com.google.protobuf.MessageOrBuilder {
 
     /**
-     * <code>string aname = 4;</code>
+     * <code>string secname = 4;</code>
      */
-    java.lang.String getAname();
+    java.lang.String getSecname();
     /**
-     * <code>string aname = 4;</code>
+     * <code>string secname = 4;</code>
      */
     com.google.protobuf.ByteString
-        getAnameBytes();
+        getSecnameBytes();
 
     /**
      * <code>string status = 5;</code>
@@ -3467,9 +3467,9 @@ public final class Camera {
         getCamBytes();
 
     /**
-     * <code>int32 volume = 7;</code>
+     * <code>int32 distance = 7;</code>
      */
-    int getVolume();
+    int getDistance();
   }
   /**
    * Protobuf type {@code org.DS.xinqipeiproject.SmartOfficeGRPC.cameraResponse}
@@ -3484,10 +3484,10 @@ public final class Camera {
       super(builder);
     }
     private cameraResponse() {
-      aname_ = "";
+      secname_ = "";
       status_ = "";
       cam_ = "";
-      volume_ = 0;
+      distance_ = 0;
     }
 
     @java.lang.Override
@@ -3517,7 +3517,7 @@ public final class Camera {
             case 34: {
               java.lang.String s = input.readStringRequireUtf8();
 
-              aname_ = s;
+              secname_ = s;
               break;
             }
             case 42: {
@@ -3534,7 +3534,7 @@ public final class Camera {
             }
             case 56: {
 
-              volume_ = input.readInt32();
+              distance_ = input.readInt32();
               break;
             }
             default: {
@@ -3569,34 +3569,34 @@ public final class Camera {
               org.DS.xinqipeiproject.SmartOfficeGRPC.Camera.cameraResponse.class, org.DS.xinqipeiproject.SmartOfficeGRPC.Camera.cameraResponse.Builder.class);
     }
 
-    public static final int ANAME_FIELD_NUMBER = 4;
-    private volatile java.lang.Object aname_;
+    public static final int SECNAME_FIELD_NUMBER = 4;
+    private volatile java.lang.Object secname_;
     /**
-     * <code>string aname = 4;</code>
+     * <code>string secname = 4;</code>
      */
-    public java.lang.String getAname() {
-      java.lang.Object ref = aname_;
+    public java.lang.String getSecname() {
+      java.lang.Object ref = secname_;
       if (ref instanceof java.lang.String) {
         return (java.lang.String) ref;
       } else {
         com.google.protobuf.ByteString bs = 
             (com.google.protobuf.ByteString) ref;
         java.lang.String s = bs.toStringUtf8();
-        aname_ = s;
+        secname_ = s;
         return s;
       }
     }
     /**
-     * <code>string aname = 4;</code>
+     * <code>string secname = 4;</code>
      */
     public com.google.protobuf.ByteString
-        getAnameBytes() {
-      java.lang.Object ref = aname_;
+        getSecnameBytes() {
+      java.lang.Object ref = secname_;
       if (ref instanceof java.lang.String) {
         com.google.protobuf.ByteString b = 
             com.google.protobuf.ByteString.copyFromUtf8(
                 (java.lang.String) ref);
-        aname_ = b;
+        secname_ = b;
         return b;
       } else {
         return (com.google.protobuf.ByteString) ref;
@@ -3671,13 +3671,13 @@ public final class Camera {
       }
     }
 
-    public static final int VOLUME_FIELD_NUMBER = 7;
-    private int volume_;
+    public static final int DISTANCE_FIELD_NUMBER = 7;
+    private int distance_;
     /**
-     * <code>int32 volume = 7;</code>
+     * <code>int32 distance = 7;</code>
      */
-    public int getVolume() {
-      return volume_;
+    public int getDistance() {
+      return distance_;
     }
 
     private byte memoizedIsInitialized = -1;
@@ -3694,8 +3694,8 @@ public final class Camera {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (!getAnameBytes().isEmpty()) {
-        com.google.protobuf.GeneratedMessageV3.writeString(output, 4, aname_);
+      if (!getSecnameBytes().isEmpty()) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 4, secname_);
       }
       if (!getStatusBytes().isEmpty()) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 5, status_);
@@ -3703,8 +3703,8 @@ public final class Camera {
       if (!getCamBytes().isEmpty()) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 6, cam_);
       }
-      if (volume_ != 0) {
-        output.writeInt32(7, volume_);
+      if (distance_ != 0) {
+        output.writeInt32(7, distance_);
       }
       unknownFields.writeTo(output);
     }
@@ -3715,8 +3715,8 @@ public final class Camera {
       if (size != -1) return size;
 
       size = 0;
-      if (!getAnameBytes().isEmpty()) {
-        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(4, aname_);
+      if (!getSecnameBytes().isEmpty()) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(4, secname_);
       }
       if (!getStatusBytes().isEmpty()) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(5, status_);
@@ -3724,9 +3724,9 @@ public final class Camera {
       if (!getCamBytes().isEmpty()) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(6, cam_);
       }
-      if (volume_ != 0) {
+      if (distance_ != 0) {
         size += com.google.protobuf.CodedOutputStream
-          .computeInt32Size(7, volume_);
+          .computeInt32Size(7, distance_);
       }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
@@ -3744,14 +3744,14 @@ public final class Camera {
       org.DS.xinqipeiproject.SmartOfficeGRPC.Camera.cameraResponse other = (org.DS.xinqipeiproject.SmartOfficeGRPC.Camera.cameraResponse) obj;
 
       boolean result = true;
-      result = result && getAname()
-          .equals(other.getAname());
+      result = result && getSecname()
+          .equals(other.getSecname());
       result = result && getStatus()
           .equals(other.getStatus());
       result = result && getCam()
           .equals(other.getCam());
-      result = result && (getVolume()
-          == other.getVolume());
+      result = result && (getDistance()
+          == other.getDistance());
       result = result && unknownFields.equals(other.unknownFields);
       return result;
     }
@@ -3763,14 +3763,14 @@ public final class Camera {
       }
       int hash = 41;
       hash = (19 * hash) + getDescriptor().hashCode();
-      hash = (37 * hash) + ANAME_FIELD_NUMBER;
-      hash = (53 * hash) + getAname().hashCode();
+      hash = (37 * hash) + SECNAME_FIELD_NUMBER;
+      hash = (53 * hash) + getSecname().hashCode();
       hash = (37 * hash) + STATUS_FIELD_NUMBER;
       hash = (53 * hash) + getStatus().hashCode();
       hash = (37 * hash) + CAM_FIELD_NUMBER;
       hash = (53 * hash) + getCam().hashCode();
-      hash = (37 * hash) + VOLUME_FIELD_NUMBER;
-      hash = (53 * hash) + getVolume();
+      hash = (37 * hash) + DISTANCE_FIELD_NUMBER;
+      hash = (53 * hash) + getDistance();
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
       return hash;
@@ -3904,13 +3904,13 @@ public final class Camera {
       @java.lang.Override
       public Builder clear() {
         super.clear();
-        aname_ = "";
+        secname_ = "";
 
         status_ = "";
 
         cam_ = "";
 
-        volume_ = 0;
+        distance_ = 0;
 
         return this;
       }
@@ -3938,10 +3938,10 @@ public final class Camera {
       @java.lang.Override
       public org.DS.xinqipeiproject.SmartOfficeGRPC.Camera.cameraResponse buildPartial() {
         org.DS.xinqipeiproject.SmartOfficeGRPC.Camera.cameraResponse result = new org.DS.xinqipeiproject.SmartOfficeGRPC.Camera.cameraResponse(this);
-        result.aname_ = aname_;
+        result.secname_ = secname_;
         result.status_ = status_;
         result.cam_ = cam_;
-        result.volume_ = volume_;
+        result.distance_ = distance_;
         onBuilt();
         return result;
       }
@@ -3990,8 +3990,8 @@ public final class Camera {
 
       public Builder mergeFrom(org.DS.xinqipeiproject.SmartOfficeGRPC.Camera.cameraResponse other) {
         if (other == org.DS.xinqipeiproject.SmartOfficeGRPC.Camera.cameraResponse.getDefaultInstance()) return this;
-        if (!other.getAname().isEmpty()) {
-          aname_ = other.aname_;
+        if (!other.getSecname().isEmpty()) {
+          secname_ = other.secname_;
           onChanged();
         }
         if (!other.getStatus().isEmpty()) {
@@ -4002,8 +4002,8 @@ public final class Camera {
           cam_ = other.cam_;
           onChanged();
         }
-        if (other.getVolume() != 0) {
-          setVolume(other.getVolume());
+        if (other.getDistance() != 0) {
+          setDistance(other.getDistance());
         }
         this.mergeUnknownFields(other.unknownFields);
         onChanged();
@@ -4034,71 +4034,71 @@ public final class Camera {
         return this;
       }
 
-      private java.lang.Object aname_ = "";
+      private java.lang.Object secname_ = "";
       /**
-       * <code>string aname = 4;</code>
+       * <code>string secname = 4;</code>
        */
-      public java.lang.String getAname() {
-        java.lang.Object ref = aname_;
+      public java.lang.String getSecname() {
+        java.lang.Object ref = secname_;
         if (!(ref instanceof java.lang.String)) {
           com.google.protobuf.ByteString bs =
               (com.google.protobuf.ByteString) ref;
           java.lang.String s = bs.toStringUtf8();
-          aname_ = s;
+          secname_ = s;
           return s;
         } else {
           return (java.lang.String) ref;
         }
       }
       /**
-       * <code>string aname = 4;</code>
+       * <code>string secname = 4;</code>
        */
       public com.google.protobuf.ByteString
-          getAnameBytes() {
-        java.lang.Object ref = aname_;
+          getSecnameBytes() {
+        java.lang.Object ref = secname_;
         if (ref instanceof String) {
           com.google.protobuf.ByteString b = 
               com.google.protobuf.ByteString.copyFromUtf8(
                   (java.lang.String) ref);
-          aname_ = b;
+          secname_ = b;
           return b;
         } else {
           return (com.google.protobuf.ByteString) ref;
         }
       }
       /**
-       * <code>string aname = 4;</code>
+       * <code>string secname = 4;</code>
        */
-      public Builder setAname(
+      public Builder setSecname(
           java.lang.String value) {
         if (value == null) {
     throw new NullPointerException();
   }
   
-        aname_ = value;
+        secname_ = value;
         onChanged();
         return this;
       }
       /**
-       * <code>string aname = 4;</code>
+       * <code>string secname = 4;</code>
        */
-      public Builder clearAname() {
+      public Builder clearSecname() {
         
-        aname_ = getDefaultInstance().getAname();
+        secname_ = getDefaultInstance().getSecname();
         onChanged();
         return this;
       }
       /**
-       * <code>string aname = 4;</code>
+       * <code>string secname = 4;</code>
        */
-      public Builder setAnameBytes(
+      public Builder setSecnameBytes(
           com.google.protobuf.ByteString value) {
         if (value == null) {
     throw new NullPointerException();
   }
   checkByteStringIsUtf8(value);
         
-        aname_ = value;
+        secname_ = value;
         onChanged();
         return this;
       }
@@ -4241,28 +4241,28 @@ public final class Camera {
         return this;
       }
 
-      private int volume_ ;
+      private int distance_ ;
       /**
-       * <code>int32 volume = 7;</code>
+       * <code>int32 distance = 7;</code>
        */
-      public int getVolume() {
-        return volume_;
+      public int getDistance() {
+        return distance_;
       }
       /**
-       * <code>int32 volume = 7;</code>
+       * <code>int32 distance = 7;</code>
        */
-      public Builder setVolume(int value) {
+      public Builder setDistance(int value) {
         
-        volume_ = value;
+        distance_ = value;
         onChanged();
         return this;
       }
       /**
-       * <code>int32 volume = 7;</code>
+       * <code>int32 distance = 7;</code>
        */
-      public Builder clearVolume() {
+      public Builder clearDistance() {
         
-        volume_ = 0;
+        distance_ = 0;
         onChanged();
         return this;
       }
@@ -4374,26 +4374,26 @@ public final class Camera {
       "\030\001 \001(\t\"\035\n\016booleanRequest\022\013\n\003msg\030\002 \001(\010\"\036\n" +
       "\017booleanResponse\022\013\n\003msg\030\002 \001(\010\"\036\n\014valueRe" +
       "quest\022\016\n\006length\030\003 \001(\005\"\037\n\rvalueResponse\022\016" +
-      "\n\006length\030\003 \001(\005\"L\n\016cameraResponse\022\r\n\005anam" +
-      "e\030\004 \001(\t\022\016\n\006status\030\005 \001(\t\022\013\n\003cam\030\006 \001(\t\022\016\n\006" +
-      "volume\030\007 \001(\0052\224\005\n\025SecuritycameraService\022v" +
-      "\n\013initialItem\022-.org.DS.xinqipeiproject.S" +
-      "martOfficeGRPC.Empty\0326.org.DS.xinqipeipr" +
-      "oject.SmartOfficeGRPC.cameraResponse\"\000\022\201" +
-      "\001\n\014changeCamera\0225.org.DS.xinqipeiproject" +
-      ".SmartOfficeGRPC.stringRequest\0326.org.DS." +
-      "xinqipeiproject.SmartOfficeGRPC.stringRe" +
-      "sponse\"\0000\001\022\177\n\014changeVolume\0224.org.DS.xinq" +
-      "ipeiproject.SmartOfficeGRPC.valueRequest" +
-      "\0325.org.DS.xinqipeiproject.SmartOfficeGRP" +
-      "C.valueResponse\"\0000\001\022z\n\005onOff\0226.org.DS.xi" +
-      "nqipeiproject.SmartOfficeGRPC.booleanReq" +
-      "uest\0327.org.DS.xinqipeiproject.SmartOffic" +
-      "eGRPC.booleanResponse\"\000\022\201\001\n\016changeItemNa" +
-      "me\0225.org.DS.xinqipeiproject.SmartOfficeG" +
-      "RPC.stringRequest\0326.org.DS.xinqipeiproje" +
-      "ct.SmartOfficeGRPC.stringResponse\"\000b\006pro" +
-      "to3"
+      "\n\006length\030\003 \001(\005\"P\n\016cameraResponse\022\017\n\007secn" +
+      "ame\030\004 \001(\t\022\016\n\006status\030\005 \001(\t\022\013\n\003cam\030\006 \001(\t\022\020" +
+      "\n\010distance\030\007 \001(\0052\222\005\n\020CameraSecService\022v\n" +
+      "\013initialItem\022-.org.DS.xinqipeiproject.Sm" +
+      "artOfficeGRPC.Empty\0326.org.DS.xinqipeipro" +
+      "ject.SmartOfficeGRPC.cameraResponse\"\000\022\201\001" +
+      "\n\014changeCamera\0225.org.DS.xinqipeiproject." +
+      "SmartOfficeGRPC.stringRequest\0326.org.DS.x" +
+      "inqipeiproject.SmartOfficeGRPC.stringRes" +
+      "ponse\"\0000\001\022\201\001\n\016changeDistance\0224.org.DS.xi" +
+      "nqipeiproject.SmartOfficeGRPC.valueReque" +
+      "st\0325.org.DS.xinqipeiproject.SmartOfficeG" +
+      "RPC.valueResponse\"\0000\001\022z\n\005onOff\0226.org.DS." +
+      "xinqipeiproject.SmartOfficeGRPC.booleanR" +
+      "equest\0327.org.DS.xinqipeiproject.SmartOff" +
+      "iceGRPC.booleanResponse\"\000\022\201\001\n\016changeItem" +
+      "Name\0225.org.DS.xinqipeiproject.SmartOffic" +
+      "eGRPC.stringRequest\0326.org.DS.xinqipeipro" +
+      "ject.SmartOfficeGRPC.stringResponse\"\000b\006p" +
+      "roto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
@@ -4454,7 +4454,7 @@ public final class Camera {
     internal_static_org_DS_xinqipeiproject_SmartOfficeGRPC_cameraResponse_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_org_DS_xinqipeiproject_SmartOfficeGRPC_cameraResponse_descriptor,
-        new java.lang.String[] { "Aname", "Status", "Cam", "Volume", });
+        new java.lang.String[] { "Secname", "Status", "Cam", "Distance", });
   }
 
   // @@protoc_insertion_point(outer_class_scope)

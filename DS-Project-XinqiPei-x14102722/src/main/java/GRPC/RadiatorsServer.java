@@ -103,7 +103,7 @@ public class RadiatorsServer extends RadiatorsServiceImplBase{
 	@Override
 	public void initialItem(Empty request, StreamObserver<radiatorsResponse> responseObserver) {
 		// TODO Auto-generated method stub
-		System.out.println("Receiving initial item request for TV ");
+		System.out.println("Receiving initial item request for the Monitor ");
 		String status;
 		
 		if(myRadiators.isOn()) {
@@ -118,7 +118,7 @@ public class RadiatorsServer extends RadiatorsServiceImplBase{
 		Integer aTemperature = myRadiators.getTemperature();
 	
 		
-		radiatorsResponse response = radiatorsResponse.newBuilder().setAname(aName).setStatus(aStatus).setTemperature(aTemperature).build();
+		radiatorsResponse response = radiatorsResponse.newBuilder().setRadname(aName).setStatus(aStatus).setTemperature(aTemperature).build();
 		responseObserver.onNext(response);
 		responseObserver.onCompleted();
 		

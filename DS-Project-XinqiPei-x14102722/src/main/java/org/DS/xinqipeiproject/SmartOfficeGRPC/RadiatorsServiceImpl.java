@@ -68,22 +68,22 @@ public final class RadiatorsServiceImpl {
       "ringResponse\022\014\n\004text\030\001 \001(\t\"\035\n\016booleanReq" +
       "uest\022\013\n\003msg\030\002 \001(\010\"\036\n\017booleanResponse\022\013\n\003" +
       "msg\030\002 \001(\010\"\036\n\014valueRequest\022\016\n\006length\030\003 \001(" +
-      "\005\"\037\n\rvalueResponse\022\016\n\006length\030\003 \001(\005\"T\n\021ra" +
-      "diatorsResponse\022\r\n\005aname\030\004 \001(\t\022\016\n\006status" +
-      "\030\005 \001(\t\022\023\n\013temperature\030\006 \001(\005\022\013\n\003fan\030\007 \001(\005" +
-      "2\252\003\n\020RadiatorsService\022K\n\013initialItem\022\026.S" +
-      "martOfficeGRPC.Empty\032\".SmartOfficeGRPC.r" +
-      "adiatorsResponse\"\000\022V\n\021changeTemperature\022" +
-      "\035.SmartOfficeGRPC.valueRequest\032\036.SmartOf" +
-      "ficeGRPC.valueResponse\"\0000\001\022N\n\tchangeFan\022" +
-      "\035.SmartOfficeGRPC.valueRequest\032\036.SmartOf" +
-      "ficeGRPC.valueResponse\"\0000\001\022L\n\005onOff\022\037.Sm" +
-      "artOfficeGRPC.booleanRequest\032 .SmartOffi" +
-      "ceGRPC.booleanResponse\"\000\022S\n\016changeItemNa" +
-      "me\022\036.SmartOfficeGRPC.stringRequest\032\037.Sma" +
-      "rtOfficeGRPC.stringResponse\"\000B@\n&org.DS." +
-      "xinqipeiproject.SmartOfficeGRPCB\024Radiato" +
-      "rsServiceImplP\001b\006proto3"
+      "\005\"\037\n\rvalueResponse\022\016\n\006length\030\003 \001(\005\"V\n\021ra" +
+      "diatorsResponse\022\017\n\007radname\030\004 \001(\t\022\016\n\006stat" +
+      "us\030\005 \001(\t\022\023\n\013temperature\030\006 \001(\005\022\013\n\003fan\030\007 \001" +
+      "(\0052\252\003\n\020RadiatorsService\022K\n\013initialItem\022\026" +
+      ".SmartOfficeGRPC.Empty\032\".SmartOfficeGRPC" +
+      ".radiatorsResponse\"\000\022V\n\021changeTemperatur" +
+      "e\022\035.SmartOfficeGRPC.valueRequest\032\036.Smart" +
+      "OfficeGRPC.valueResponse\"\0000\001\022N\n\tchangeFa" +
+      "n\022\035.SmartOfficeGRPC.valueRequest\032\036.Smart" +
+      "OfficeGRPC.valueResponse\"\0000\001\022L\n\005onOff\022\037." +
+      "SmartOfficeGRPC.booleanRequest\032 .SmartOf" +
+      "ficeGRPC.booleanResponse\"\000\022S\n\016changeItem" +
+      "Name\022\036.SmartOfficeGRPC.stringRequest\032\037.S" +
+      "martOfficeGRPC.stringResponse\"\000B@\n&org.D" +
+      "S.xinqipeiproject.SmartOfficeGRPCB\024Radia" +
+      "torsServiceImplP\001b\006proto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
@@ -144,7 +144,7 @@ public final class RadiatorsServiceImpl {
     internal_static_SmartOfficeGRPC_radiatorsResponse_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_SmartOfficeGRPC_radiatorsResponse_descriptor,
-        new java.lang.String[] { "Aname", "Status", "Temperature", "Fan", });
+        new java.lang.String[] { "Radname", "Status", "Temperature", "Fan", });
   }
 
   // @@protoc_insertion_point(outer_class_scope)

@@ -1,7 +1,7 @@
 syntax = "proto3";
 package org.DS.xinqipeiproject.SmartOfficeGRPC;
 
-service SecuritycameraService{
+service CameraSecService{
   rpc initialItem(Empty) returns (cameraResponse) {}
   
   rpc changeCamera(stringRequest) returns (stream stringResponse) {}
@@ -43,7 +43,7 @@ message valueResponse {
 }
 
 message cameraResponse{
-  string aname = 4;
+  string secname = 4;
   string status = 5;
   string cam = 6;
   int32 distance = 7;

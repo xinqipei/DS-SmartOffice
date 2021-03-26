@@ -18,7 +18,7 @@ private static final long serialVersionUID = 0L;
   private computercontrolsystemResponse() {
     aname_ = "";
     status_ = "";
-    volume_ = 0;
+    distance_ = 0;
   }
 
   @java.lang.Override
@@ -59,7 +59,7 @@ private static final long serialVersionUID = 0L;
           }
           case 48: {
 
-            volume_ = input.readInt32();
+            distance_ = input.readInt32();
             break;
           }
           default: {
@@ -162,13 +162,13 @@ private static final long serialVersionUID = 0L;
     }
   }
 
-  public static final int VOLUME_FIELD_NUMBER = 6;
-  private int volume_;
+  public static final int DISTANCE_FIELD_NUMBER = 6;
+  private int distance_;
   /**
-   * <code>int32 volume = 6;</code>
+   * <code>int32 distance = 6;</code>
    */
-  public int getVolume() {
-    return volume_;
+  public int getDistance() {
+    return distance_;
   }
 
   private byte memoizedIsInitialized = -1;
@@ -191,8 +191,8 @@ private static final long serialVersionUID = 0L;
     if (!getStatusBytes().isEmpty()) {
       com.google.protobuf.GeneratedMessageV3.writeString(output, 5, status_);
     }
-    if (volume_ != 0) {
-      output.writeInt32(6, volume_);
+    if (distance_ != 0) {
+      output.writeInt32(6, distance_);
     }
     unknownFields.writeTo(output);
   }
@@ -209,9 +209,9 @@ private static final long serialVersionUID = 0L;
     if (!getStatusBytes().isEmpty()) {
       size += com.google.protobuf.GeneratedMessageV3.computeStringSize(5, status_);
     }
-    if (volume_ != 0) {
+    if (distance_ != 0) {
       size += com.google.protobuf.CodedOutputStream
-        .computeInt32Size(6, volume_);
+        .computeInt32Size(6, distance_);
     }
     size += unknownFields.getSerializedSize();
     memoizedSize = size;
@@ -233,8 +233,8 @@ private static final long serialVersionUID = 0L;
         .equals(other.getAname());
     result = result && getStatus()
         .equals(other.getStatus());
-    result = result && (getVolume()
-        == other.getVolume());
+    result = result && (getDistance()
+        == other.getDistance());
     result = result && unknownFields.equals(other.unknownFields);
     return result;
   }
@@ -250,8 +250,8 @@ private static final long serialVersionUID = 0L;
     hash = (53 * hash) + getAname().hashCode();
     hash = (37 * hash) + STATUS_FIELD_NUMBER;
     hash = (53 * hash) + getStatus().hashCode();
-    hash = (37 * hash) + VOLUME_FIELD_NUMBER;
-    hash = (53 * hash) + getVolume();
+    hash = (37 * hash) + DISTANCE_FIELD_NUMBER;
+    hash = (53 * hash) + getDistance();
     hash = (29 * hash) + unknownFields.hashCode();
     memoizedHashCode = hash;
     return hash;
@@ -389,7 +389,7 @@ private static final long serialVersionUID = 0L;
 
       status_ = "";
 
-      volume_ = 0;
+      distance_ = 0;
 
       return this;
     }
@@ -419,7 +419,7 @@ private static final long serialVersionUID = 0L;
       org.DS.xinqipeiproject.SmartOfficeGRPC.computercontrolsystemResponse result = new org.DS.xinqipeiproject.SmartOfficeGRPC.computercontrolsystemResponse(this);
       result.aname_ = aname_;
       result.status_ = status_;
-      result.volume_ = volume_;
+      result.distance_ = distance_;
       onBuilt();
       return result;
     }
@@ -476,8 +476,8 @@ private static final long serialVersionUID = 0L;
         status_ = other.status_;
         onChanged();
       }
-      if (other.getVolume() != 0) {
-        setVolume(other.getVolume());
+      if (other.getDistance() != 0) {
+        setDistance(other.getDistance());
       }
       this.mergeUnknownFields(other.unknownFields);
       onChanged();
@@ -646,28 +646,28 @@ private static final long serialVersionUID = 0L;
       return this;
     }
 
-    private int volume_ ;
+    private int distance_ ;
     /**
-     * <code>int32 volume = 6;</code>
+     * <code>int32 distance = 6;</code>
      */
-    public int getVolume() {
-      return volume_;
+    public int getDistance() {
+      return distance_;
     }
     /**
-     * <code>int32 volume = 6;</code>
+     * <code>int32 distance = 6;</code>
      */
-    public Builder setVolume(int value) {
+    public Builder setDistance(int value) {
       
-      volume_ = value;
+      distance_ = value;
       onChanged();
       return this;
     }
     /**
-     * <code>int32 volume = 6;</code>
+     * <code>int32 distance = 6;</code>
      */
-    public Builder clearVolume() {
+    public Builder clearDistance() {
       
-      volume_ = 0;
+      distance_ = 0;
       onChanged();
       return this;
     }

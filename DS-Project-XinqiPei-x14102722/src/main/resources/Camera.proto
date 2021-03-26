@@ -2,16 +2,16 @@ syntax = "proto3";
 
 option java_multiple_files = true;
 option java_package = "org.DS.xinqipeiproject.SmartOfficeGRPC";
-option java_outer_classname = "SecuritycameraServiceImpl";
+option java_outer_classname = "CameraSecServiceImpl";
 
 package SmartOfficeGRPC;
 
-service SecuritycameraService{
+service CameraSecService{
   rpc initialItem(Empty) returns (cameraResponse) {}
   
   rpc changeCamera(stringRequest) returns (stream stringResponse) {}
   
-  rpc changeVolume(valueRequest) returns (stream valueResponse) {}
+  rpc changeDistance(valueRequest) returns (stream valueResponse) {}
   
   rpc onOff(booleanRequest) returns (booleanResponse) {}
   
@@ -48,7 +48,7 @@ message valueResponse {
 }
 
 message cameraResponse{
-  string aname = 4;
+  string secname = 4;
   string status = 5;
   string cam = 6;
   int32 distance = 7;
